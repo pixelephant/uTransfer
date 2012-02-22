@@ -1,0 +1,204 @@
+#slider-outer{
+	background:#f1e229;
+	height:312px;
+}
+
+@import 'anythingslider.css';
+@import '_mixins.css.scss';
+
+#slider{
+	height:312px;
+	width:864px;
+	padding:0 18px;
+	margin:0 auto;
+	.left{
+		float:left;
+	}
+	.right{
+		float:right;
+		margin-right:160px;
+	}
+	img.right,	img.left{
+		margin-top:60px;
+	}
+	li{
+		a.button{
+			@include cta-button;
+			float:right;
+		}
+		h2{
+			color:white;
+			font-size:28px;
+			margin:60px 0 20px 75px;
+			width:270px;
+		}
+		p{
+			line-height:1.5;
+			font-size:13px;
+			color:white;
+			width:270px;
+			margin-left:75px;
+		}
+		img{
+			float:right;
+		}
+		img.left{
+			float:left;
+		}
+	}
+}
+
+#testimonials-button{
+	display:block;
+	float:left;
+}
+
+.testimonial{
+	img{
+		width:90px;
+		height:160px;
+		border:5px solid white;
+		float:right;
+	}
+	p{
+		background:url(qoutemark.png) no-repeat 133px 2px;
+		padding-top:12px;
+		font-size:13px;
+		float:left;
+		width:160px;
+		margin-right:5px;
+		color:white;
+	}
+}
+
+#study-promo{
+	a{
+		margin:15px 0;
+	}
+}
+
+#partner-universities{
+	.button{
+		float:right;
+	}
+	.universities{
+		margin-top:40px;
+	}
+}
+
+div#social-wrap{
+	float:left;
+	width:315px;
+}
+
+#twitter-box{
+	h3{
+		color:white;
+		font-size:28px;
+		margin-top:0;
+	}
+	margin-left:5px;
+	margin-top:5px;
+	padding:20px;
+	width:107.5px;
+	background:#009DD3;
+	float:left;
+	margin-right:10px;
+}
+
+#facebook-box{
+	h3{
+		color:white;
+		font-size:28px;
+		margin-top:0;
+		line-height:1;
+	}
+	margin-top:5px;
+	padding:20px;
+	width:107.5px;
+	background:#324C92;
+	float:left;
+}
+
+::-webkit-input-placeholder {
+   color: white;
+   opacity:0.8;
+}
+
+:-moz-placeholder {
+	color: white;
+    opacity:0.8;
+}
+
+#newsletter{
+	height:200px;
+	width:305px;
+	padding:0;
+	position:relative;
+	h3,p{
+		margin:20px;
+	}
+}
+
+#newsletter-form{
+	margin:20px;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	input[type="email"]{
+		border:1px solid white;
+		background:#4A3B80;
+		color:white;
+		padding:4px 10px;
+		width:150px;
+		float:left;
+	}
+	input[type="submit"]{
+		border:none;
+		padding:0;
+		margin:0;
+		@include cta-button;
+		float:left;
+		padding-left:5px;
+		padding-right:5px;
+		margin-left:15px;
+	}
+	
+}
+
+#blog{
+	position:relative;
+	.button{
+		position:absolute;
+		top:20px;
+		right:20px;
+	}
+}
+
+#article-list{
+	article{
+		@include clearfix;
+		margin-bottom:30px;
+		img{
+			float:left;
+			border:1px solid white;
+			margin-right:10px;
+		}
+		h1{
+			margin:0;
+			color:white;
+			@include font-raleway;
+			font-size:18px;
+		}
+		p{
+			margin:0;
+			time{
+				@include font-raleway;
+			}
+			a{
+				color:#333;
+				font-style:italic;
+			}
+		}
+	}
+}

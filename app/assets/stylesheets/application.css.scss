@@ -1,0 +1,325 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+
+@import '_mixins.css.scss';
+
+
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+html,body{
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100%;
+	font-family:Arial;
+}
+
+#main-header{
+	width:100%;
+}
+
+#language-selector{
+	width:100%;
+	background:$background-gray;
+	padding:10px 0;
+	position:absolute;
+	top:-55px;
+	border-bottom:1px solid $border-gray;
+	z-index:2;
+	p{
+		float:left;
+		font-style:italic;
+		color:#89897F;
+	}
+}
+
+#language-inner{
+	position:relative;
+	margin:0 auto;
+	width:980px;
+}
+
+#languages{
+	float:left;
+	overflow:hidden;
+	list-style:none;
+	li {
+		float:left;
+	}
+}
+
+#current-language{
+	img{
+		text-align:center;
+		line-height:30px;
+		@include border-radius(60px,60px,60px,60px);
+		background:$background-gray;
+		border-bottom:1px solid $border-gray;
+		float:left;
+		padding:4px;
+	}
+	span{
+		margin-top:15px;
+		margin-left:5px;
+		float:left;
+		background-color: transparent;
+	  	background-color: rgba(255, 255, 255, 0.6); 
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF,endColorstr=#99FFFFFF); 
+        zoom: 1;
+	}
+	font-size:12px;
+	text-decoration:none;
+	font-style:italic;
+	color:#6D5C47;
+	position:absolute;
+	right:0;
+	bottom:-27px;
+	display:block;
+}
+
+#masthead{
+	padding:45px 30px 0px 30px;
+	width:910px;
+	margin:0 auto;
+	.left{
+		float:left;
+	}
+	hgroup{
+		h1{
+			margin:0;
+			font-size:40px;
+			font-weight:bold;
+			color:#333333;
+		}
+		h2{
+			margin:0;
+			font-size:17px;
+			color:$brand-purple;
+			font-weight:normal;
+		}
+	}
+}
+
+#logo{
+	img{
+		width:145px;
+		height:50px;	
+	}
+}
+
+#offer{
+	float:right;
+	@include orange-gradient;
+	text-decoration:none;
+	color:white;
+	padding:25px 20px;
+	margin-top:65px;
+	width:160px;
+	height:50px;
+	@include font-raleway;
+	font-size:22px;
+	line-height:1;
+	position:relative;
+	z-index:1;    
+	-webkit-box-shadow: -1px -8px 5px -4px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: -1px -8px 5px -4px rgba(0, 0, 0, 0.4);
+	box-shadow: -1px -8px 5px -4px rgba(0, 0, 0, 0.4);
+	@include transition-03s;
+	&:hover{
+		
+	}
+	&:active{
+		box-shadow:none;
+	}
+	strong{
+		display:block;
+		font-family:Arial;
+		font-weight:bold;
+	}
+}
+
+#main-nav{
+	background:$background-gray;
+	border-top:1px solid $border-gray;
+	border-bottom:1px solid $border-gray;
+	height:40px;
+	padding-top:6px;
+	ul{
+		width:960px;
+		margin:0 auto;
+		list-style:none;
+		overflow:hidden;
+	}
+	li{
+		margin:0 5px;
+		float:left;
+	}
+	a{
+		text-decoration:none;
+		display:block;
+		@include cupid-black;
+	}
+}
+
+#content{
+	min-height:400px;
+	margin:0 auto;
+	width:945px;
+	padding:5px;
+}
+
+.box{
+	padding:20px;
+	margin:5px;
+	float:left;
+	@include clearfix;
+	h3{
+		color:white;
+		font-weight:bold;
+		font-size:28px;
+		margin-top:0;
+	}
+	h4{
+		color:white;
+		margin-top:0;
+		@include font-raleway;
+		font-size:28px;
+	}
+	p{
+		font-size:13px;
+		line-height:1.5;
+	}
+	
+	.inner-block{
+		width:280px;
+		float:left;
+		padding-left:10px;
+		&:first-child{
+			width:280px;
+			padding-right:10px;
+			padding-left:0;
+		}
+	}
+	
+	
+	&.third{
+		width:265px; /*305 paddingal*/
+	}
+	&.twothird{
+		width:580px; /*620 paddingal*/
+	}
+	&.full{
+		width:895px; /*935 paddingal*/
+	}
+	
+	&.white{
+		h3{
+			color:$brand-purple;
+		}
+		p{
+			color:#333;
+		}
+	}
+	
+	&.light-green{
+		@include light-green-gradient;
+		p{
+			color:white;
+		}
+	}
+	&.dark-green{
+		@include dark-green-gradient;
+		p{
+			color:white;
+		}
+	}
+	
+	&.dark-purple{
+		@include dark-purple-gradient;
+		p{
+			color:white;
+		}
+	}
+}
+
+p{
+	.firstLetter{
+	  display      : block;
+	  float        : left;
+	  margin-top   : -0.63em; /* use -0.205em for two lines */
+	  margin-left  : -0.56em;
+	  margin-right : 0.5em;
+	  height       : 4.5em;
+	}
+
+	.firstLetter span{
+	  font-size    : 5.6em;   /* use 3.33em for two lines */
+	  line-height  : 1.0em;
+	}
+
+	.firstLetter + span{
+	  margin-left  : -0.5em;
+	}
+}
+
+#main-footer{
+	background:#404040;
+	-webkit-box-shadow: inset 0px 0px 7px #000;
+	-moz-box-shadow: inset 0px 0px 7px #000;
+	box-shadow: inset 0px 0px 7px #000;
+}
+
+#footer-inner{
+	overflow:hidden;
+	padding:0 5px;
+	padding-bottom:35px;
+	width:970px;
+	margin:0 auto;
+	ul{
+		float:left;
+		list-style:none;
+		padding-left:0;
+		margin-left:10px;
+	}
+	li{
+		float:left;
+		margin: 0 5px;
+		a{
+			color:white;
+			font-size:11px;
+		}
+	}
+}
+
+#footer-misc{
+	float:right !important;
+	margin-right:5px;
+	a{
+		color:#bfbfbf !important;
+	}
+}
+
+#footer-logo{
+	float:left;
+	margin-left:5px;
+	@include background-gradient(#84A219,#92B41C);
+	width:305px;
+	height:65px;
+	line-height:65px;
+	text-align:center;
+	color:white;
+	font-size:20px;
+	font-weight:bold;
+	-webkit-box-shadow: 0px 0px 15px #000;
+	-moz-box-shadow: 0px 0px 15px #000;
+	box-shadow: 0px 0px 15px #000;
+	@include font-helvetica;
+}

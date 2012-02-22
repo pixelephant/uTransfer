@@ -1,0 +1,132 @@
+#slider {
+	list-style: none;
+	/* Prevent FOUC (see FAQ page) and keep things readable if javascript is disabled */
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+div.anythingSlider .anythingControls ul a {
+	background: white;
+	opacity:0.7;
+	-webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
+     -moz-transition: all 0.3s ease-out;  /* FF4+ */
+      -ms-transition: all 0.3s ease-out;  /* IE10 */
+       -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
+          transition: all 0.3s ease-out;
+}
+
+div.anythingSlider .anythingControls ul a:hover{
+	opacity:1;
+}
+
+div.anythingSlider .anythingControls ul a.cur{
+	background:black !important;
+}
+
+
+/***********************
+  COMMON SLIDER STYLING
+ ***********************/
+/* Overall Wrapper: 45px right & left padding for the arrows, 28px @ bottom for navigation */
+div.anythingSlider {
+	display: block;
+	margin: 0 auto;
+	overflow: visible !important; /* needed for Opera and Safari */
+	position: relative;
+	padding: 0 50px 28px 50px;
+	width:880px;
+}
+/* anythingSlider viewport window */
+div.anythingSlider .anythingWindow {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+/* anythingSlider base (original element) */
+.anythingBase {
+	background: transparent;
+	list-style: none;
+	position: absolute;
+	overflow: visible !important;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+}
+/* all panels inside the slider */
+.anythingBase .panel {
+	background: transparent;
+	display: block;
+	overflow: hidden;
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+.anythingBase .panel.vertical {
+	float: none;
+}
+
+/* Navigation Arrows */
+div.anythingSlider .arrow {
+	top: 40%;
+	position: absolute;
+	display: block;
+}
+
+div.anythingSlider .arrow a {
+	display: block;
+	width:40px;
+	height: 40px;
+	text-align: center;
+	zoom: 1;
+}
+div.anythingSlider .back, div.anythingSlider .forward {
+opacity:0.3;
+-webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
+ -moz-transition: all 0.3s ease-out;  /* FF4+ */
+  -ms-transition: all 0.3s ease-out;  /* IE10 */
+   -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
+      transition: all 0.3s ease-out;
+}
+
+
+div.anythingSlider .back:hover,div.anythingSlider .forward:hover {
+	opacity:1;
+}
+
+div.anythingSlider .back:active{
+	background-position:center left;
+}
+
+div.anythingSlider .forward:active{
+	background-position:center right;
+}
+
+/* hide text, target the span so IE7 doesn't text-indent the link */
+div.anythingSlider .arrow a span { display: block; visibility: hidden; }
+
+
+div.anythingSlider .back { left: 0; background:url(left.png) no-repeat center white;}
+div.anythingSlider .back.disabled,div.anythingSlider .forward.disabled  { display: none; } /* disabled arrows, hide or reduce opacity: opacity: .5; filter: alpha(opacity=50); */
+
+div.anythingSlider .forward { right: 0; background:url(right.png) no-repeat center white;}
+
+
+/* Navigation Links */
+div.anythingSlider .anythingControls { outline: 0; display: none; position:absolute; bottom:0; }
+div.anythingSlider .anythingControls ul { margin: 0; padding: 0; float: left; }
+div.anythingSlider .anythingControls ul li { display: inline; }
+div.anythingSlider .anythingControls ul a {
+	display: inline-block;
+	text-decoration: none;
+	margin: 0 5px 0 0;
+	text-align: center;
+	outline: 0;
+	width:12px;
+	height:12px;
+	border-radius: 30px 30px 30px 30px;
+	-moz-border-radius: 30px 30px 30px 30px;
+	-webkit-border-radius: 30px 30px 30px 30px;
+	text-indent:-9999em;
+}

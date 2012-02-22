@@ -1,0 +1,115 @@
+<section id="slider-outer">
+	<ul id="slider">
+		<li class="clearfix">
+			<div class="left">
+				<h2>Első slide</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibul</p>
+				<a href="#" class="button">Action</a>
+			</div>
+			<%= image_tag "money.png", :title => "title", :class => "right" %>
+			
+		</li>
+		<li class="clearfix">
+			<%= image_tag "pie.png", :title => "title", :class => "left" %>
+			<div class="right">
+				<h2>Második slide</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim,</p>
+				
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="left">
+				<h2>Harmadik slide</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti.</p>
+			</div>
+		</li>
+	</ul>
+</section>
+
+<section id="content" class="clearfix">
+	<div class="box third dark-green">
+		<h3>They have already chosen us</h3>
+		<a href="#" id="testimonials-button" class="button">View all testimonials</a>
+	</div>
+	<div class="box third light-green testimonial">
+		<h4>Alina</h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque.</p>
+		<img src="http://placekitten.com/g/90/160" alt="Testimonial of Alina" />
+	</div>
+	<div class="box third light-green testimonial">
+		<h4>Zohan</h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque.</p>
+		<img src="http://placekitten.com/g/90/160" alt="Testimonial of Zohan" />
+	</div>
+	<div class="box third dark-green">
+		<h3>Study with us in Hungary</h3>
+	</div>
+	<div id="study-promo" class="box twothird light-green">
+		<div class="inner-block">
+			<p><span class="firstLetter"><span>L</span></span><span>orem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin.</p>
+		</div>
+		<div class="inner-block">
+			<a href="#" class="button">Discover the uTransfer experience</a>
+			<a href="#" class="button">Learn more about Hungary</a>
+		</div>
+	</div>
+	<div id="partner-universities" class="white full box">
+		<div class="inner-block">
+			<h3>Partner universities</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque.</p>
+		</div>
+		<a href="#" class="button">View all universities</a>
+		<div class="universities">
+			<a href="#"><img src="http://placekitten.com/g/120/90" alt="" /></a>
+			<a href="#"><img src="http://placekitten.com/g/120/90" alt="" /></a>
+			<a href="#"><img src="http://placekitten.com/g/120/90" alt="" /></a>
+			<a href="#"><img src="http://placekitten.com/g/120/90" alt="" /></a>
+		</div>
+	</div>
+	<div id="social-wrap">
+		<div id="newsletter" class="dark-purple box third">
+			<h3>Stay up to date!</h3>
+			<form action="#" id="newsletter-form">
+				<input type="email" name="email" id="email" placeholder="Email address" />
+				<input type="submit" value="Subscribe" />
+			</form>
+		</div>
+		<div id="twitter-box">
+			<h3>Twitter</h3>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://utransferhungary.com" data-lang="hu">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			<a href="https://twitter.com/twitter" class="twitter-follow-button" data-show-count="false" data-lang="hu">@twitter követése</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+		<div id="facebook-box">
+			<h3>Face book</h3>
+			<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=136997593064327";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+			<div class="fb-like" data-href="http://www.utransferhungary.com" data-send="true" data-layout="button_count" data-width="200" data-show-faces="false"></div>
+		</div>
+	</div>
+	<div id="blog" class="box twothird dark-green">
+		<h3>Fresh from our blog</h3>
+		<a href="#" class="button">View all</a>
+		<div id="article-list">
+			<article>
+				<img src="http://placekitten.com/g/90/90" alt="" />
+				<h1>Megaphone girls party @Merlin</h1>
+				<p><time pubdate datetime="2009-10-10T19:15-08:00">~1 hour ago</time></p>
+				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. <a href="#">Continue reading &raquo;</a></p>
+			</article>
+			<article>
+				<img src="http://placekitten.com/g/90/90" alt="" />
+				<h1>Megaphone girls party @Merlin</h1>
+				<p><time pubdate datetime="2009-10-10T19:15-08:00">~1 hour ago</time></p>
+				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. <a href="#">Continue reading &raquo;</a></p>
+			</article>
+		</div>
+	</div>
+</section>
