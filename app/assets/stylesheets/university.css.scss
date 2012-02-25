@@ -1,0 +1,150 @@
+@import '_mixins.css.scss';
+/* jQuery Countdown styles 1.5.11. */
+.hasCountdown {
+
+}
+.countdown_rtl {
+	direction: rtl;
+}
+.countdown_holding span {
+
+}
+.countdown_row {
+	clear: both;
+	width: 100%;
+	padding: 0px 2px;
+	text-align: center;
+}
+.countdown_show1 .countdown_section {
+	width: 98%;
+}
+.countdown_show2 .countdown_section {
+	width: 48%;
+}
+.countdown_show3 .countdown_section {
+	width: 32.5%;
+}
+.countdown_show4 .countdown_section {
+	width: 24.5%;
+}
+.countdown_show5 .countdown_section {
+	width: 19.5%;
+}
+.countdown_show6 .countdown_section {
+	width: 16.25%;
+}
+.countdown_show7 .countdown_section {
+	width: 14%;
+}
+.countdown_section {
+	display: block;
+	float: left;
+	font-size: 75%;
+	text-align: center;
+}
+.countdown_amount {
+	font-size: 200%;
+}
+.countdown_descr {
+	display: block;
+	width: 100%;
+}
+
+
+
+#university-slider-wrap{
+	overflow:hidden;
+	width:100%;
+	height:240px;
+	padding-top:20px;
+	background:#ededed;
+	-webkit-box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
+	-moz-box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
+	box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
+	h1{
+		width:945px;
+		padding-left:15px;
+		margin:0px auto 20px auto;
+		color:$brand-purple;
+		.sub{
+			font-size:20px;
+			@include font-raleway;
+		}
+	}
+	ul{
+		height:140px;
+		width:855px; /*955 a max két 40px nyíl + 2*10px margó*/
+	}
+	li{
+		@include clearfix;
+		width:960px;
+		height:150px;
+		a{
+			width:240;
+			display:block;
+			float:left;
+			margin:30px 10px;
+			position:relative;
+			text-decoration:none;
+			color:black;
+			font-size:24px;
+			@include font-raleway;
+			text-align:center;
+			&:hover{
+				color: $brand-purple;
+				
+			}
+		}
+		.speciality{
+			display:block;
+			width:42px;
+			height:41px;
+			position:absolute;
+			right:0;
+			top:-10px;
+			text-indent:-9999em;
+			&.engineering{
+				background: url(specs/engineering.png) no-repeat center;
+			}
+		}
+		.name{
+			display:block;
+			margin-top:10px;
+		}
+	}
+	ul{
+		overflow:hidden;
+	}
+	
+}
+
+#counter{
+	height:386px;
+}
+
+#counter .button{
+	float:right;
+	margin-top:20px;
+}
+
+#countdown{
+	color:white;
+}
+
+#deadline{
+	text-align:center;
+	color:white;
+	margin-top:15px;
+	display:block;
+}
+
+#campus{
+	height:225px;
+}
+
+#faculty-grid .box{
+	height:225px;
+	a{
+		float:right;
+	}
+}

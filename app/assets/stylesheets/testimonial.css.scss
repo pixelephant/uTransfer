@@ -1,0 +1,120 @@
+@import '_mixins.css.scss';
+
+#testimonial-slider-wrap{
+	overflow:hidden;
+	width:100%;
+	height:350px;
+	padding-top:20px;
+	background:#ededed;
+	-webkit-box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
+	-moz-box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
+	box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
+	h1{
+		width:945px;
+		padding-left:15px;
+		margin:0px auto 20px auto;
+		color:$brand-purple;
+		.sub{
+			font-size:20px;
+			@include font-raleway;
+		}
+	}
+	ul{
+		height:250px;
+		width:855px; /*955 a max két 40px nyíl + 2*10px margó*/
+	}
+	li{
+		@include clearfix;
+		width:960px;
+		height:150px;
+		a{
+			display:block;
+			float:left;
+			margin:30px 36px;
+			position:relative;
+			text-decoration:none;
+			color:black;
+			font-size:24px;
+			@include font-raleway;
+			text-align:center;
+			&:hover{
+				color: $brand-purple;
+				
+			}
+		}
+		.nationality{
+			display:block;
+			width:42px;
+			height:41px;
+			position:absolute;
+			right:0;
+			top:-10px;
+			text-indent:-9999em;
+			&.ukrainian{
+				background: url(flags/ukraine.png) no-repeat center;
+			}
+		}
+		.name{
+			display:block;
+			margin-top:10px;
+		}
+	}
+	ul{
+		overflow:hidden;
+	}
+	
+}
+
+#cite{
+	cite{
+		display:block;
+		background:url(qoutemark.png) no-repeat 300px 70px;
+		@include font-raleway;
+		font-size:50px;
+		color:white;
+	}
+}
+
+#about-person{
+	@include font-raleway;
+	b{
+		font-family:Arial;
+		font-weight:bold;
+	}
+}
+
+#scholarship{
+	height:128px;
+	a{
+		text-decoration:none;
+		@include clearfix;
+		img,p{
+			float:left;
+		}
+		img{
+			margin-right:5px;
+		}
+	}
+}
+
+#photo{
+	img{
+		position:relative;
+		z-index:3;
+		left:-100px;
+	}
+}
+
+#under-photo{
+	position:relative;
+	top:-135px;
+	z-index:4;
+}
+
+#experiences{
+	height:265px;
+}
+
+#career{
+	height:178px;
+}
