@@ -3,7 +3,7 @@ $border-gray: #d9d9d9;
 $background-gray: #f2f2f2;
 
 $brand-purple: #554595;
-
+$brand-green: #84A219;
 
 @mixin clearfix{
 	*zoom:1;
@@ -137,6 +137,11 @@ $brand-purple: #554595;
 .dark-green .button,.light-green .button{
 	@include cta-button(#fff,#748E15);
 	border:1px solid #637811;
+}
+
+.dark-purple .button, .light-purple .button{
+	@include cta-button(#fff,#1E174D);
+	border:1px solid #000;
 }
 
 .white .button{

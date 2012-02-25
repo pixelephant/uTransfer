@@ -197,7 +197,16 @@ html,body{
 		font-size:13px;
 		line-height:1.5;
 	}
-	
+	ul{
+		font-size:12px;
+		margin:0;
+		padding:0;
+		list-stlye-type:square;
+		list-style-position:inside;
+		li{
+			margin:10px 0;
+		}
+	}
 	.inner-block{
 		width:280px;
 		float:left;
@@ -218,6 +227,32 @@ html,body{
 	}
 	&.full{
 		width:895px; /*935 paddingal*/
+	}
+	
+	
+	
+	&.video,&.image{
+		padding:0;
+		width:305px;
+	}
+	
+	&.image-quad{
+		padding:0;
+		height:305px;
+		width:305px;
+		@include clearfix;
+		a,img{
+			&.one{
+				margin:0 5px 5px 0;
+			}
+			&.two{
+				margin:0 0 5px 0;
+			}
+			&.three{
+				margin:0 5px 0 0;
+			}
+			float:left;
+		}
 	}
 	
 	&.white{
@@ -248,6 +283,36 @@ html,body{
 			color:white;
 		}
 	}
+	&.gray{
+		background:#e6e6e6;
+		h3,h4,h5,ul{
+			color:$brand-purple;
+		}
+		p{
+			color:$brand-purple;
+		}
+	}
+	
+	&.gray-green{
+		background:#e6e6e6;
+		h3,h4,h5,ul{
+			color:$brand-green;
+		}
+		p{
+			color:black;
+		}
+	}
+}
+
+
+.third-wrap{
+	width:315px;
+	float:left;
+}
+
+.twothird-wrap{
+	float:left;
+	width:630px;
 }
 
 p{
@@ -268,6 +333,12 @@ p{
 	.firstLetter + span{
 	  margin-left  : -0.5em;
 	}
+}
+
+p.left{
+	float:left;
+	margin-right:10px;
+	width:265px;
 }
 
 #main-footer{
