@@ -50,7 +50,9 @@
 	width: 100%;
 }
 
-
+.anythingControls{
+	display:none !important;
+}
 
 #university-slider-wrap{
 	overflow:hidden;
@@ -143,8 +145,67 @@
 }
 
 #faculty-grid .box{
+	overflow:hidden;
 	height:225px;
+	position:relative;
+	.more-info{
+		display:none;
+	}
+	&.open .more-info{
+		display:block;
+	}
 	a{
 		float:right;
+	}
+	.close{
+		position:absolute;
+		top:20px;
+		right:20px;
+	}
+}
+
+.graduate{
+	float:left;
+	width:298px;
+}
+
+#international-relations{
+	h3{
+		margin-bottom:10px;
+	}
+	p{
+		margin-bottom:30px;
+	}
+}
+
+.relation{
+	position:relative;
+	margin:0 14px;
+	display:block;
+	float:left;
+	width:150px;
+	.country{
+		display:block;
+		width:42px;
+		height:41px;
+		position:absolute;
+		left:55px;
+		top:-20px;
+		text-indent:-9999em;
+		&.ukraine{
+			background: url(flags/ukraine.png) no-repeat center;
+		}
+	}
+	h5{
+		display:block;
+		padding:30px 10px 10px 10px;
+		height:55px;
+		width:130px;
+		line-height:1;
+		@include dark-green-gradient;
+		color:white !important;
+		@include font-raleway;
+		font-size:19px;
+		margin:0;
 	}
 }
