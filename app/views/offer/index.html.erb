@@ -1,0 +1,183 @@
+<section id="content" class="clearfix">
+	<div class="box dark-purple third">
+		<h3>Application form</h3>
+		<p>Please fill in this form so that we can give you a presonalized offer. Thanks :)</p>
+	</div>
+	<div class="box gray twothird">
+		<form action="#">
+			<h4>Personal data</h4>
+			
+			<fieldset>
+				<div class="half">
+					<label for="firstname">First name</label> <input type="text" name="firstname" id="firstname" />
+				</div>
+				<div class="half">
+					<label for="lastname">Last name</label> <input type="text" name="lastname" id="lastname" />
+				</div>
+			</fieldset>
+			<fieldset id="gender" class="radio">
+				<legend>Gender</legend>
+				<div>
+					<label for="male">Male</label><input type="radio" name="gender" id="male" />
+					<label for="female">Female</label><input type="radio" name="gender" id="female" />
+				</div>
+			</fieldset>
+			<filedset>
+				<label for="citizenship">Citizenship</label>
+				<select name="citizeship" id="citizenship">
+					<option value="">1</option>
+					<option value="">2</option>
+					<option value="">3</option>
+					<option value="">4</option>
+					<option value="">5</option>
+					<option value="">6</option>
+					<option value="">7</option>
+					<option value="">8</option>
+					<option value="">9</option>
+					<option value="">10</option>
+				</select>
+			</filedset>
+			<fieldset>
+				<label for="age">How old are you?</label>
+				<input type="number" name="age" id="age" value="18" />
+			</fieldset>
+		<!--	<fieldset id="place">
+				<legend>Place of birth</legend>
+				<div>
+					<div class="half">
+						<label for="birth-country">Country</label>
+						<select name="birth-country" id="birth-country">
+							<option value="">1</option>
+							<option value="">2</option>
+							<option value="">3</option>
+							<option value="">4</option>
+							<option value="">5</option>
+							<option value="">6</option>
+							<option value="">7</option>
+							<option value="">8</option>
+							<option value="">9</option>
+							<option value="">10</option>
+						</select>
+					</div>
+					<div class="half">
+						<label for="birth-city">City</label>
+						<input type="text" name="birth-city" id="birth-city" />
+					</div>
+				</div>
+			</fieldset> -->
+		<!--	<fieldset>
+				<legend>Postal address</legend>
+				<label for="postal-country">Country</label>
+				<select name="postal-country" id="postal-country">
+					<option value="">1</option>
+					<option value="">2</option>
+					<option value="">3</option>
+					<option value="">4</option>
+					<option value="">5</option>
+					<option value="">6</option>
+					<option value="">7</option>
+					<option value="">8</option>
+					<option value="">9</option>
+					<option value="">10</option>
+				</select>
+				<label for="postal-city">City</label>
+				<input type="text" name="postal-city" id="postal-city" />
+				<label for="postal-county">County</label>
+				<input type="text" name="postal-county" id="postal-county" />
+			</fieldset> -->
+			<fieldset id="tel">
+				<legend>Phone number</legend>
+				<div>
+					<div class="half">
+						<label for="phone-country">Country code</label>
+						<input type="text" name="phone-country" id="phone-country" />
+					</div>
+					<div class="half">
+						<label for="phone-number">Phone no.</label>
+						<input type="tel" name="phone-number" id="phone-number" />
+					</div>
+				</div>
+			</fieldset>
+			<fieldset>
+				<label for="email">Email address</label>
+				<input type="email" name="email" id="email" />
+			</fieldset>
+			<h4>Interests</h4>
+			<fieldset id="type" class="radio">
+				<legend>What form of education are you applying for?</legend>
+				<div>
+					<div class="half">
+						<label for="bsc">BSc</label><input type="radio" name="type" id="bsc" selected />
+					</div>
+					<div class="half">
+						<label for="msc">MSc</label><input type="radio" name="type" id="msc" />
+					</div>
+					<div class="half">
+						<label for="phd">PhD</label><input type="radio" name="type" id="phd" />
+					</div>
+				</div>
+			</fieldset>
+			<fieldset id="uni" class="radio">
+				<legend>Did you find an interesting university in our <a href="/university">list</a>?</legend>
+				<div>
+					<div class="half">
+						<label for="no-uni">Yes</label><input type="radio" name="uni" id="no-uni" />
+					</div>
+					<div class="half">
+						<label for="yes-uni">No</label><input type="radio" name="uni" id="yes-uni" />
+					</div>
+				</div>
+			</fieldset>
+			<div class="uni-yes">
+				<fieldset id="exact-uni" class="selects">
+					<legend>Where would you like to apply?</legend>
+					<div>
+						<div class="half">
+							<label for="university">University</label> 
+							<select name="university" id="university">
+								<option value="#">University 1</option>
+								<option value="#">University 2</option>
+								<option value="#">University 3</option>								
+							</select>
+						</div>
+						<div class="half">
+							<label for="major">Major</label> 
+							<select name="major" id="major">
+								<option value="#">Major 1</option>
+								<option value="#">Major 2</option>
+								<option value="#">Major 3</option>								
+							</select>
+						</div>
+					</div>
+				</fieldset>
+			</div>
+			<div class="uni-no">
+				<fieldset id="interests" class="radio">
+					<legend>Please select which applies to you</legend>
+					<div>
+						<div class="half">
+							<label for="">I like maths <input type="checkbox" name="interests" id="" /></label>
+						</div>
+						<div class="half">
+							<label for="">I like IT <input type="checkbox" name="interests" id="" /></label>
+						</div>
+						<div class="half">
+							<label for="">I'm interested in healthcare <input type="checkbox" name="interests" id="" /></label>
+						</div>
+						<div class="half">
+							<label for="">Music is my life <input type="checkbox" name="interests" id="" /></label>
+						</div>
+						<div class="half">
+							<label for="">I like literature <input type="checkbox" name="interests" id="" /></label>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset>
+					<label for="else">Anything else?</label>
+					<textarea name="else" id="" cols="60" rows="10"></textarea>
+				</fieldset>
+			</div>
+			<input type="submit" value="Send application" class="button" />
+		</form>
+	</div>
+</section>

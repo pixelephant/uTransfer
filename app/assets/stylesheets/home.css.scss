@@ -4,6 +4,15 @@
 }
 
 @import 'anythingslider.css';
+
+.anythingControls{
+	bottom:40px !important;
+}
+
+.start-stop{
+	display:none !important;
+}
+
 @import '_mixins.css.scss';
 
 #slider{

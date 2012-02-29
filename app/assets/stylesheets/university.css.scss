@@ -1,4 +1,7 @@
+
+@import 'anythingslider.css';
 @import '_mixins.css.scss';
+
 /* jQuery Countdown styles 1.5.11. */
 .hasCountdown {
 
@@ -48,10 +51,6 @@
 .countdown_descr {
 	display: block;
 	width: 100%;
-}
-
-.anythingControls{
-	display:none !important;
 }
 
 #university-slider-wrap{

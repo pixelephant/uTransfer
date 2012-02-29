@@ -1,0 +1,153 @@
+@import 'anythingslider.css';
+@import 'jquery.fancybox.css';
+@import '_mixins.css.scss';
+
+#tooltip {
+	position: absolute;
+	z-index: 3000;
+	border: 1px solid #111;
+	background-color: #eee;
+	padding: 5px;
+	opacity: 0.85;
+}
+#tooltip h3, #tooltip div { margin: 0; }
+
+#hungary-intro{
+	h3,p{
+		color:$brand-purple;
+	}
+}
+
+table{
+	.info{
+		float:right;
+		color:white;
+	}
+	float:left;
+	width:100%;
+	margin:5px;
+	thead{
+		th{
+			border-right:5px solid white;
+			color:white;
+			background:$brand-purple;
+			&.last{
+				border-right:10px solid white;
+			}
+			&.big{
+				border-right:10px solid white;
+				font-size:28px;
+				margin-bottom:40px;
+				@include dark-purple-gradient;
+				width:265px;
+				padding:20px;
+				text-align:left;
+			}
+		}
+	}
+	tbody{
+		tr{
+			border-top:5px solid white;
+		}
+		td{
+			border-right:5px solid white;
+			padding:20px;
+			background:$background-gray;
+			text-align:center;
+			vertical-align:center;
+			&.last{
+				border-right:10px solid white;
+			}
+		}
+		.head{
+			background:$brand-purple;
+			color:white;
+			text-align:left;
+			padding:20px;
+			border-right:10px solid white;
+		}
+	}
+}
+
+#festival-slider{
+	position:relative;
+	margin:25px 5px 30px 5px;
+	.anythingSlider{
+		margin:0 !important;
+		padding:0 !important;
+		top:25px;
+	}
+	.anythingControls{
+		position:absolute;
+		top:-20px;
+		@include font-raleway;
+		font-size:28px;
+		width:935px;
+		li{
+			margin-right:10px;
+			float:left;
+		}
+		li a{
+			height:45px;
+			line-height:45px;
+			background:$background-gray;
+			float:left;
+			text-decoration:none;
+			min-width:100px;
+			color:black;
+			text-align:center;
+			display:block;
+			&.cur{
+				@include dark-purple-gradient;
+				color:white;
+			}
+		}
+	}
+	ul{
+		width:935px;
+		list-style:none;
+		padding:0;
+		margin:0;
+	}
+	li{
+		height:300px !important;
+		margin:0;
+		padding:0;
+		.caption{
+			z-index:2;
+			font-size:12px;
+			position:absolute;
+			padding:20px;
+			width:895px;
+			color:white;
+			@include dark-purple-gradient;
+		}
+	}
+}
+
+#famous-hungarians{
+	.hungarian{
+		float:left;
+		width:298px;
+	}
+}
+
+.hungaricum{
+	position:relative;
+	margin:0 14px;
+	display:block;
+	float:left;
+	width:150px;
+	h5{
+		display:block;
+		padding:30px 10px 10px 10px;
+		height:55px;
+		width:130px;
+		line-height:1;
+		@include dark-green-gradient;
+		color:white !important;
+		@include font-raleway;
+		font-size:19px;
+		margin:0;
+	}
+}

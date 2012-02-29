@@ -7,8 +7,8 @@
   <meta charset="utf-8">	
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Utransfer</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag    "application", controller_name %>
+  <%= javascript_include_tag "application", controller_name %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -38,17 +38,17 @@
 				<h2>With uTransfer your education in Hungary is painless. <em>Intrested?</em></h2>
 			</hgroup>
 		</div>
-		<a href="#" id="offer">get a personalized <strong>offer</strong></a>
+		<a href="/offer" id="offer">get a personalized <strong>offer</strong></a>
 	</section>
 	<nav id="main-nav">
 		<ul>
-			<li><a href="#">Home</a></li>
+			<li><a href="/home">Home</a></li>
 			<li><a class="active" href="">Experience</a></li>
-			<li><a href="#">Process</a></li>
+			<li><a href="/process">Process</a></li>
 			<li><a href="#">Essentials</a></li>
-			<li><a href="#">Hungary</a></li>
-			<li><a href="/home/university">Universities</a></li>
-			<li><a href="/home/testimonial">Testimonials</a></li>
+			<li><a href="/hungary">Hungary</a></li>
+			<li><a href="/university">Universities</a></li>
+			<li><a href="/testimonial">Testimonials</a></li>
 			<li><a href="#">Contact</a></li>
 		</ul>
 	</nav>

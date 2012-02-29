@@ -7,7 +7,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.easing
-//= require_tree .
 
 $(document).ready(function(){
 	var language_top = parseInt($("#language-selector").css("top"));
@@ -23,12 +22,4 @@ $(document).ready(function(){
 		},1000,"easeOutBounce");
 		return false;
 	});
-	
-	$("#slider").anythingSlider({
-		
-	}).anythingSliderFx({
-		'p' : ['fade'],
-	    'img'       : [ 'listLR' ],
-		'h3' : ['left']
-	  });;
 });

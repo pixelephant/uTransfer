@@ -1,0 +1,76 @@
+@import '_mixins.css.scss';
+
+h4{
+	margin:40px 0 20px 0 !important;
+	border-bottom:1px dotted #BABABA;
+}
+
+fieldset{
+	margin:20px 0;
+	padding:0;
+	border:none;
+	.half{
+		float:left;
+		margin-right:10px;
+	}
+}
+
+label,legend{
+	display:block;
+	color:$brand-purple;
+	margin-left:2px;
+	margin-right:5px;
+	margin-bottom:5px;
+	a{
+		color:$brand-green;
+	}
+}
+
+.radio,.selects,#tel{
+	legend{
+		margin-left:0;
+	}
+	div{
+		padding-top:5px;
+	}
+	div.half{
+		padding-top:0;
+	}
+	label{
+		color:black;
+		display:inline;
+		margin-left:5px;
+	}
+}
+
+#tel,#gender,#uni,#type,#exact-uni,#interests{
+	label{
+		font-size:12px;
+		color:#89897F;
+	}
+}
+
+#phone-country,#age{
+	width:35px;
+}
+
+.uni-no,.uni-yes{
+	display:none;
+}
+
+input[type='text'],input[type='tel'],input[type='email'],input[type='number']{
+	border:1px solid #8f8f8f;
+	height:16px;
+	padding:2px;
+}
+
+textarea{
+	padding:2px;
+	border:1px solid #8f8f8f;
+	resize:vertical;
+}
+
+.button{
+	border:none;
+	cursor:pointer;
+}

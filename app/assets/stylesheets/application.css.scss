@@ -3,7 +3,6 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
- *= require_tree . 
 */
 
 @import '_mixins.css.scss';
@@ -193,11 +192,15 @@ html,body{
 		@include font-raleway;
 		font-size:28px;
 	}
+	h5{
+		color:white;
+	}
 	p{
 		font-size:13px;
 		line-height:1.5;
 	}
 	ul{
+		color:white;
 		font-size:12px;
 		margin:0;
 		padding:0;
@@ -234,6 +237,7 @@ html,body{
 	&.video,&.image{
 		padding:0;
 		width:305px;
+		height:305px;
 	}
 	
 	&.image-quad{
@@ -313,10 +317,25 @@ html,body{
 	}
 }
 
+h3.green{
+	font-size:28px;
+	color:$brand-green;
+	margin:0 0 20px 5px;
+}
+
+h3.purple{
+	font-size:28px;
+	color:$brand-purple;
+	margin:0 0 20px 5px;
+}
 
 .third-wrap{
 	width:315px;
 	float:left;
+	.one{
+		margin-left:5px;
+	}
+	margin-bottom:10px;
 }
 
 .twothird-wrap{

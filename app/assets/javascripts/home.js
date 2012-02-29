@@ -1,6 +1,5 @@
 //= require jquery.anythingslider
 //= require jquery.anythingslider.fx
-//= require jquery.touchwipe
 //= require jquery.color
 //= require jquery.flip
 
@@ -28,9 +27,11 @@ $(document).ready(function(){
 	$("#slider").anythingSlider({
 		appendControlsTo : ".anythingWindow",
 		buildStartStop: false,
+		resizeContents: false,
 		hashtags: false,
 		autoPlay: true,
 	    delay: 8000,
+		resizeContents: false,
 	    resumeDelay: 8000,
 	    animationTime: 500,
 	    onSlideComplete: function(slider) {
@@ -43,12 +44,5 @@ $(document).ready(function(){
 	    'img' : [ 'fade' ],
 		'h3' : ['left']
 	  });;
-	
-/*	$("#slider-outer").touchwipe({
-	     wipeLeft: function() { $(".forward").trigger("click"); },
-	     wipeRight: function() { $(".back").trigger("click"); },
-	     min_move_x: 20,
-	     min_move_y: 20,
-	     preventDefaultEvents: true
-	}); */
+
 });

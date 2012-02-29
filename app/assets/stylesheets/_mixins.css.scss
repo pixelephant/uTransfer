@@ -144,6 +144,6 @@ $brand-green: #84A219;
 	border:1px solid #000;
 }
 
-.white .button{
+.white .button,.gray .button{
 	@include cta-button(#fff,$brand-purple);
 }
