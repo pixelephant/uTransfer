@@ -1,0 +1,52 @@
+@import '_mixins.css.scss';
+
+#about-utransfer{
+	margin:0 auto;
+	float:none;
+	font-size:12px;
+	p{
+		color:$brand-purple;
+	}
+	h3{
+		color:$brand-purple;
+	}
+}
+
+#about-center{
+	width:935px;
+	background:url(about-center.png) no-repeat center;
+	height:400px;
+	background:#aaa;
+}
+
+.about{
+	@include clearfix;
+	padding:20px;
+	width:427.5px;
+	float:left;
+	h3{
+		color:$brand-purple;
+		font-size:28px;
+		margin:0 0 20px 0;
+	}
+	p{
+		color:$brand-purple;
+		font-size:12px;
+		line-height:1.5;
+		width:265px;
+	}
+}
+
+#about-peter{
+	text-align:right;
+	p{
+		float:right;
+	}
+}
+
+#about-gan{
+	text-align:left;
+	p{
+		float:left;
+	}
+}

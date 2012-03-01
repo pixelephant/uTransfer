@@ -1,0 +1,53 @@
+<section id="content" class="clearfix">
+	<div class="third-wrap">
+		<div class="box third white-purple">
+			<h3>Contact info</h3>
+			<strong>Contact 1</strong>
+			<ul>
+				<li>lipsum</li>
+				<li>lispum</li>
+				<li>lipsum</li>
+			</ul>
+			<strong>Contact 2</strong>
+			<ul>
+				<li>lipsum</li>
+				<li>lispum</li>
+				<li>lipsum</li>
+			</ul>
+		</div>
+		<div class="box third gray">
+			<h4>Company info</h4>
+			<strong>Company yah</strong>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+		</div>
+	</div>
+	<div class="box twothird dark-purple">
+		<h3>Get in touch right now!</h3>
+		<form action="#">
+			<fieldset>
+				<label for="name">Name</label>
+				<input type="text" name="name" id="name" />
+				<label for="email">Email address</label>
+				<input type="email" name="email" id="email" />
+				<label for="type">Whatsup?</label>
+				<select name="type" id="type">
+					<option value="">1</option>
+					<option value="">2</option>
+					<option value="">3</option>
+				</select>
+				<label for="message">Message</label>
+				<textarea name="message" id="message" cols="60" rows="10"></textarea>
+			</fieldset>
+			<%= submit_tag "Send", :id => "submit", :name => "submit", :class => "button", :disabled => false, :disable_with => "Sending..." %>
+		</form>
+	</div>
+	<div class="box twothird dark-green" id="thankyou">
+		<h4>Thank you!</h4>
+		<p>We'll answer soon.</p>
+	</div>
+</section>

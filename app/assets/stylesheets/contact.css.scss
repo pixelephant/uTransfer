@@ -1,0 +1,25 @@
+@import '_mixins.css.scss';
+@import '_form.css.scss';
+
+label{
+	color:white;
+}
+
+input[type="text"],input[type="email"]{
+	margin-bottom:20px;
+	background:#bfb6de;
+	width:200px;
+	@include transition-03s;
+}
+
+textarea{
+	margin-bottom:20px;
+	background:#bfb6de;
+	@include transition-03s;
+}
+
+textarea,input[type="text"],input[type="email"]{
+	&:focus{
+		background:white;
+	}
+}

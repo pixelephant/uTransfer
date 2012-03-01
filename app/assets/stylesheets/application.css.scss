@@ -21,6 +21,19 @@ html,body{
 	font-family:Arial;
 }
 
+em{
+	font-style:italic;
+}
+
+strong{
+	font-weight:bold;
+}
+
+abbr{
+	border-bottom:1px dotted;
+	cursor:help;
+}
+
 #main-header{
 	width:100%;
 }
@@ -303,6 +316,15 @@ html,body{
 		}
 		p{
 			color:black;
+		}
+	}
+	
+	&.white-purple{
+		h3,h4,h5,ul,strong{
+			color:$brand-purple;
+		}
+		p{
+			color:$brand-purple;
 		}
 	}
 	
