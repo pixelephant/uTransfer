@@ -6,7 +6,7 @@
 @import 'anythingslider.css';
 
 .anythingControls{
-	bottom:40px !important;
+	bottom:20px !important;
 }
 
 .start-stop{
@@ -15,10 +15,13 @@
 
 @import '_mixins.css.scss';
 
+div.anythingSlider{
+	padding-bottom:0;
+}
+
 #slider{
 	height:312px;
 	width:855px; /*955 a max két 40px nyíl + 2*10px margó*/
-	margin:0 auto;
 	.left{
 		float:left;
 	}
@@ -30,14 +33,15 @@
 		margin-top:60px;
 	}
 	li{
+		padding:10px;
 		a.button{
+			
 			@include cta-button;
 			float:right;
 		}
 		h2{
 			color:white;
 			font-size:28px;
-			margin:60px 0 20px 75px;
 			width:270px;
 		}
 		p{
@@ -45,7 +49,6 @@
 			font-size:13px;
 			color:white;
 			width:270px;
-			margin-left:75px;
 		}
 		img{
 			float:right;
@@ -59,6 +62,33 @@
 #testimonials-button{
 	display:block;
 	float:left;
+}
+
+#testimonial-box,#study-with-us-box,#partner-uni-box,#newsletter
+{
+	background-image: url(left_quote.png);
+	background-repeat: no-repeat;
+	background-position:255px 20px;
+	padding-right:50px;
+	width:235px;
+}
+
+#study-with-us-box{
+	background-image: url(book.png);
+}
+
+#partner-uni-box{
+	background-image: url(bookmark.png);
+}
+
+#newsletter{
+	background-image: url(mail.png);
+}
+
+#blog{
+	background-image: url(rss.png);
+	background-repeat: no-repeat;
+	background-position: 300px 20px;
 }
 
 .testimonial{
@@ -85,13 +115,12 @@
 	}
 }
 
-#partner-universities{
-	.button{
-		float:right;
-	}
-	.universities{
-		margin-top:40px;
-	}
+#view-all-uni{
+	float:right;
+}
+
+.universities{
+	margin-top:40px;
 }
 
 div#social-wrap{
@@ -157,9 +186,10 @@ div#social-wrap{
 		border:1px solid white;
 		background:#4A3B80;
 		color:white;
-		padding:4px 10px;
+		padding:6px 10px;
 		width:150px;
 		float:left;
+		@include border-radius(12px,12px,12px,12px);
 	}
 	input[type="submit"]{
 		border:none;

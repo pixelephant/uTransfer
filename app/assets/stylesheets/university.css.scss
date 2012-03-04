@@ -2,6 +2,10 @@
 @import 'anythingslider.css';
 @import '_mixins.css.scss';
 
+div.anythingControls{
+	display:none !important;
+}
+
 /* jQuery Countdown styles 1.5.11. */
 .hasCountdown {
 

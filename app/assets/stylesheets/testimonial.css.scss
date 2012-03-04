@@ -1,6 +1,10 @@
 @import 'anythingslider.css';
 @import '_mixins.css.scss';
 
+div.anythingControls{
+	display:none;
+}
+
 #testimonial-slider-wrap{
 	overflow:hidden;
 	width:100%;

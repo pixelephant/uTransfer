@@ -107,10 +107,10 @@ div.anythingSlider .forward:active{
 div.anythingSlider .arrow a span { display: block; visibility: hidden; }
 
 
-div.anythingSlider .back { left: 0; background:url(left.png) no-repeat center white;}
+div.anythingSlider .back { left: 0; background:url(left.png) no-repeat center;}
 div.anythingSlider .back.disabled,div.anythingSlider .forward.disabled  { display: none; } /* disabled arrows, hide or reduce opacity: opacity: .5; filter: alpha(opacity=50); */
 
-div.anythingSlider .forward { right: 0; background:url(right.png) no-repeat center white;}
+div.anythingSlider .forward { right: 0; background:url(right.png) no-repeat center;}
 
 
 /* Navigation Links */

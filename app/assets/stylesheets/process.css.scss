@@ -4,7 +4,8 @@
 .step{
 	margin:0 5px;
 	padding:20px;
-	width:417px;
+	padding-right:80px;
+	width:357px;
 	float:left;
 	.num{
 		display:block;
@@ -30,6 +31,8 @@
 		.num{
 			background:$brand-purple;
 		}
+		
+		background:url(process_application.png) no-repeat right center;
 	}
 	&.second{
 		margin-top:40px;
@@ -37,6 +40,7 @@
 		.num{
 			background:#834690;
 		}
+		background:url(process_quotation.png) no-repeat right center;
 	}
 	&.third{
 		margin-top:40px;
@@ -44,20 +48,23 @@
 		.num{
 			background:#984564;
 		}	
+		background:url(process_choosing.png) no-repeat right center;
 	}
 	&.fourth{
 		margin-top:60px;
 		color:#96784c;
 		.num{
 			background:#96784c;
-		}	
+		}
+		background:url(process_application.png) no-repeat right center;
 	}
 	&.fifth{
 		margin-top:40px;
 		color:#7b9450;
 		.num{
 			background:#7b9450;
-		}	
+		}
+		background:url(process_payment.png) no-repeat right center;			
 	}
 	&.sixth{
 		margin-top:60px;
@@ -65,13 +72,15 @@
 		.num{
 			background:#3d9551;
 		}	
+		background:url(process_ticket.png) no-repeat right center;
 	}
 	&.seventh{
 		margin-top:40px;
 		color:#3d958e;
 		.num{
 			background:#3d958e;
-		}	
+		}
+		background:url(process_visa.png) no-repeat right center;			
 	}
 	&.eighth{
 		margin-top:60px;		
@@ -79,12 +88,14 @@
 		.num{
 			background:#436991;
 		}	
+		background:url(process_arrival.png) no-repeat right center;
 	}
 	&.ninth{
 		margin-top:40px;		
 		color:$brand-purple;
 		.num{
 			background:$brand-purple;
-		}	
+		}
+		background:url(process_experience.png) no-repeat right center;			
 	}
 }

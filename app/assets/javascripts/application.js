@@ -22,4 +22,10 @@ $(document).ready(function(){
 		},1000,"easeOutBounce");
 		return false;
 	});
+	
+	$("#languages li").click(function(){
+		$("#current-language").removeClass().addClass($(this).attr("class"));
+		$("#current-language").trigger("click");
+	})
+	
 });

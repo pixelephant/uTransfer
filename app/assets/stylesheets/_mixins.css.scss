@@ -66,6 +66,14 @@ $brand-green: #84A219;
           transition: all 0.3s ease-out;
 }
 
+@mixin transition-03s-bg{
+	-webkit-transition: background 0.3s ease-out;  /* Saf3.2+, Chrome */
+     -moz-transition: background 0.3s ease-out;  /* FF4+ */
+      -ms-transition: background 0.3s ease-out;  /* IE10 */
+       -o-transition: background 0.3s ease-out;  /* Opera 10.5+ */
+          transition: background 0.3s ease-out;
+}
+
 @mixin box-shadow ($shadow-1,
   $shadow-2: false, $shadow-3: false,
   $shadow-4: false, $shadow-5: false,
@@ -108,7 +116,7 @@ $brand-green: #84A219;
   border:1px solid transparent;
   text-align: center;
   @include transition-03s;
-  &:hover, &.active {
+  &:hover, &.active, &:focus {
 	@include background-gradient(#73736A, #40403C);
 	@include border-radius(12px,12px,12px,12px);
     @include box-shadow(inset 0 1px 0 0 #f2f2f2);
@@ -132,6 +140,10 @@ $brand-green: #84A219;
 	padding:0 20px;
 	color:$color;
 	background:$background;
+	@include transition-03s;
+	&:hover,&:focus{
+		// TODO
+	}
 }
 
 .dark-green .button,.light-green .button{

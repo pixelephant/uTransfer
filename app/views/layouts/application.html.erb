@@ -21,17 +21,17 @@
 		<div id="language-inner" class="clearfix">
 			<p>Select your language</p>
 			<ul id="languages">
-				<li><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
+				<li class="en"><a href="#"><%= image_tag "flags/en.png", :title => "English" %> <span>Do you speak english?</span></a></li>
+				<li class="chn"><a href="#"><%= image_tag "flags/chn.png", :title => "Chinese" %> <span>你会说汉语吗？</span></a></li>
+				<li class="tur"><a href="#"><%= image_tag "flags/tur.png", :title => "Turkish" %> <span>Türkçe biliyor musun?</span></a></li>
+				<li class="ukr"><a href="#"><%= image_tag "flags/ukr.png", :title => "Ukranian" %> <span>Ви говорите по-українському?</span></a></li>
 			</ul>
-			<a href="#" id="current-language"><%= image_tag "language-arrow.png", :title => "title", :class => "class" %><span>Language</span></a>
+			<a class="en" href="#" id="current-language"><span>Language</span></a>
 		</div>
 	</section>
 	<section id="masthead" class="clearfix">
 		<div class="left">
-			<a id="logo" href="/"><%= image_tag "logo.png", :title => "uTransfer Hungary"%></a>
+			<a id="logo" href="/"><%= image_tag "logo-full.png", :title => "uTransfer Hungary"%></a>
 			<!-- aloldalakon h3,h4 és a téma lesz h1 h2 -->
 			<hgroup>
 				<h1>Hassle-free university transfer</h1>

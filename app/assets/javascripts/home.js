@@ -27,11 +27,9 @@ $(document).ready(function(){
 	$("#slider").anythingSlider({
 		appendControlsTo : ".anythingWindow",
 		buildStartStop: false,
-		resizeContents: false,
 		hashtags: false,
 		autoPlay: true,
 	    delay: 8000,
-		resizeContents: false,
 	    resumeDelay: 8000,
 	    animationTime: 500,
 	    onSlideComplete: function(slider) {
@@ -42,7 +40,7 @@ $(document).ready(function(){
 	}).anythingSliderFx({
 		'p' : ['fade'],
 	    'img' : [ 'fade' ],
-		'h3' : ['left']
+		'h2' : ['left']
 	  });;
 
 });

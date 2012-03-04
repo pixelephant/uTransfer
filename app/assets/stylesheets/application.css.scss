@@ -34,6 +34,10 @@ abbr{
 	cursor:help;
 }
 
+a,input[type='submit']{
+	cursor:pointer;
+}
+
 #main-header{
 	width:100%;
 }
@@ -43,13 +47,14 @@ abbr{
 	background:$background-gray;
 	padding:10px 0;
 	position:absolute;
-	top:-55px;
+	top:-112px;
 	border-bottom:1px solid $border-gray;
 	z-index:2;
 	p{
 		float:left;
 		font-style:italic;
 		color:#89897F;
+		margin-top:26px;
 	}
 }
 
@@ -64,11 +69,31 @@ abbr{
 	overflow:hidden;
 	list-style:none;
 	li {
+		opacity:0.7;
+		cursor:pointer;
 		float:left;
+		margin:0 20px;
+		a{
+			width:150px;
+			text-align:center;
+			display:block;
+			color:#89897F;
+			@include transition-03s;
+			&:hover{
+				color:black;
+			}
+			span{
+				display:block;
+				font-size:13px;
+				
+			}
+		}
 	}
 }
 
 #current-language{
+	background-repeat:no-repeat;
+	background-position:center;
 	img{
 		text-align:center;
 		line-height:30px;
@@ -78,9 +103,33 @@ abbr{
 		float:left;
 		padding:4px;
 	}
+	&.en{
+		background-image:url(flags/en-small.png);
+		&:hover{
+			background-image:url(flags/en-small-hover.png);
+		}
+	}
+	&.chn{
+		background-image:url(flags/chn-small.png);
+		&:hover{
+			background-image:url(flags/chn-small-hover.png);
+		}
+	}
+	&.tur{
+		background-image:url(flags/tur-small.png);
+		&:hover{
+			background-image:url(flags/tur-small-hover.png);
+		}
+	}
+	&.ukr{
+		background-image:url(flags/ukr-small.png);
+		&:hover{
+			background-image:url(flags/ukr-small-hover.png);
+		}
+	}
 	span{
 		margin-top:15px;
-		margin-left:5px;
+		margin-left:90px;
 		float:left;
 		background-color: transparent;
 	  	background-color: rgba(255, 255, 255, 0.6); 
@@ -95,6 +144,9 @@ abbr{
 	right:0;
 	bottom:-27px;
 	display:block;
+	&:hover{
+		text-decoration:underline;
+	}
 }
 
 #masthead{
@@ -121,9 +173,9 @@ abbr{
 }
 
 #logo{
+	height:150px;
 	img{
-		width:145px;
-		height:50px;	
+
 	}
 }
 
@@ -146,7 +198,7 @@ abbr{
 	box-shadow: -1px -8px 5px -4px rgba(0, 0, 0, 0.4);
 	@include transition-03s;
 	&:hover{
-		
+		//TODO
 	}
 	&:active{
 		box-shadow:none;
