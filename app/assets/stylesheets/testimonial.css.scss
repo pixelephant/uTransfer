@@ -1,8 +1,8 @@
 @import 'anythingslider.css';
 @import '_mixins.css.scss';
 
-div.anythingControls{
-	display:none;
+.anythingControls{
+	display:none !important;
 }
 
 #testimonial-slider-wrap{

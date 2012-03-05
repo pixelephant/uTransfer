@@ -31,16 +31,22 @@ $(document).ready(function(){
 		autoPlay: true,
 	    delay: 8000,
 	    resumeDelay: 8000,
-	    animationTime: 500,
+		autoplayDelayed: true,
+		pauseOnHover: true,
+		animationTime      : 0,
+        delayBeforeAnimate : 500,
 	    onSlideComplete: function(slider) {
 			$("#slider-outer").animate({
 				backgroundColor: get_random_color()
 			},500);
 		}
-	}).anythingSliderFx({
+	}).anythingSliderFx({ 
 		'p' : ['fade'],
-	    'img' : [ 'fade' ],
-		'h2' : ['left']
-	  });;
+	    'img' : [ 'bottom' ],
+		'h2' : ['left'],
+		'a' : ['fade']
+	  },{
+		stopRepeat : false
+	});;
 
 });
