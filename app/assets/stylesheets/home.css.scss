@@ -65,31 +65,34 @@ div.anythingSlider{
 	float:left;
 }
 
-#testimonial-box,#study-with-us-box,#partner-uni-box,#newsletter
+#testimonial-box
 {
-	background-image: url(left_quote.png);
-	background-repeat: no-repeat;
-	background-position:255px 20px;
+	@include dark-green-gradient(url(left_quote.png) no-repeat 250px 20px);
 	padding-right:50px;
 	width:235px;
 }
 
 #study-with-us-box{
-	background-image: url(book.png);
+	@include dark-green-gradient(url(book.png) no-repeat 250px 20px);
+	padding-right:50px;
+	width:235px;
 }
 
 #partner-uni-box{
-	background-image: url(bookmark.png);
+	background: url(bookmark.png) no-repeat 250px 20px;
+	padding-right:50px;
+	width:235px;
+	
 }
 
 #newsletter{
-	background-image: url(mail.png);
+	@include dark-purple-gradient(url(mail.png) no-repeat 250px 20px);
+	padding-right:50px;
+	width:235px;
 }
 
 #blog{
-	background-image: url(rss.png);
-	background-repeat: no-repeat;
-	background-position: 300px 20px;
+	@include light-green-gradient(url(rss.png) no-repeat 300px 20px);
 }
 
 .testimonial{
@@ -188,7 +191,7 @@ div#social-wrap{
 		background:#4A3B80;
 		color:white;
 		padding:6px 10px;
-		width:150px;
+		width:139px;
 		float:left;
 		@include border-radius(12px,12px,12px,12px);
 	}
@@ -196,10 +199,8 @@ div#social-wrap{
 		border:none;
 		padding:0;
 		margin:0;
-		@include cta-button;
+		@include submit;
 		float:left;
-		padding-left:5px;
-		padding-right:5px;
 		margin-left:15px;
 	}
 	
@@ -227,7 +228,7 @@ div#social-wrap{
 			margin:0;
 			color:white;
 			@include font-raleway;
-			font-size:18px;
+			font-size:21px;
 		}
 		p{
 			margin:0;
