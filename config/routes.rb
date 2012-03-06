@@ -1,5 +1,11 @@
 Utransfer::Application.routes.draw do
   
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  devise_for :users
+
+  resources :essentials
+
   root :to => 'home#index'
   
   # The priority is based upon order of creation:

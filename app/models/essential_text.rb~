@@ -1,0 +1,7 @@
+class EssentialText < ActiveRecord::Base
+	translates :title, :text
+
+	belongs_to :essential
+
+	has_many :essential_text_translation
+end

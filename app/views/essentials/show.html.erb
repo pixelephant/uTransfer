@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Topic:</b>
+  <%= @essential.topic %>
+</p>
+
+<p>
+  <b>Order:</b>
+  <%= @essential.order %>
+</p>
+
+
+<%= link_to 'Edit', edit_essential_path(@essential) %> |
+<%= link_to 'Back', essentials_path %>

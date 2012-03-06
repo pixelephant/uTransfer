@@ -1,0 +1,25 @@
+<%= form_for(@essential) do |f| %>
+  <% if @essential.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@essential.errors.count, "error") %> prohibited this essential from being saved:</h2>
+
+      <ul>
+      <% @essential.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :topic %><br />
+    <%= f.text_field :topic %>
+  </div>
+  <div class="field">
+    <%= f.label :order %><br />
+    <%= f.number_field :order %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

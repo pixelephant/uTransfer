@@ -7,6 +7,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.easing
+//= require ckeditor/init
 
 $(document).ready(function(){
 	var language_top = parseInt($("#language-selector").css("top"));
@@ -22,10 +23,10 @@ $(document).ready(function(){
 		},1000,"easeOutBounce");
 		return false;
 	});
-	
+
 	$("#languages li").click(function(){
 		$("#current-language").removeClass().addClass($(this).attr("class"));
 		$("#current-language").trigger("click");
 	})
-	
+
 });

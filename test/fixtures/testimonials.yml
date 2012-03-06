@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  quote: MyText
+  about: MyText
+  university_id: 1
+  faculty_id: 1
+  how: MyText
+  image_file: MyString
+  icon: MyString
+  index_page: false
+  default_for: MyString
+
+two:
+  name: MyString
+  quote: MyText
+  about: MyText
+  university_id: 1
+  faculty_id: 1
+  how: MyText
+  image_file: MyString
+  icon: MyString
+  index_page: false
+  default_for: MyString

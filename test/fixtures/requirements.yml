@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  text: MyText
+  tution_fee: MyText
+  university_id: 1
+  level: MyString
+
+two:
+  text: MyText
+  tution_fee: MyText
+  university_id: 1
+  level: MyString
