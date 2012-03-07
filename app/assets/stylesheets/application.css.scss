@@ -53,7 +53,7 @@ a,input[type='submit']{
 	p{
 		float:left;
 		font-style:italic;
-		color:#89897F;
+		color:$brand-purple;
 		margin-top:26px;
 	}
 }
@@ -181,29 +181,35 @@ a,input[type='submit']{
 
 #offer{
 	float:right;
-	@include orange-gradient;
-	text-decoration:none;
-	color:white;
-	padding:25px 20px;
-	margin-top:65px;
-	width:160px;
-	height:50px;
-	@include font-raleway;
-	font-size:22px;
-	line-height:1;
-	position:relative;
-	z-index:1; 
-	@include transition-03s;
-	&:hover{
-		@include orange-gradient-hover;
-	}
-	&:active{
-		box-shadow:none;
-	}
-	strong{
+	background:url(offer-shadow.png) no-repeat left 65px;
+	a{
+		margin-left:6px;
 		display:block;
-		font-family:Arial;
-		font-weight:bold;
+		@include orange-gradient;
+		text-decoration:none;
+		color:white;
+		padding:25px 20px;
+		margin-top:65px;
+		width:160px;
+		height:50px;
+		@include font-raleway;
+		font-size:22px;
+		line-height:1;
+		position:relative;
+		z-index:1; 
+		@include transition-03s;
+		&:hover{
+			@include orange-gradient-hover;
+		}
+		&:active{
+			margin-left:0;
+		}
+		strong{
+			display:block;
+			font-family:Arial;
+			font-weight:bold;
+		}
+		
 	}
 }
 

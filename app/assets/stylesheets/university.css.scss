@@ -77,13 +77,13 @@ div.anythingControls{
 		}
 	}
 	ul{
-		height:140px;
+		height:160px;
 		width:855px; /*955 a max két 40px nyíl + 2*10px margó*/
 	}
 	li{
 		@include clearfix;
 		width:960px;
-		height:150px;
+		height:160px;
 		a{
 			width:240;
 			display:block;
@@ -124,7 +124,7 @@ div.anythingControls{
 }
 
 #counter{
-	height:386px;
+	height:397px;
 }
 
 #counter .button{

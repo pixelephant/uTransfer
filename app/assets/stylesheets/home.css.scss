@@ -35,8 +35,9 @@ div.anythingSlider{
 	li{
 		padding:10px;
 		a.button{
-			
-			@include cta-button;
+			text-decoration:none;
+			@include submit;
+			font-size:16px;
 			float:right;
 		}
 		h2{
@@ -70,25 +71,28 @@ div.anythingSlider{
 	@include dark-green-gradient(url(left_quote.png) no-repeat 250px 20px);
 	padding-right:50px;
 	width:235px;
+	height:245px;
 }
 
 #study-with-us-box{
 	@include dark-green-gradient(url(book.png) no-repeat 250px 20px);
 	padding-right:50px;
 	width:235px;
+	height:216px;
 }
 
 #partner-uni-box{
 	background: url(bookmark.png) no-repeat 250px 20px;
 	padding-right:50px;
 	width:235px;
-	
+	height:134px;
 }
 
 #newsletter{
 	@include dark-purple-gradient(url(mail.png) no-repeat 250px 20px);
 	padding-right:50px;
 	width:235px;
+	height:230px;
 }
 
 #blog{
@@ -124,7 +128,7 @@ div.anythingSlider{
 }
 
 .universities{
-	margin-top:40px;
+	margin-top:110px;
 }
 
 div#social-wrap{
@@ -145,6 +149,7 @@ div#social-wrap{
 	background:#009DD3;
 	float:left;
 	margin-right:10px;
+	height:165px
 }
 
 #facebook-box{
@@ -159,20 +164,21 @@ div#social-wrap{
 	width:107.5px;
 	background:#324C92;
 	float:left;
+	height:165px
 }
 
 ::-webkit-input-placeholder {
-   color: white;
-   opacity:0.8;
+   color: #4A3B80;
+   opacity:0.9;
 }
 
 :-moz-placeholder {
-	color: white;
-    opacity:0.8;
+	color: #4A3B80;
+    opacity:0.9;
 }
 
 #newsletter{
-	height:200px;
+	height:230px;
 	width:305px;
 	padding:0;
 	position:relative;
@@ -188,8 +194,8 @@ div#social-wrap{
 	left:0px;
 	input[type="email"]{
 		border:1px solid white;
-		background:#4A3B80;
-		color:white;
+		background:white;
+		color:#4A3B80;
 		padding:6px 10px;
 		width:139px;
 		float:left;
