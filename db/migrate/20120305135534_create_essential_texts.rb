@@ -7,11 +7,11 @@ class CreateEssentialTexts < ActiveRecord::Migration
 
       t.timestamps
     end
-		EssentialTexts.create_translation_table! :title => :string, :text => :text
+		EssentialText.create_translation_table! :title => :string, :text => :text
   end
 
 	def down
 		drop_table :essential_texts
-		EssentialTexts.drop_translation_table!
+		EssentialText.drop_translation_table!
 	end
 end
