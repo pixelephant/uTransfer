@@ -1,11 +1,11 @@
 class CreateTextBlocks < ActiveRecord::Migration
   def up
     create_table :text_blocks do |t|
-      t.string :title
-      t.text :text
+      t.string :title, :null => false
+      t.text :text, :null => false
       t.string :visual
       t.string :link
-      t.integer :position
+      t.integer :position, :null => false
 
       t.timestamps
     end

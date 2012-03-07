@@ -7,4 +7,6 @@ class Essential < ActiveRecord::Base
 	accepts_nested_attributes_for :essential_translations
 
 	default_scope :order => 'position ASC'
+
+	validates :topic, :position, :presence => true
 end

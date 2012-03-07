@@ -1,15 +1,15 @@
 class CreateTestimonials < ActiveRecord::Migration
   def up
     create_table :testimonials do |t|
-      t.string :name
-      t.text :quote
-      t.text :about
-      t.integer :university_id
-      t.integer :faculty_id
-      t.text :how
-      t.string :image_file
+      t.string :name, :null => false
+      t.text :quote, :null => false
+      t.text :about, :null => false
+      t.integer :university_id, :null => false
+      t.integer :faculty_id, :null => false
+      t.text :how, :null => false
+      t.string :image_file, :null => false
       t.string :icon
-      t.boolean :index_page
+      t.boolean :index_page, :null => false, :default => false
       t.string :default_for
 
       t.timestamps

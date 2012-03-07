@@ -1,5 +1,9 @@
 RailsAdmin.config do |config|
-  config.included_models = [Essential, EssentialTranslation, EssentialText, EssentialTextTranslation, University, UniversityTranslation, Faculty, FacultyTranslation, FamousGraduate, FamousGraduateTranslation, Requirement, RequirementTranslation, ProcessFlow, ProcessFlowTranslation, TextBlock, TextBlockTranslation, Testimonial, TestimonialTranslation]
+  config.included_models = [Essential, EssentialTranslation, EssentialText, EssentialTextTranslation, University, UniversityTranslation, Faculty, FacultyTranslation, FamousGraduate, FamousGraduateTranslation, Requirement, RequirementTranslation, ProcessFlow, ProcessFlowTranslation, TextBlock, TextBlockTranslation, Testimonial, TestimonialTranslation, Media, RelatedIndustry, RelatedInstitution]
+
+	config.model Essential do
+		object_label_method :essential_label
+	end
 
 	config.model EssentialTranslation do
     edit do
@@ -25,8 +29,28 @@ RailsAdmin.config do |config|
     end
   end
 
-	config.model UniversityTranslation do
+	config.model University do
+    edit do
+      include_all_fields
+      field :description do
+        ckeditor true
+      end
+      field :campus do
+        ckeditor true
+      end
+    end
+  end
 
+	config.model UniversityTranslation do
+    edit do
+      include_all_fields
+      field :description do
+        ckeditor true
+      end
+      field :campus do
+        ckeditor true
+      end
+    end
   end
 
 
@@ -63,10 +87,43 @@ RailsAdmin.config do |config|
     end
   end
 
+	config.model ProcessFlow do
+    edit do
+      include_all_fields
+      field :text do
+        ckeditor true
+      end
+    end
+  end
+
+	config.model TextBlock do
+    edit do
+      include_all_fields
+      field :text do
+        ckeditor true
+      end
+    end
+  end
+
 	config.model TextBlockTranslation do
     edit do
       include_all_fields
       field :text do
+        ckeditor true
+      end
+    end
+  end
+
+	config.model Testimonial do
+    edit do
+      include_all_fields
+      field :quote do
+        ckeditor true
+      end
+			field :about do
+        ckeditor true
+      end
+			field :how do
         ckeditor true
       end
     end
@@ -82,7 +139,31 @@ RailsAdmin.config do |config|
 			field :how do
         ckeditor true
       end
+			field :quote do
+        ckeditor true
+      end
     end
   end
+
+	config.model Requirement do
+    edit do
+      include_all_fields
+      field :tution_fee do
+        ckeditor true
+      end
+			field :text do
+        ckeditor true
+      end
+    end
+		object_label_method :requirement_label
+  end
+
+	def essential_label
+		self.topic
+	end
+
+	def requirement_label
+		self.university.name + " - " + self.level
+	end
 
 end
