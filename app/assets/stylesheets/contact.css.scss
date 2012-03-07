@@ -23,3 +23,8 @@ textarea,input[type="text"],input[type="email"]{
 		background:white;
 	}
 }
+
+
+input[type="submit"]{
+	@include submit;
+}

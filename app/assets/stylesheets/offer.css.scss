@@ -33,3 +33,14 @@
 .uni-no,.uni-yes{
 	display:none;
 }
+
+
+
+input[type="submit"]{
+	@include submit;
+}
+
+.submit{
+	border-top:1px dotted #BABABA;
+	padding-top:20px;
+}
