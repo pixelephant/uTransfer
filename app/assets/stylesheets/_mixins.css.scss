@@ -24,38 +24,64 @@ $brand-green: #84A219;
   border-radius: $tl $tr $br $bl;
 }
 
-@mixin background-gradient($startColor: #3C3C3C, $endColor: #999999) {
-    background-color: $startColor;
-    background-image: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
-    background-image: -webkit-linear-gradient(top, $startColor, $endColor);
-    background-image:    -moz-linear-gradient(top, $startColor, $endColor);
-    background-image:     -ms-linear-gradient(top, $startColor, $endColor);
-    background-image:      -o-linear-gradient(top, $startColor, $endColor);
-    background-image:         linear-gradient(top, $startColor, $endColor);
+@mixin background-gradient($startColor: #3C3C3C, $endColor: #999999, $image: none) {
+    background: $startColor;
+    background: $image, -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+    background: $image, -webkit-linear-gradient(top, $startColor, $endColor);
+    background: $image,   -moz-linear-gradient(top, $startColor, $endColor);
+    background: $image,    -ms-linear-gradient(top, $startColor, $endColor);
+    background: $image,     -o-linear-gradient(top, $startColor, $endColor);
+    background: $image,        linear-gradient(top, $startColor, $endColor);
     filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr=$startColor, EndColorStr=$endColor);
 }
 
-@mixin dark-green-gradient{
-	@include background-gradient(#84A219,#92B41C);
+@mixin dark-green-gradient($image: none){
+	@include background-gradient(#84A219,#92B41C,$image);
 }
 
-@mixin dark-purple-gradient{
-	@include background-gradient(#5E4DA5,#493B80);
+@mixin dark-purple-gradient($image: none){
+	@include background-gradient(#5E4DA5,#493B80,$image);
 }
 
 
-@mixin light-green-gradient{
-	@include background-gradient(#9DBB31,#90AB2F);
+@mixin light-green-gradient($image: none){
+	@include background-gradient(#9DBB31,#90AB2F,$image);
 }
 
-@mixin orange-gradient{
-	@include background-gradient(#f25d23,#dd5520);
+@mixin orange-gradient($image: none){
+	@include background-gradient(#f25d23,#dd5520,$image);
 }
 
-@mixin orange-gradient-inverse{
-		@include background-gradient(#dd5520,#f25d23);
+@mixin orange-gradient-hover($image: none){
+	@include background-gradient(#ec7f36,#dd5520,$image);
 }
 
+
+@mixin submit{
+		font-size: 12px;
+		color: #554595;
+		padding: 8px 16px;
+		@include border-radius(20px,20px,20px,20px);
+		@include background-gradient(#fff,#e0e0e0);
+		
+		border: 0px solid #171717;
+		-moz-box-shadow:
+			1px 1px 3px rgba(000,000,000,0.2),
+			inset 0px -1px 3px rgba(087,087,087,0.7);
+		-webkit-box-shadow:
+			1px 1px 3px rgba(000,000,000,0.2),
+			inset 0px -1px 3px rgba(087,087,087,0.7);
+		text-shadow:
+			0px -1px 0px rgba(000,000,000,0.4),
+			0px 1px 0px rgba(255,255,255,0.3);
+			
+		&:hover,&:focus{
+			//TODO
+		}
+		&:active{
+			//TODO
+		}
+}
 
 
 @mixin transition-03s{
@@ -90,20 +116,14 @@ $brand-green: #84A219;
           box-shadow: $full;
 }
 
-@font-face {
-	font-family: 'Raleway';
-	src: url('raleway_thin-webfont.eot?#iefix') format('embedded-opentype'), 
-	     url('raleway_thin-webfont.woff') format('woff'), 
-	     url('raleway_thin-webfont.ttf')  format('truetype'),
-	     url('raleway_thin-webfont.svg#svgFontName') format('svg');
-	}
-
 @mixin font-helvetica{
 	font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
 @mixin font-raleway{
-  font-family: "Raleway",Arial,sans-serif;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight:300;
+
 }
 
 @mixin cupid-black {
@@ -112,14 +132,12 @@ $brand-green: #84A219;
   font-size:18px;
   padding:0 10px; 
   height:32px;
-  line-height:36px;
+  line-height:30px;
   border:1px solid transparent;
   text-align: center;
-  @include transition-03s;
   &:hover, &.active, &:focus {
 	@include background-gradient(#73736A, #40403C);
-	@include border-radius(12px,12px,12px,12px);
-    @include box-shadow(inset 0 1px 0 0 #f2f2f2);
+	@include border-radius(20px,20px,20px,20px);
 	border: 1px solid #333;
     color: white;
     cursor: pointer;
@@ -136,26 +154,40 @@ $brand-green: #84A219;
 	font-size:13px;
 	height:30px;
 	line-height:30px;
-	@include border-radius(12px,12px,12px,12px);
+	@include border-radius(20px,20px,20px,20px);
 	padding:0 20px;
 	color:$color;
 	background:$background;
 	@include transition-03s;
 	&:hover,&:focus{
-		// TODO
+		box-shadow: inset 1px 1px 9px -1px #242b07;
 	}
 }
 
 .dark-green .button,.light-green .button{
 	@include cta-button(#fff,#748E15);
 	border:1px solid #637811;
+	&:hover,&:focus{
+		color:#eee;
+	}
+
 }
 
 .dark-purple .button, .light-purple .button{
-	@include cta-button(#fff,#1E174D);
-	border:1px solid #000;
+	@include cta-button(#fff,#24195e);
+	border:1px solid #24195e;
+	&:hover,&:focus{
+		color:#eee;
+		box-shadow: inset 1px 1px 9px -1px #000;
+	}
 }
 
 .white .button,.gray .button{
 	@include cta-button(#fff,$brand-purple);
+	border:1px solid #24195e;
+	&:hover,&:focus{
+		color:#eee;
+		box-shadow: inset 1px 1px 9px -1px #000;
+	}
+	
 }

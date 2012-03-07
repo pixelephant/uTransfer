@@ -11,10 +11,8 @@ $(document).ready(function(){
 		buildStartStop: false,
 		buildNavigation: false,
 		hashtags: false,
-		autoPlay: true,
 	    delay: 8000,
 	    resumeDelay: 8000,
-	    animationTime: 500,
 	    onSlideComplete: function(slider) {
 			
 		}
