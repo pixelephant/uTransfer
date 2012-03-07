@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120307104413) do
+ActiveRecord::Schema.define(:version => 20120307120646) do
 
   create_table "essential_text_translations", :force => true do |t|
     t.integer  "essential_text_id"
@@ -135,6 +135,13 @@ ActiveRecord::Schema.define(:version => 20120307104413) do
   create_table "related_industries", :force => true do |t|
     t.string   "name"
     t.string   "image_file"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "related_industries_universities", :force => true do |t|
+    t.integer  "university_id"
+    t.integer  "related_industry_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
