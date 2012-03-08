@@ -16,4 +16,8 @@ class TextBlock < ActiveRecord::Base
     I18n.available_locales
   end
 
+	def visual_enum
+    {:one_col => 1, :two_col => 2, :with_pic => 3}
+  end
+
 end

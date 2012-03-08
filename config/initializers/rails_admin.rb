@@ -1,5 +1,5 @@
 RailsAdmin.config do |config|
-  config.included_models = [Essential, EssentialTranslation, EssentialText, EssentialTextTranslation, University, UniversityTranslation, Faculty, FacultyTranslation, FamousGraduate, FamousGraduateTranslation, Requirement, RequirementTranslation, ProcessFlow, ProcessFlowTranslation, TextBlock, TextBlockTranslation, Testimonial, TestimonialTranslation, Media, RelatedIndustry, RelatedInstitution]
+  config.included_models = [Essential, EssentialTranslation, EssentialText, EssentialTextTranslation, University, UniversityTranslation, Faculty, FacultyTranslation, FamousGraduate, FamousGraduateTranslation, Requirement, RequirementTranslation, ProcessFlow, ProcessFlowTranslation, TextBlock, TextBlockTranslation, Testimonial, TestimonialTranslation, Media, RelatedIndustry, RelatedInstitution, Personal, LivingCost]
 
 	config.model Essential do
 		object_label_method :essential_label

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120307120646) do
+ActiveRecord::Schema.define(:version => 20120308121919) do
 
   create_table "essential_text_translations", :force => true do |t|
     t.integer  "essential_text_id"
@@ -91,10 +91,37 @@ ActiveRecord::Schema.define(:version => 20120307120646) do
     t.datetime "updated_at"
   end
 
+  create_table "living_costs", :force => true do |t|
+    t.string   "title",       :null => false
+    t.text     "description", :null => false
+    t.text     "city1",       :null => false
+    t.text     "city2",       :null => false
+    t.text     "city3",       :null => false
+    t.text     "city4",       :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "media", :force => true do |t|
     t.integer  "text_block_id"
     t.string   "image_file"
     t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "personals", :force => true do |t|
+    t.string   "first_name",    :null => false
+    t.string   "last_name",     :null => false
+    t.string   "gender",        :null => false
+    t.string   "country",       :null => false
+    t.integer  "birth_year",    :null => false
+    t.string   "phone",         :null => false
+    t.string   "email",         :null => false
+    t.text     "message"
+    t.integer  "university_id"
+    t.integer  "faculty_id"
+    t.text     "apply_to"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
