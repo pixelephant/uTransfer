@@ -17,7 +17,7 @@ class TextBlock < ActiveRecord::Base
   end
 
 	def visual_enum
-    {:one_col => 1, :two_col => 2, :with_pic => 3}
+    {:one_col => 1, :two_col => 2, :with_pic => 3, :pic_only => 4}
   end
 
 end

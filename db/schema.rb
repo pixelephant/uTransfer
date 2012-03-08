@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120308121919) do
+ActiveRecord::Schema.define(:version => 20120308123734) do
 
   create_table "essential_text_translations", :force => true do |t|
     t.integer  "essential_text_id"
@@ -87,6 +87,28 @@ ActiveRecord::Schema.define(:version => 20120308121919) do
     t.string   "title"
     t.string   "image_file"
     t.integer  "university_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "index_content_translations", :force => true do |t|
+    t.integer  "index_content_id"
+    t.string   "locale"
+    t.text     "intro"
+    t.text     "basic_info"
+    t.text     "famous_person_quote"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "index_content_translations", ["index_content_id"], :name => "index_75f11df5d215168188da0fd0cdb9228176947ccd"
+  add_index "index_content_translations", ["locale"], :name => "index_index_content_translations_on_locale"
+
+  create_table "index_contents", :force => true do |t|
+    t.text     "intro",               :null => false
+    t.text     "basic_info",          :null => false
+    t.string   "famous_person_image", :null => false
+    t.text     "famous_person_quote", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

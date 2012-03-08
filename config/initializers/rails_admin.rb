@@ -1,5 +1,5 @@
 RailsAdmin.config do |config|
-  config.included_models = [Essential, EssentialTranslation, EssentialText, EssentialTextTranslation, University, UniversityTranslation, Faculty, FacultyTranslation, FamousGraduate, FamousGraduateTranslation, Requirement, RequirementTranslation, ProcessFlow, ProcessFlowTranslation, TextBlock, TextBlockTranslation, Testimonial, TestimonialTranslation, Media, RelatedIndustry, RelatedInstitution, Personal, LivingCost]
+  config.included_models = [Essential, EssentialTranslation, EssentialText, EssentialTextTranslation, University, UniversityTranslation, Faculty, FacultyTranslation, FamousGraduate, FamousGraduateTranslation, Requirement, RequirementTranslation, ProcessFlow, ProcessFlowTranslation, TextBlock, TextBlockTranslation, Testimonial, TestimonialTranslation, Media, RelatedIndustry, RelatedInstitution, Personal, LivingCost, IndexContent, IndexContentTranslation ]
 
 	config.model Essential do
 		object_label_method :essential_label
@@ -156,6 +156,36 @@ RailsAdmin.config do |config|
       end
     end
 		object_label_method :requirement_label
+  end
+
+	config.model IndexContent do
+    edit do
+      include_all_fields
+      field :intro do
+        ckeditor true
+      end
+			field :basic_info do
+        ckeditor true
+      end
+			field :famous_person_quote do
+        ckeditor true
+      end
+    end
+  end
+
+	config.model IndexContentTranslation do
+    edit do
+      include_all_fields
+      field :intro do
+        ckeditor true
+      end
+			field :basic_info do
+        ckeditor true
+      end
+			field :famous_person_quote do
+        ckeditor true
+      end
+    end
   end
 
 	def essential_label
