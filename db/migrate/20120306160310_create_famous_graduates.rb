@@ -1,10 +1,10 @@
 class CreateFamousGraduates < ActiveRecord::Migration
   def up
     create_table :famous_graduates do |t|
-      t.string :name
-      t.string :title
+      t.string :name, :null => false
+      t.string :title, :null => false
       t.string :image_file
-      t.integer :university_id
+      t.integer :university_id, :null => false
 
       t.timestamps
     end

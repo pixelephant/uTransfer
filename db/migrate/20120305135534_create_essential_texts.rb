@@ -1,9 +1,9 @@
 class CreateEssentialTexts < ActiveRecord::Migration
   def up
     create_table :essential_texts do |t|
-      t.integer :essential_id
-      t.string :title
-      t.text :text
+      t.integer :essential_id, :null => false
+      t.string :title, :null => false
+      t.text :text, :null => false
 
       t.timestamps
     end

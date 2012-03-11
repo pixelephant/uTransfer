@@ -1,8 +1,8 @@
 class CreateEssentials < ActiveRecord::Migration
   def up
     create_table :essentials do |t|
-      t.string :topic
-      t.integer :position
+      t.string :topic, :null => false
+      t.integer :position, :null => false
 
       t.timestamps
     end

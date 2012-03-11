@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  intro: MyText
+  basic_info: MyText
+  famous_person_image: MyString
+  famous_person_quote: MyText
+
+two:
+  intro: MyText
+  basic_info: MyText
+  famous_person_image: MyString
+  famous_person_quote: MyText

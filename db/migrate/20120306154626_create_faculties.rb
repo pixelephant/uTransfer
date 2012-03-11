@@ -1,9 +1,9 @@
 class CreateFaculties < ActiveRecord::Migration
   def up
     create_table :faculties do |t|
-      t.string :name
-      t.text :desc
-      t.integer :university_id
+      t.string :name, :null => false
+      t.text :desc, :null => false
+      t.integer :university_id, :null => false
 
       t.timestamps
     end
