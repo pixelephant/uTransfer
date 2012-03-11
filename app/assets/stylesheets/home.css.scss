@@ -19,8 +19,15 @@ div.anythingSlider{
 	padding-bottom:0;
 }
 
+#slider-outer{
+	overflow:hidden;
+	width:100%;
+	height:240px;
+	padding-top:20px;
+}
+
 #slider{
-	height:312px;
+	height:240px;
 	width:855px; /*955 a max két 40px nyíl + 2*10px margó*/
 	.left{
 		float:left;
@@ -33,7 +40,8 @@ div.anythingSlider{
 		margin-top:60px;
 	}
 	li{
-		padding:10px;
+		height:260px;
+		padding:20px;
 		a.button{
 			text-decoration:none;
 			@include submit;
@@ -71,14 +79,14 @@ div.anythingSlider{
 	@include dark-green-gradient(url(left_quote.png) no-repeat 250px 20px);
 	padding-right:50px;
 	width:235px;
-	height:245px;
+	height:238px;
 }
 
 #study-with-us-box{
 	@include dark-green-gradient(url(book.png) no-repeat 250px 20px);
 	padding-right:50px;
 	width:235px;
-	height:216px;
+	height:190px;
 }
 
 #partner-uni-box{
@@ -141,6 +149,7 @@ div#social-wrap{
 		color:white;
 		font-size:28px;
 		margin-top:0;
+		margin-bottom:40px;
 	}
 	margin-left:5px;
 	margin-top:5px;
@@ -149,7 +158,7 @@ div#social-wrap{
 	background:#009DD3;
 	float:left;
 	margin-right:10px;
-	height:165px
+	height:158px
 }
 
 #facebook-box{
@@ -158,13 +167,14 @@ div#social-wrap{
 		font-size:28px;
 		margin-top:0;
 		line-height:1;
+		margin-bottom:40px;
 	}
 	margin-top:5px;
 	padding:20px;
 	width:107.5px;
 	background:#324C92;
 	float:left;
-	height:165px
+	height:158px
 }
 
 ::-webkit-input-placeholder {
@@ -197,6 +207,7 @@ div#social-wrap{
 		background:white;
 		color:#4A3B80;
 		padding:6px 10px;
+		font-size:12px;
 		width:139px;
 		float:left;
 		@include border-radius(12px,12px,12px,12px);
@@ -208,8 +219,18 @@ div#social-wrap{
 		@include submit;
 		float:left;
 		margin-left:15px;
+		margin-top:2px;
 	}
-	
+}
+
+
+.lt-ie9{
+	input[type="submit"]{
+		margin-top:0 !important;
+	}
+	input[type="email"]{
+		height:17px;
+	}
 }
 
 #blog{

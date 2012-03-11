@@ -28,3 +28,7 @@ textarea,input[type="text"],input[type="email"]{
 input[type="submit"]{
 	@include submit;
 }
+
+label.error{
+	margin-top:-15px;
+}

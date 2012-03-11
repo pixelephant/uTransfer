@@ -19,13 +19,14 @@
 		padding-left:15px;
 		margin:0px auto 20px auto;
 		color:$brand-purple;
+		font-size:30px;
 		.sub{
 			font-size:20px;
 			@include font-raleway;
 		}
 	}
 	ul{
-		height:250px;
+		height:215px;
 		width:855px; /*955 a max két 40px nyíl + 2*10px margó*/
 	}
 	li{
@@ -73,7 +74,7 @@
 #cite{
 	cite{
 		display:block;
-		background:url(qoutemark.png) no-repeat 300px 70px;
+		background:url(qoutemark.png) no-repeat 200px 70px;
 		@include font-raleway;
 		font-size:50px;
 		color:white;

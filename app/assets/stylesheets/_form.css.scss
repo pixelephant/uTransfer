@@ -32,10 +32,22 @@ fieldset{
 label,legend{
 	display:block;
 	color:$brand-purple;
-	margin-left:2px;
 	margin-right:5px;
 	margin-bottom:5px;
 	a{
 		color:$brand-green;
 	}
+}
+
+label.error{
+	color:red !important;
+	font-style:italic;
+	border:none;
+	font-size:12px;
+	margin-top:5px;
+	display:block !important;
+}
+
+.select-wrap{
+	margin-bottom:20px;
 }

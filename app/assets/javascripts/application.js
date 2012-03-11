@@ -4,10 +4,15 @@
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // the compiled file.
 //
+
+//= require modernizr
 //= require jquery
 //= require jquery_ujs
 //= require jquery.easing
-//= require ckeditor/init
+
+
+//  <- Ez mit keres itt? 
+//= require ckeditor/init 
 
 $(document).ready(function(){
 	var language_top = parseInt($("#language-selector").css("top"));

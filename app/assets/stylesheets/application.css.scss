@@ -5,13 +5,61 @@
  *= require_self
 */
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
 @import '_mixins.css.scss';
 
-
-
-.clearfix:before, .clearfix:after { content: ""; display: table; }
-.clearfix:after { clear: both; }
-.clearfix { *zoom: 1; }
+a img{
+	border:none; //buta explorer
+}
 
 html,body{
 	margin:0;
@@ -38,16 +86,13 @@ a,input[type='submit']{
 	cursor:pointer;
 }
 
-#main-header{
-	width:100%;
-}
-
 #language-selector{
 	width:100%;
 	background:$background-gray;
 	padding:10px 0;
 	position:absolute;
-	top:-112px;
+	top:-85px;
+	left:0px;
 	border-bottom:1px solid $border-gray;
 	z-index:2;
 	p{
@@ -62,6 +107,7 @@ a,input[type='submit']{
 	position:relative;
 	margin:0 auto;
 	width:980px;
+	padding:5px 0;
 }
 
 #languages{
@@ -150,24 +196,27 @@ a,input[type='submit']{
 }
 
 #masthead{
-	padding:45px 30px 0px 30px;
 	width:910px;
 	margin:0 auto;
+	padding:35px 30px 0px 30px;
+	overflow:hidden;
 	.left{
 		float:left;
 	}
 	hgroup{
+		margin-top:12px;
 		h1{
 			margin:0;
-			font-size:40px;
+			font-size:45px;
 			font-weight:bold;
 			color:#333333;
 		}
 		h2{
 			margin:0;
-			font-size:17px;
+			font-size:20px;
 			color:$brand-purple;
 			font-weight:normal;
+			margin-top:8px;
 		}
 	}
 }
@@ -219,6 +268,7 @@ a,input[type='submit']{
 	border-bottom:1px solid $border-gray;
 	height:40px;
 	padding-top:6px;
+	width:100%;
 	ul{
 		width:960px;
 		margin:0 auto;
@@ -253,15 +303,18 @@ a,input[type='submit']{
 		font-weight:bold;
 		font-size:28px;
 		margin-top:0;
+		margin-bottom:40px;
 	}
 	h4{
 		color:white;
 		margin-top:0;
 		@include font-raleway;
 		font-size:28px;
+		margin-bottom:40px;
 	}
 	h5{
 		color:white;
+		margin:20px 0;
 	}
 	p{
 		font-size:13px;
@@ -363,6 +416,14 @@ a,input[type='submit']{
 		p{
 			color:$brand-purple;
 		}
+		a{
+			color:#dd5520;
+			opacity:0.9;
+			@include transition-03s;
+			&:hover{
+				opacity:1;
+			}
+		}
 	}
 	
 	&.white{
@@ -446,6 +507,10 @@ p.left{
 	width:265px;
 }
 
+.twothird p.left{
+	margin-right:25px;
+}
+
 #main-footer{
 	background:#404040;
 	-webkit-box-shadow: inset 0px 0px 7px #000;
@@ -460,6 +525,7 @@ p.left{
 	width:970px;
 	margin:0 auto;
 	ul{
+		margin-top:20px;
 		float:left;
 		list-style:none;
 		padding-left:0;
@@ -469,8 +535,12 @@ p.left{
 		float:left;
 		margin: 0 5px;
 		a{
-			color:white;
+			color:#eee;
 			font-size:11px;
+			@include transition-03s;
+			&:hover{
+				color:#fff;
+			}
 		}
 	}
 }
@@ -480,12 +550,16 @@ p.left{
 	margin-right:5px;
 	a{
 		color:#bfbfbf !important;
+		@include transition-03s;
+		&:hover{
+			color:#fff !important;
+		}
 	}
 }
 
 #footer-logo{
 	float:left;
-	margin-left:5px;
+	margin-left:16px;
 	@include background-gradient(#84A219,#92B41C);
 	width:305px;
 	height:65px;

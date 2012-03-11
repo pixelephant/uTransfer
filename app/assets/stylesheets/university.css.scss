@@ -1,6 +1,7 @@
 
 @import 'anythingslider.css';
 @import '_mixins.css.scss';
+@import 'jquery.fancybox.css';
 
 div.anythingControls{
 	display:none !important;
@@ -50,7 +51,7 @@ div.anythingControls{
 	text-align: center;
 }
 .countdown_amount {
-	font-size: 200%;
+	font-size: 300%;
 }
 .countdown_descr {
 	display: block;
@@ -67,6 +68,7 @@ div.anythingControls{
 	-moz-box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
 	box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
 	h1{
+		font-size:30px;
 		width:945px;
 		padding-left:15px;
 		margin:0px auto 20px auto;
@@ -77,7 +79,7 @@ div.anythingControls{
 		}
 	}
 	ul{
-		height:160px;
+		height:135px;
 		width:855px; /*955 a max két 40px nyíl + 2*10px margó*/
 	}
 	li{
@@ -124,12 +126,15 @@ div.anythingControls{
 }
 
 #counter{
-	height:397px;
+	@include dark-purple-gradient(url(clock.png) no-repeat 250px 20px);
 }
 
 #counter .button{
-	float:right;
-	margin-top:20px;
+	@include submit;
+	margin:28px auto;
+	font-size:16px;
+	width:100px;
+	text-align:center;
 }
 
 #countdown{
@@ -139,12 +144,9 @@ div.anythingControls{
 #deadline{
 	text-align:center;
 	color:white;
-	margin-top:15px;
+	margin-top:28px;
 	display:block;
-}
-
-#campus{
-	height:225px;
+	font-style:italic;
 }
 
 #faculty-grid .box{
@@ -154,16 +156,20 @@ div.anythingControls{
 	.more-info{
 		display:none;
 	}
+	&.open{
+		position:absolute;
+		z-index:2;
+	}
 	&.open .more-info{
 		display:block;
 	}
 	a{
-		float:right;
+		position:absolute;
+		bottom:20px;
+		right:20px;
 	}
 	.close{
-		position:absolute;
-		top:20px;
-		right:20px;
+
 	}
 }
 
@@ -211,4 +217,22 @@ div.anythingControls{
 		font-size:19px;
 		margin:0;
 	}
+}
+
+
+
+
+/* COLUMN MÉRET IGAZÍTÁSOK */
+
+#bsc,#msc,#phd{
+	height:515px;
+}
+
+#counter{
+	height:353px;
+}
+
+
+#campus{
+	height:265px;
 }

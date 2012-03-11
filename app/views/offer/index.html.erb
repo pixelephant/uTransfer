@@ -4,21 +4,21 @@
 		<p>Please fill in this form so that we can give you a presonalized offer. Thanks :)</p>
 	</div>
 	<div class="box gray twothird">
-		<form action="#">
+		<form id="offer-form" action="#">
 			<h4>Personal data</h4>
 			
 			<fieldset>
 				<div class="half">
-					<label for="firstname">First name</label> <input type="text" name="firstname" id="firstname" />
+					<label for="firstname">First name</label> <input autofocus type="text" name="firstname" id="firstname" class="required" />
 				</div>
 				<div class="half">
-					<label for="lastname">Last name</label> <input type="text" name="lastname" id="lastname" />
+					<label for="lastname">Last name</label> <input type="text" name="lastname" id="lastname" class="required" />
 				</div>
 			</fieldset>
 			<fieldset id="gender" class="radio">
 				<legend>Gender</legend>
 				<div>
-					<label for="male">Male</label><input type="radio" name="gender" id="male" />
+					<label for="male">Male</label><input checked type="radio" name="gender" id="male" />
 					<label for="female">Female</label><input type="radio" name="gender" id="female" />
 				</div>
 			</fieldset>
@@ -39,7 +39,7 @@
 			</filedset>
 			<fieldset>
 				<label for="age">How old are you?</label>
-				<input type="number" name="age" id="age" value="18" />
+				<input type="number" name="age" id="age" value="18" class="required" />
 			</fieldset>
 		<!--	<fieldset id="place">
 				<legend>Place of birth</legend>
@@ -90,24 +90,24 @@
 				<div>
 					<div class="half">
 						<label for="phone-country">Country code</label>
-						<input type="text" name="phone-country" id="phone-country" />
+						<input type="text" name="phone-country" id="phone-country" class="required" />
 					</div>
 					<div class="half">
 						<label for="phone-number">Phone no.</label>
-						<input type="tel" name="phone-number" id="phone-number" />
+						<input type="tel" name="phone-number" id="phone-number" class="required" />
 					</div>
 				</div>
 			</fieldset>
 			<fieldset>
 				<label for="email">Email address</label>
-				<input type="email" name="email" id="email" />
+				<input type="email" name="email" id="email" class="required email" />
 			</fieldset>
 			<h4>Interests</h4>
 			<fieldset id="type" class="radio">
 				<legend>What form of education are you applying for?</legend>
 				<div>
 					<div class="half">
-						<label for="bsc">BSc</label><input type="radio" name="type" id="bsc" selected />
+						<label for="bsc">BSc</label><input type="radio" name="type" id="bsc" checked />
 					</div>
 					<div class="half">
 						<label for="msc">MSc</label><input type="radio" name="type" id="msc" />

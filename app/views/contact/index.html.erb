@@ -28,20 +28,22 @@
 	</div>
 	<div class="box twothird dark-purple">
 		<h3>Get in touch right now!</h3>
-		<form action="#">
+		<form id="contact-form" action="#">
 			<fieldset>
 				<label for="name">Name</label>
-				<input type="text" name="name" id="name" />
+				<input autofocus type="text" name="name" id="name" class="required" />
 				<label for="email">Email address</label>
-				<input type="email" name="email" id="email" />
-				<label for="type">Whatsup?</label>
-				<select name="type" id="type">
-					<option value="">1</option>
-					<option value="">2</option>
-					<option value="">3</option>
-				</select>
+				<input type="email" name="email" id="email" class="required email" />
+				<div class="select-wrap">
+					<label for="type">Whatsup?</label>
+					<select name="type" id="type">
+						<option value="">1</option>
+						<option value="">2</option>
+						<option value="">3</option>
+					</select>
+				</div>
 				<label for="message">Message</label>
-				<textarea name="message" id="message" cols="60" rows="10"></textarea>
+				<textarea class="required" name="message" id="message" cols="60" rows="10"></textarea>
 			</fieldset>
 			<%= submit_tag "Send", :id => "submit", :name => "submit", :disabled => false, :disable_with => "Sending..." %>
 		</form>
