@@ -18,6 +18,12 @@ $(document).ready(function(){
 		timeSeparator: ':', isRTL: false};
 	$.countdown.setDefaults($.countdown.regional['zh-CN']);*/
 	
+	$("#bsc a,#msc a,#phd a").click(function(){
+		console.log($($(this).attr("href")));
+		$('html,body').animate({scrollTop: $($(this).attr("href")).offset().top -10},'slow');
+	});
+	
+	
 	$("#university-slider").anythingSlider({
 		appendControlsTo : ".anythingWindow",
 		buildStartStop: false,
@@ -43,7 +49,7 @@ $(document).ready(function(){
 	$('#deadline span').text(austDay.getFullYear() + " " + austDay.getMonth() + 1 + " " + austDay.getDate());
 	
 	
-	$("#faculty-grid .box a.button").fancybox({
+	$(".more-link").fancybox({
 		openEffect : "elastic",
 		closeEffect : "elastic",
 		padding: 0,

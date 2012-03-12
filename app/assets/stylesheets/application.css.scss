@@ -39,7 +39,7 @@ body {
 	line-height: 1;
 }
 ol, ul {
-	list-style: none;
+	list-style: disc;
 }
 blockquote, q {
 	quotes: none;
@@ -418,10 +418,9 @@ a,input[type='submit']{
 		}
 		a{
 			color:#dd5520;
-			opacity:0.9;
 			@include transition-03s;
-			&:hover{
-				opacity:1;
+			&:hover,&:focus{
+				color:#FF8112;
 			}
 		}
 	}

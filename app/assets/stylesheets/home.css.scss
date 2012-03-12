@@ -76,7 +76,7 @@ div.anythingSlider{
 
 #testimonial-box
 {
-	@include dark-green-gradient(url(left_quote.png) no-repeat 250px 20px);
+	@include dark-green-gradient(url(qoutemark.png) no-repeat 250px 20px);
 	padding-right:50px;
 	width:235px;
 	height:238px;
@@ -115,8 +115,8 @@ div.anythingSlider{
 		float:right;
 	}
 	p{
-		background:url(qoutemark.png) no-repeat 133px 2px;
-		padding-top:12px;
+		background:url(qoutemark.png) no-repeat 120px 2px;
+		padding-top:32px;
 		font-size:13px;
 		float:left;
 		width:160px;

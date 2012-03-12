@@ -3,6 +3,10 @@
 @import '_mixins.css.scss';
 @import 'jquery.fancybox.css';
 
+p.full{
+	margin-top:10px;
+}
+
 div.anythingControls{
 	display:none !important;
 }
@@ -149,6 +153,10 @@ div.anythingControls{
 	font-style:italic;
 }
 
+#faculty-grid{
+
+}
+
 #faculty-grid .box{
 	overflow:hidden;
 	height:225px;
@@ -229,7 +237,7 @@ div.anythingControls{
 }
 
 #counter{
-	height:353px;
+	height:363px;
 }
 
 
