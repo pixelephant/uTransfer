@@ -5,7 +5,7 @@ set :project, 'utransfer'
 set :application, "utransfer.pixelephant.hu"
 set :applicationdir, "/home/#{user}/#{application}"  # The standard Dreamhost setup
 
-set :repository,  "git@github.com:pixelephant/uTransfer.git"
+set :repository,  "git://github.com/pixelephant/uTransfer.git"
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
