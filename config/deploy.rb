@@ -2,7 +2,7 @@ set :user, 'pixelephant'
 set :domain, 'vindemiatrix.dreamhost.com'
 set :project, 'utransfer'
 
-set :application, "rails.pixelephant.hu"
+set :application, "utransfer.pixelephant.hu"
 set :applicationdir, "/home/#{user}/#{application}"  # The standard Dreamhost setup
 
 set :repository,  "git://github.com/pixelephant/utransfer.git"
