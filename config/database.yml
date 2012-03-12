@@ -32,11 +32,11 @@ test:
   socket: /tmp/mysql.sock
 
 production:
-  adapter: mysql2
+  adapter: mysql
   encoding: utf8
   reconnect: false
   database: utransfer_production
   pool: 5
-  username: root
-  password:
-  socket: /tmp/mysql.sock
+  username: balazs_madearthome
+  password: tyeF2q
+  socket: mysql.rails.pixelephant.hu
