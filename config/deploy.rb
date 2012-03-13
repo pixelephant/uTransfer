@@ -12,7 +12,7 @@ set :scm, :git
 set :scm_username, 'pixelephant'
 set :scm_password, 'pix3l3phant'
 
-set :default_environment, { 'PATH' => "'/home/pixelephant/local/bin:/home/pixelephant/.gems/bin:/usr/lib/ruby/gems/1.8/bin/:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games'" }
+set :default_environment, { 'PATH' => "'/home/pixelephant/local/bin:/home/pixelephant/.gems/bin:/usr/lib/ruby/gems/1.8/bin/:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:/home/pixelephant/.gems/bin/rake'" }
 
 role :web, domain                          # Your HTTP server, Apache/etc
 role :app, domain                          # This may be the same as your `Web` server
