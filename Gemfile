@@ -30,7 +30,7 @@ gem 'devise'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 
-gem 'rmagick', "1.15.14"
+#gem 'rmagick'
 gem 'carrierwave'
 
 # To use ActiveModel has_secure_password
