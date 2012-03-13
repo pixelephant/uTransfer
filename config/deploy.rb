@@ -1,7 +1,7 @@
-require "bundler/capistrano"
+#require "bundler/capistrano"
 
 set :user, 'pixelephant'
-set :domain, 'vindemiatrix.dreamhost.com'
+
 set :project, 'utransfer'
 
 set :application, "utransfer.pixelephant.hu"
@@ -11,8 +11,7 @@ set :repository,  "git://github.com/pixelephant/uTransfer.git"
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
-set :scm_username, 'pixelephant'
-set :scm_password, 'pix3l3phant'
+
 
 set :default_environment, { 'PATH' => "'/home/pixelephant/local/bin:/home/pixelephant/.gems/bin:/usr/lib/ruby/gems/1.8/bin/:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11'" }
 
@@ -37,7 +36,7 @@ set :use_sudo, false
 # if you're still using the script/reapear helper you will need
 # these http://github.com/rails/irs_process_scripts
 namespace :deploy do
-#	task :bunlde_gems
+#	task :bundle_gems
 #		run "cd #{deploy_to}/current && bundle install vendor/gems"
 #	end
 	task :start do ; end
