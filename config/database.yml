@@ -37,6 +37,6 @@ production:
   reconnect: false
   database: utransfer_production
   pool: 5
-  username: balazs_madearthome
+  username: balazs_madeartho
   password: tyeF2q
   socket: mysql.rails.pixelephant.hu
