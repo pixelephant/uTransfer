@@ -1,3 +1,5 @@
+require "bundler/capistrano"
+
 set :user, 'pixelephant'
 set :domain, 'vindemiatrix.dreamhost.com'
 set :project, 'utransfer'
