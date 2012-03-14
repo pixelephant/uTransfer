@@ -363,7 +363,6 @@ a,input[type='submit']{
 	
 	&.image-quad{
 		padding:0;
-		height:305px;
 		width:305px;
 		@include clearfix;
 		a,img{
@@ -375,6 +374,12 @@ a,input[type='submit']{
 			}
 			&.three{
 				margin:0 5px 0 0;
+			}
+			&.five{
+				margin:5px 5px 0px 0;
+			}
+			&.six{
+				margin:5px 0 0 0;
 			}
 			float:left;
 		}
@@ -397,8 +402,18 @@ a,input[type='submit']{
 	}
 	&.dark-green{
 		@include dark-green-gradient;
-		p{
+		p,ul,li,h5,h6{
 			color:white;
+		}
+		ul{
+			list-style-position:inside;
+			line-height:1.5;
+		}
+		h5{
+			font-weight:bold;
+		}
+		h6{
+			margin-bottom:10px;
 		}
 	}
 	

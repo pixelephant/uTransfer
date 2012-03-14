@@ -197,7 +197,10 @@ div.anythingControls{
 
 .relation{
 	position:relative;
-	margin:0 14px;
+	margin-right:36px;
+	&.last{
+		margin-right:0;
+	}
 	display:block;
 	float:left;
 	width:150px;
@@ -228,6 +231,9 @@ div.anythingControls{
 }
 
 
+.rightwrap{
+	float:right;
+}
 
 
 /* COLUMN MÉRET IGAZÍTÁSOK */
