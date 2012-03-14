@@ -39,4 +39,5 @@ production:
   pool: 5
   username: balazs_madeartho
   password: tyeF2q
-  socket: mysql.rails.pixelephant.hu
+  #socket: mysql.rails.pixelephant.hu
+  host: mysql.rails.pixelephant.hu
