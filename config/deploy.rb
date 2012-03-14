@@ -1,5 +1,7 @@
+#require "bundler/capistrano"
+
 set :user, 'pixelephant'
-set :domain, 'vindemiatrix.dreamhost.com'
+
 set :project, 'utransfer'
 
 set :application, "utransfer.pixelephant.hu"
@@ -9,8 +11,9 @@ set :repository,  "git://github.com/pixelephant/uTransfer.git"
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
-set :scm_username, 'pixelephant'
-set :scm_password, 'pix3l3phant'
+
+
+set :default_environment, { 'PATH' => "'/home/pixelephant/local/bin:/home/pixelephant/.gems/bin:/usr/lib/ruby/gems/1.8/bin/:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11'" }
 
 role :web, domain                          # Your HTTP server, Apache/etc
 role :app, domain                          # This may be the same as your `Web` server
@@ -32,17 +35,19 @@ set :use_sudo, false
 # If you are using Passenger mod_rails uncomment this:
 # if you're still using the script/reapear helper you will need
 # these http://github.com/rails/irs_process_scripts
-# namespace :deploy do
-#   task :start {}
-#   task :stop {}
-#   task :restart, :roles => :app, :except => { :no_release => true } do
-     #run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-#			run "#{try} touch #{File.join(current_path,'tmp','restart.txt')}"
-#   end
-# end
-
-desc "Restarting after deployment"
-task :after_deploy, :roles => [:app, :db, :web] do
- run "sed 's/# ENV\\[/ENV\\[/g' #{deploy_to}/current/config/environment.rb > #{deploy_to}/current/config/environment.temp"
- run "mv #{deploy_to}/current/config/environment.temp #{deploy_to}/current/config/environment.rb"
+namespace :deploy do
+#	task :bundle_gems
+#		run "cd #{deploy_to}/current && bundle install vendor/gems"
+#	end
+	task :start do ; end
+  task :stop do ; end
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    run "touch #{File.join(current_path,'tmp','restart.txt')}"
+ 	end
 end
+
+#desc "Restarting after deployment"
+#task :after_deploy, :roles => [:app, :db, :web] do
+# run "sed 's/# ENV\\[/ENV\\[/g' #{deploy_to}/current/config/environment.rb > #{deploy_to}/current/config/environment.temp"
+# run "mv #{deploy_to}/current/config/environment.temp #{deploy_to}/current/config/environment.rb"
+#end
