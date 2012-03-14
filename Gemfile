@@ -34,6 +34,8 @@ gem 'rails_admin'
 #gem 'rmagick'
 gem 'carrierwave'
 
+gem 'rake', '0.9.2.2'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
