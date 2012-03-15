@@ -27,8 +27,7 @@ gem 'globalize3'
 gem "ckeditor", "3.7.0.rc3"
 
 gem 'devise'
-gem 'rails_admin'
-#, :git => 'git://github.com/sferik/rails_admin.git'
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 
 #gem 'rmagick'
