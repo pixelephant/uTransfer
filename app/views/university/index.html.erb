@@ -2,7 +2,7 @@
 		<h1>Universities <span class="sub"> the best of Hungary</span></h1>
 		<ul id="university-slider">
 			<li class="clearfix">
-				<a class="one" href="#"><span class="speciality engineering">Ukrain</span><%= image_tag "universities/bme/bme_thumb.png", :title => "BUTE" %> <span class="name">BUTE1</span></a>
+				<a class="one active" href="#"><span class="speciality engineering">Ukrain</span><%= image_tag "universities/bme/bme_thumb.png", :title => "BUTE" %> <span class="name">BUTE1</span></a>
 				<a class="two" href="#"><span class="speciality engineering">Ukrain</span><%= image_tag "universities/bme/bme_thumb.png", :title => "BUTE" %> <span class="name">BUTE2</span></a>
 				<a class="three" href="#"><span class="speciality engineering">Ukrain</span><%= image_tag "universities/bme/bme_thumb.png", :title => "BUTE" %> <span class="name">BUTE3</span></a>
 				<a class="four" href="#"><span class="speciality engineering">Ukrain</span><%= image_tag "universities/bme/bme_thumb.png", :title => "BUTE" %> <span class="name">BUTE4</span></a>
@@ -587,31 +587,33 @@
 		</div>
 		
 </div>
-	<div class="box dark-purple full">
+	<div class="box dark-purple full" id="graduates">
 		<h3>Famous graduates</h3>
-		<div class="graduate">
-			<h4>Jeno Wigner</h4>
-			<p>Nobel prize winner</p>
+		<div class="graduate" id="akos">
+			<h4>Ákos Kovács</h4>
+			<p>Famous singer and performer</p>
 		</div>
-		<div class="graduate">
-			<h4>Jeno Wigner</h4>
-			<p>Nobel prize winner</p>
+		<div class="graduate" id="beke">
+			<h4>Gábor Beke-Martos</h4>
+			<p>CEO of Siemens Hungary</p>
 		</div>
-		<div class="graduate">
-			<h4>Jeno Wigner</h4>
-			<p>Nobel prize winner</p>
+		<div class="graduate" id="agi">
+			<h4>Ágnes Kovács</h4>
+			<p>Olympic Gold winner swimmer, UNICEF ambassador</p>
 		</div>
 	</div>
-	<div class="box full white">
+	<div class="box full white" id="connections">
 		<h3>Industrial connections</h3>
-		<a href="#"><img src="http://placekitten.com/g/200/100" alt="" /></a>
-		<a href="#"><img src="http://placekitten.com/g/200/100" alt="" /></a>
-		<a href="#"><img src="http://placekitten.com/g/200/100" alt="" /></a>
-		<a href="#"><img src="http://placekitten.com/g/200/100" alt="" /></a>
-		<a href="#"><img src="http://placekitten.com/g/200/100" alt="" /></a>
-		<a href="#"><img src="http://placekitten.com/g/200/100" alt="" /></a>
-		<a href="#"><img src="http://placekitten.com/g/200/100" alt="" /></a>
-		<a href="#"><img src="http://placekitten.com/g/200/100" alt="" /></a>
+		<%= image_tag "partners/deloitte.png", :title => "Deloiette" %>
+		<%= image_tag "partners/exxon.png", :title => "Exxon mobil" %>
+		<%= image_tag "partners/kpmg.png", :title => "KPMG" %>
+		<%= image_tag "partners/lego.png", :title => "Lego" %>
+		<%= image_tag "partners/loreal.png", :title => "L'Oreal" %>
+		<%= image_tag "partners/nestle.png", :title => "Nestle" %>
+		<%= image_tag "partners/peek.png", :title => "Peek & Cloppenburg" %>
+		<%= image_tag "partners/pg.png", :title => "PG" %>
+		<%= image_tag "partners/pwc.png", :title => "PWC" %>
+		<%= image_tag "partners/tata.png", :title => "TATA" %>
 	</div>
 	<div class="box dark-green twothird">
 		<h3>Community</h3>
@@ -636,22 +638,22 @@
 		<div class="relation">
 			<span class="country england">England</span>
 			<h5>London School of Economics</h5>
-			<img src="http://www.placekitten.com/g/150/150" alt="London School of Economics" />
+			<%= image_tag "universities/partners/london.png", :title => "London School of Economics" %>
 		</div>
 		<div class="relation">
 			<span class="country germany">Germany</span>
 			<h5>Humboldt-Universität zu Berlin</h5>
-			<img src="http://www.placekitten.com/g/150/150" alt="Humboldt-Universität zu Berlin" />
+			<%= image_tag "universities/partners/humboldt.png", :title => "Humboldt-Universität zu Berlin" %>
 		</div>
 		<div class="relation">
 			<span class="country spaing">Spain</span>
 			<h5>Universitat Politechnica de Catalanya</h5>
-			<%= image_tag "universities/partners/upc.gif", :title => "Universitat Politechnica de Catalanya" %>
+			<%= image_tag "universities/partners/upc.png", :title => "Universitat Politechnica de Catalanya" %>
 		</div>
 		<div class="relation">
 			<span class="country france">France</span>
 			<h5>Université de Paris III - Sorbonne Nouvelle</h5>
-			<%= image_tag "universities/partners/sorbonne.jpg", :title => "Université de Paris III - Sorbonne Nouvelle" %>
+			<%= image_tag "universities/partners/sorbonne.png", :title => "Université de Paris III - Sorbonne Nouvelle" %>
 		</div>
 		<div class="relation last">
 			<span class="country ireland">Ireland</span>
