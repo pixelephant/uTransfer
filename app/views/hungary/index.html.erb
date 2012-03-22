@@ -82,16 +82,34 @@
 	</table>
 	<div class="box dark-purple third">
 		<h3>Sights</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor.</p>
-	</div>
-	<div class="box third video">
-		<img src="http://www.placekitten.com/305/305" alt="" />
 	</div>
 	<div class="box third image-quad">
-		<a title="Cica1" rel="group-1" class="fancybox one" href="http://www.vadallatok.hu/hatterkepek/cica/cica_cat040.jpg"><img src="http://www.placekitten.com/150/150" alt="Cica 1" /></a>
-		<a rel="group-1" class="fancybox two" href="http://www.vadallatok.hu/hatterkepek/cica/cica_cat040.jpg"><img src="http://www.placekitten.com/150/150" alt="Cica 2" /></a>
-		<a rel="group-1" class="fancybox three" href="http://www.vadallatok.hu/hatterkepek/cica/cica_cat040.jpg"><img src="http://www.placekitten.com/150/150" alt="Cica 3" /></a>
-		<a rel="group-1" class="fancybox four" href="http://www.vadallatok.hu/hatterkepek/cica/cica_cat040.jpg"><img src="http://www.placekitten.com/150/150" alt="Cica 4" /></a>		
+		<%= link_to "sights/nationalmuseum.jpg", :title => "National Museum", :class=>"fancybox one" do %>
+			<%= image_tag("sights/nationalmuseum.jpg", :title => "National Museum") %>
+		<% end %>
+		<%= link_to "sights/nationalmuseum.jpg", :title => "National Museum", :class=>"fancybox two" do %>
+			<%= image_tag("sights/nationalmuseum.jpg", :title => "National Museum") %>
+		<% end %>
+		<%= link_to "sights/nationalmuseum.jpg", :title => "National Museum", :class=>"fancybox three" do %>
+			<%= image_tag("sights/nationalmuseum.jpg", :title => "National Museum") %>
+		<% end %>
+		<%= link_to "sights/nationalmuseum.jpg", :title => "National Museum", :class=>"fancybox four" do %>
+			<%= image_tag("sights/nationalmuseum.jpg", :title => "National Museum") %>
+		<% end %>
+	</div>
+	<div class="box third image-quad">
+		<%= link_to "sights/nationalmuseum.jpg", :title => "National Museum", :class=>"fancybox one" do %>
+			<%= image_tag("sights/nationalmuseum.jpg", :title => "National Museum") %>
+		<% end %>
+		<%= link_to "sights/nationalmuseum.jpg", :title => "National Museum", :class=>"fancybox two" do %>
+			<%= image_tag("sights/nationalmuseum.jpg", :title => "National Museum") %>
+		<% end %>
+		<%= link_to "sights/nationalmuseum.jpg", :title => "National Museum", :class=>"fancybox three" do %>
+			<%= image_tag("sights/nationalmuseum.jpg", :title => "National Museum") %>
+		<% end %>
+		<%= link_to "sights/nationalmuseum.jpg", :title => "National Museum", :class=>"fancybox four" do %>
+			<%= image_tag("sights/nationalmuseum.jpg", :title => "National Museum") %>
+		<% end %>
 	</div>
 	<div class="box third dark-green">
 		<h3>History</h3>
@@ -248,27 +266,30 @@ Mostly during the autumn the annual Pálinka and Sausage Festival takes place in
 			<p>Lorem ipsum dolor sit amet.</p>
 		</div>
 	</div>
-	<h3 class="purple">Hungaricums</h3>
+	<div class="box full" id="hung">
+		<h3 class="purple">Hungaricums</h3>
+	<p>Hungaricums are those unique Hungarian products, specialties, works of art, and animals which you can not find anywhere else in the world except in Hungary.</p>
 	<div id="hungaricums">
 		<div class="hungaricum">
-			<h5>Kolbász</h5>
+			<h5>Pálinka</h5>
 			<img src="http://www.placekitten.com/g/150/150" alt="Ukraine U" />
 		</div>
 		<div class="hungaricum">
-			<h5>Kolbász</h5>
+			<h5>Rubik's Cube</h5>
 			<img src="http://www.placekitten.com/g/150/150" alt="Ukraine U" />
 		</div>
 		<div class="hungaricum">
-			<h5>Kolbász</h5>
+			<h5>Paprika</h5>
 			<img src="http://www.placekitten.com/g/150/150" alt="Ukraine U" />
 		</div>
 		<div class="hungaricum">
-			<h5>Kolbász</h5>
+			<h5>Pick salami</h5>
 			<img src="http://www.placekitten.com/g/150/150" alt="Ukraine U" />
 		</div>
 		<div class="hungaricum">
-			<h5>Kolbász</h5>
+			<h5>Tokaji wine</h5>
 			<img src="http://www.placekitten.com/g/150/150" alt="Ukraine U" />
 		</div>
+	</div>
 	</div>
 </section>
