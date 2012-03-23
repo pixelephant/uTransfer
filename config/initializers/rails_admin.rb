@@ -1,5 +1,5 @@
 RailsAdmin.config do |config|
-  config.included_models = [Essential, EssentialTranslation, EssentialText, EssentialTextTranslation, University, UniversityTranslation, Faculty, FacultyTranslation, FamousGraduate, FamousGraduateTranslation, Requirement, RequirementTranslation, ProcessFlow, ProcessFlowTranslation, TextBlock, TextBlockTranslation, Testimonial, TestimonialTranslation, Media, RelatedIndustry, RelatedInstitution, Personal, LivingCost, IndexContent, IndexContentTranslation ]
+  config.included_models = [Essential, EssentialTranslation, EssentialText, EssentialTextTranslation, University, UniversityTranslation, Faculty, FacultyTranslation, FamousGraduate, FamousGraduateTranslation, Requirement, RequirementTranslation, ProcessFlow, ProcessFlowTranslation, TextBlock, TextBlockTranslation, Testimonial, TestimonialTranslation, Media, RelatedIndustry, RelatedInstitution, Personal, LivingCost, IndexContent, IndexContentTranslation, UniversityImage ]
 
 	config.model Essential do
 		object_label_method :essential_label
@@ -53,6 +53,14 @@ RailsAdmin.config do |config|
     end
   end
 
+	config.model Faculty do
+    edit do
+      include_all_fields
+      field :desc do
+        ckeditor true
+      end
+    end
+  end
 
 	config.model FacultyTranslation do
     edit do
@@ -193,7 +201,7 @@ RailsAdmin.config do |config|
 	end
 
 	def requirement_label
-		self.university.name + " - " + self.level
+		self.university.name + " - " + self.level if !self.university.nil?
 	end
 
 end
