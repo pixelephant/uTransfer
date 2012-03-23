@@ -65,7 +65,7 @@ div.anythingControls{
 #university-slider-wrap{
 	overflow:hidden;
 	width:100%;
-	height:240px;
+	height:280px;
 	padding-top:20px;
 	background:#ededed;
 	-webkit-box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
@@ -83,13 +83,13 @@ div.anythingControls{
 		}
 	}
 	ul{
-		height:135px;
+		height:180px;
 		width:855px; /*955 a max két 40px nyíl + 2*10px margó*/
 	}
 	li{
 		@include clearfix;
 		width:960px;
-		height:160px;
+		height:180px;
 		a{
 			width:240;
 			display:block;
@@ -103,7 +103,9 @@ div.anythingControls{
 			text-align:center;
 			&:hover{
 				color: $brand-purple;
-				
+			}
+			&.active{
+				background:url(slider_active.png) no-repeat bottom center;
 			}
 		}
 		.speciality{
@@ -181,9 +183,22 @@ div.anythingControls{
 	}
 }
 
+#graduates{
+	h4{
+		margin-bottom:10px;
+	}
+	h3{
+		padding-left:20px;
+	}
+	padding-left:0;
+	padding-right:0;
+}
+
 .graduate{
 	float:left;
-	width:298px;
+	width:258px;
+	height:200px;
+	padding:0 20px;
 }
 
 #international-relations{
@@ -197,7 +212,10 @@ div.anythingControls{
 
 .relation{
 	position:relative;
-	margin:0 14px;
+	margin-right:36px;
+	&.last{
+		margin-right:0;
+	}
 	display:block;
 	float:left;
 	width:150px;
@@ -228,7 +246,31 @@ div.anythingControls{
 }
 
 
+.rightwrap{
+	float:right;
+}
 
+#connections{
+	img{
+		margin:10px;
+	}
+}
+
+#graduates{
+	padding-bottom:0;
+}
+
+#akos{
+	background:url(universities/corvinus/akos.png) no-repeat bottom right;
+}
+
+#agi{
+	background:url(universities/corvinus/agi.png) no-repeat bottom right;
+}
+
+#beke{
+	background:url(universities/corvinus/beke.png) no-repeat bottom right;
+}
 
 /* COLUMN MÉRET IGAZÍTÁSOK */
 

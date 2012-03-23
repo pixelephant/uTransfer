@@ -19,10 +19,16 @@
 	}
 }
 
-#tel,#gender,#uni,#type,#exact-uni,#interests{
+#tel,#gender,#uni,#type,#exact-uni,#interests,#enc,#hea{
 	label{
 		font-size:12px;
 		color:#89897F;
+	}
+}
+
+#enc,#hea{
+	label{
+		color:white;
 	}
 }
 
@@ -41,4 +47,15 @@ input[type="submit"]{
 .submit{
 	border-top:1px dotted #BABABA;
 	padding-top:20px;
+}
+
+.tarea{
+	label{
+		color:white;
+		font-size:12px;
+	}
+}
+
+#additional{
+	display:none;
 }

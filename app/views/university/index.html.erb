@@ -2,7 +2,7 @@
 		<h1>Universities <span class="sub"> the best of Hungary</span></h1>
 		<ul id="university-slider">
 			<li class="clearfix">
-				<a class="one" href="#"><span class="speciality engineering">Ukrain</span><%= image_tag "universities/bme/bme_thumb.png", :title => "BUTE" %> <span class="name">BUTE1</span></a>
+				<a class="one active" href="#"><%= image_tag "universities/corvinus/corvinus_slider.png", :title => "Corvinus" %> <span class="name">Corvinus</span></a>
 				<a class="two" href="#"><span class="speciality engineering">Ukrain</span><%= image_tag "universities/bme/bme_thumb.png", :title => "BUTE" %> <span class="name">BUTE2</span></a>
 				<a class="three" href="#"><span class="speciality engineering">Ukrain</span><%= image_tag "universities/bme/bme_thumb.png", :title => "BUTE" %> <span class="name">BUTE3</span></a>
 				<a class="four" href="#"><span class="speciality engineering">Ukrain</span><%= image_tag "universities/bme/bme_thumb.png", :title => "BUTE" %> <span class="name">BUTE4</span></a>
@@ -112,8 +112,9 @@
 	</div>
 	<div class="box third dark-purple" id="campus">
 		<h3>The Campus</h3>
-		<p>A legtöbb kar a Duna partján lévő főépületben foglal helyet, ahonnan a város egyik legszebb kilátása nyílik. A campus könnyen megközelíthető bkv-val vagy gyalog, hiszen a város szívében nyugszik. Gazdag infrastruktúra alakult ki körülötte, van piac, mozi, könyvtár szórakozóhelyek stb.</p>
-		<p>Felszereltsége kiváló, több ezer számítógép, étterem, büfé és tanulószoba van. Teljesen akadálymentesített.</p>
+		<p>The main campus is located on the Pest side of the Danube. Students who study in this campus can enjoy the <strong>magnificent scenery of the Danube</strong> and the Gellért Hill.</p>
+		<p>The campus <strong>can be easily reached</strong> by public transportation and by bike as well since the campus lies in the <strong>heart of the city</strong>.</p>
+		<p>It has great facilities such as: library, café, pub, well equipped IT area and a canteen.</p>
 	</div>
 	<div class="box third video">
 		<a target="_blank" href="http://maps.google.com/maps?q=1093+Budapest,+F%C5%91v%C3%A1m+t%C3%A9r+8&hl=hu&ie=UTF8&ll=47.485352,19.060056&spn=0.008454,0.019269&sll=47.15984,19.500732&sspn=4.354998,9.865723&hnear=1093+Budapest,+IX.+ker%C3%BClet,+F%C5%91v%C3%A1m+t%C3%A9r+8&t=h&z=16">
@@ -586,85 +587,78 @@
 		</div>
 		
 </div>
-	<div class="box dark-purple full">
+	<div class="box dark-purple full" id="graduates">
 		<h3>Famous graduates</h3>
-		<div class="graduate">
-			<h4>Jeno Wigner</h4>
-			<p>Nobel prize winner</p>
+		<div class="graduate" id="akos">
+			<h4>Ákos Kovács</h4>
+			<p>Famous singer and performer</p>
 		</div>
-		<div class="graduate">
-			<h4>Jeno Wigner</h4>
-			<p>Nobel prize winner</p>
+		<div class="graduate" id="beke">
+			<h4>Gábor Beke-Martos</h4>
+			<p>CEO of Siemens Hungary</p>
 		</div>
-		<div class="graduate">
-			<h4>Jeno Wigner</h4>
-			<p>Nobel prize winner</p>
+		<div class="graduate" id="agi">
+			<h4>Ágnes Kovács</h4>
+			<p>Olympic Gold winner swimmer, UNICEF ambassador</p>
 		</div>
 	</div>
-	<div class="box full white">
+	<div class="box full white" id="connections">
 		<h3>Industrial connections</h3>
-		<a href="#"><img src="http://placekitten.com/g/200/100" alt="" /></a>
-		<a href="#"><img src="http://placekitten.com/g/200/100" alt="" /></a>
-		<a href="#"><img src="http://placekitten.com/g/200/100" alt="" /></a>
-		<a href="#"><img src="http://placekitten.com/g/200/100" alt="" /></a>
-		<a href="#"><img src="http://placekitten.com/g/200/100" alt="" /></a>
-		<a href="#"><img src="http://placekitten.com/g/200/100" alt="" /></a>
-		<a href="#"><img src="http://placekitten.com/g/200/100" alt="" /></a>
-		<a href="#"><img src="http://placekitten.com/g/200/100" alt="" /></a>
+		<%= image_tag "partners/deloitte.png", :title => "Deloiette" %>
+		<%= image_tag "partners/exxon.png", :title => "Exxon mobil" %>
+		<%= image_tag "partners/kpmg.png", :title => "KPMG" %>
+		<%= image_tag "partners/lego.png", :title => "Lego" %>
+		<%= image_tag "partners/loreal.png", :title => "L'Oreal" %>
+		<%= image_tag "partners/nestle.png", :title => "Nestle" %>
+		<%= image_tag "partners/peek.png", :title => "Peek & Cloppenburg" %>
+		<%= image_tag "partners/pg.png", :title => "PG" %>
+		<%= image_tag "partners/pwc.png", :title => "PWC" %>
+		<%= image_tag "partners/tata.png", :title => "TATA" %>
 	</div>
-	<div class="box dark-green third">
-		<h3>Dormitories</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla.</p>
-	</div>
-	<div class="box third video">
-		<img src="http://www.placekitten.com/305/305" alt="" />
-	</div>
-	<div class="box third image-quad">
-		<img class="one" src="http://www.placekitten.com/150/150" alt="" />
-		<img class="two" src="http://www.placekitten.com/150/150" alt="" />
-		<img class="three" src="http://www.placekitten.com/150/150" alt="" />
-		<img class="four" src="http://www.placekitten.com/150/150" alt="" />
-	</div>
-	<div class="box dark-green third">
+	<div class="box dark-green twothird">
 		<h3>Community</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla.</p>
-	</div>
-	<div class="box third video">
-		<img src="http://www.placekitten.com/305/305" alt="" />
+		<p class="full">Corvinus University is not just famous for its great education and educational background but for the parties and facilites as well.
+		Corvinus has its own club called <strong>Morisson’s Közgáz</strong>, which is located in the basement of the main building. The club offers several parties on almost every day during the week, students are able to choose from different types of music and from a wide variety of drink selection.</p>
+		<p class="full">Corvinus provides another option for students who want to chill a little bit after school or in the evening. <strong>Corvinus Café</strong> offers great opportunity to enjoy the night with your schoolmates. The café’s great prices and its close location to the main building is very attractive for most of Corvinus students.</p>
+		<h5>Some famous parties</h5>
+		<h6>Freshmen’s ball</h6>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ac libero eu massa sollicitudin mattis porta sollicitudin turpis. Vivamus elementum nisl non neque gravida ultricies. Cras dapibus tempor neque a scelerisque. Sed vulputate, risus eget.</p>
 	</div>
 	<div class="box third image-quad">
 		<img class="one" src="http://www.placekitten.com/150/150" alt="" />
 		<img class="two" src="http://www.placekitten.com/150/150" alt="" />
 		<img class="three" src="http://www.placekitten.com/150/150" alt="" />
 		<img class="four" src="http://www.placekitten.com/150/150" alt="" />
+		<img class="five" src="http://www.placekitten.com/150/150" alt="" />
+		<img class="six" src="http://www.placekitten.com/150/150" alt="" />			
 	</div>
 	<div id="international-relations" class="box full white">
-		<h3>International relations</h3>
-		<p>These are the universities to which you can go for a couple of semesters.</p>
+		<h3>Erasmus partners</h3>
+		<p>These are the universities to which you can go for as an exchange student.</p>
 		<div class="relation">
-			<span class="country ukraine">Ukraine</span>
-			<h5>Ukraine U</h5>
-			<img src="http://www.placekitten.com/g/150/150" alt="Ukraine U" />
+			<span class="country england">England</span>
+			<h5>London School of Economics</h5>
+			<%= image_tag "universities/partners/london.png", :title => "London School of Economics" %>
 		</div>
 		<div class="relation">
-			<span class="country ukraine">Ukraine</span>
-			<h5>Ukraine U</h5>
-			<img src="http://www.placekitten.com/g/150/150" alt="Ukraine U" />
+			<span class="country germany">Germany</span>
+			<h5>Humboldt-Universität zu Berlin</h5>
+			<%= image_tag "universities/partners/humboldt.png", :title => "Humboldt-Universität zu Berlin" %>
 		</div>
 		<div class="relation">
-			<span class="country ukraine">Ukraine</span>
-			<h5>Ukraine U</h5>
-			<img src="http://www.placekitten.com/g/150/150" alt="Ukraine U" />
+			<span class="country spaing">Spain</span>
+			<h5>Universitat Politechnica de Catalanya</h5>
+			<%= image_tag "universities/partners/upc.png", :title => "Universitat Politechnica de Catalanya" %>
 		</div>
 		<div class="relation">
-			<span class="country ukraine">Ukraine</span>
-			<h5>Ukraine U</h5>
-			<img src="http://www.placekitten.com/g/150/150" alt="Ukraine U" />
+			<span class="country france">France</span>
+			<h5>Université de Paris III - Sorbonne Nouvelle</h5>
+			<%= image_tag "universities/partners/sorbonne.png", :title => "Université de Paris III - Sorbonne Nouvelle" %>
 		</div>
-		<div class="relation">
-			<span class="country ukraine">Ukraine</span>
-			<h5>Ukraine U</h5>
-			<img src="http://www.placekitten.com/g/150/150" alt="Ukraine U" />
+		<div class="relation last">
+			<span class="country ireland">Ireland</span>
+			<h5>Dublin City University</h5>
+			<%= image_tag "universities/partners/dcu.png", :title => "Dublin City University" %>
 		</div>
 	</div>
 </section>

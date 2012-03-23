@@ -1,5 +1,7 @@
+@import '_mixins.css.scss';
+
 #slider-outer{
-	background:#f1e229;
+	background:$brand-purple;
 	height:312px;
 }
 
@@ -36,9 +38,6 @@ div.anythingSlider{
 		float:right;
 		margin-right:160px;
 	}
-	img.right,	img.left{
-		margin-top:60px;
-	}
 	li{
 		height:260px;
 		padding:20px;
@@ -52,6 +51,7 @@ div.anythingSlider{
 			color:white;
 			font-size:28px;
 			width:270px;
+			margin-bottom:40px
 		}
 		p{
 			line-height:1.5;
@@ -59,13 +59,16 @@ div.anythingSlider{
 			color:white;
 			width:270px;
 		}
-		img{
-			top:300px;
-			float:right;
+		a{
+			margin-top:20px;
 		}
-		img.left{
-			float:left;
-		}
+	}
+}
+
+#slide-1{
+	img{
+		width:410px;
+		margin-top:-30px;
 	}
 }
 

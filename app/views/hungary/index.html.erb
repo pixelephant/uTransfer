@@ -80,18 +80,36 @@
 			</tr>
 		</tbody>
 	</table>
-	<div class="box dark-purple third">
+	<div class="box dark-purple third" id="sights">
 		<h3>Sights</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor.</p>
-	</div>
-	<div class="box third video">
-		<img src="http://www.placekitten.com/305/305" alt="" />
 	</div>
 	<div class="box third image-quad">
-		<a title="Cica1" rel="group-1" class="fancybox one" href="http://www.vadallatok.hu/hatterkepek/cica/cica_cat040.jpg"><img src="http://www.placekitten.com/150/150" alt="Cica 1" /></a>
-		<a rel="group-1" class="fancybox two" href="http://www.vadallatok.hu/hatterkepek/cica/cica_cat040.jpg"><img src="http://www.placekitten.com/150/150" alt="Cica 2" /></a>
-		<a rel="group-1" class="fancybox three" href="http://www.vadallatok.hu/hatterkepek/cica/cica_cat040.jpg"><img src="http://www.placekitten.com/150/150" alt="Cica 3" /></a>
-		<a rel="group-1" class="fancybox four" href="http://www.vadallatok.hu/hatterkepek/cica/cica_cat040.jpg"><img src="http://www.placekitten.com/150/150" alt="Cica 4" /></a>		
+		<%= link_to "/assets/sights/nationalmuseum.jpg", :title => "National Museum", :class=>"fancybox one", :rel=>"group1" do %>
+			<%= image_tag("sights/nationalmuseum.jpg", :title => "National Museum") %>
+		<% end %>
+		<%= link_to "/assets/sights/fisherman.jpg", :title => "Fisherman", :class=>"fancybox two", :rel=>"group1" do %>
+			<%= image_tag("sights/fisherman.jpg", :title => "Fisherman") %>
+		<% end %>
+		<%= link_to "/assets/sights/matyaschurch.jpg", :title => "Mátyás", :class=>"fancybox three", :rel=>"group1" do %>
+			<%= image_tag("sights/matyaschurch.jpg", :title => "Mátyás") %>
+		<% end %>
+		<%= link_to "/assets/sights/chainbridge.png", :title => "Chainbridge", :class=>"fancybox four", :rel=>"group1" do %>
+			<%= image_tag("sights/chainbridge.png", :title => "Chainbridge") %>
+		<% end %>
+	</div>
+	<div class="box third image-quad">
+		<%= link_to "/assets/sights/castlebuda.jpg", :title => "Castle Buda", :class=>"fancybox one", :rel=>"group1" do %>
+			<%= image_tag("sights/castlebuda.jpg", :title => "Castle Buda") %>
+		<% end %>
+		<%= link_to "/assets/sights/parliament.jpg", :title => "Parliament", :class=>"fancybox two", :rel=>"group1" do %>
+			<%= image_tag("sights/parliament.jpg", :title => "Parliament") %>
+		<% end %>
+		<%= link_to "/assets/sights/basilica.jpg", :title => "Basilica", :class=>"fancybox three", :rel=>"group1" do %>
+			<%= image_tag("sights/basilica.jpg", :title => "Basilica") %>
+		<% end %>
+		<%= link_to "/assets/sights/synagoguex.jpg", :title => "Synagoguex", :class=>"fancybox four", :rel=>"group1" do %>
+			<%= image_tag("sights/synagoguex.jpg", :title => "Synagoguex") %>
+		<% end %>
 	</div>
 	<div class="box third dark-green">
 		<h3>History</h3>
@@ -108,13 +126,18 @@
 	<h3 class="green">Gastronomy</h3>
 	<div class="third-wrap">
 		<div class="box light-green third">
-			<h4>Must try dishes</h4>
-			<h5>Yummy</h5>
-			<ul>
-				<li>Túrórudi</li>
-				<li>Kifli</li>
-				<li>Kefír</li>
-			</ul>
+			<h4>Must try wines</h4>
+			<p>The most famous wines from Hungary are <strong>Tokaji Aszú</strong> and <strong>Egri Bikavér</strong>. Which are labeled as <em>unicum</em> so it can only be produced in Hungary.</p>
+		</div>
+		<img class="one" src="http://www.placekitten.com/150/150" alt="" />
+		<img class="two" src="http://www.placekitten.com/150/150" alt="" />
+	</div>
+	<div class="third-wrap">
+		<div class="box light-green third">
+			<h4>Must try spirits</h4>
+			<p><strong>Pálinka</strong> is a fruit brandy, distilled from fruit .It is a spirit native to Hungary and comes in a variety of flavours including plum, apricot and cherry.
+			</p>
+			<p><strong>Zwack Unicum</strong> is a bitter, dark-coloured liqueur that can be drunk as an apéritif or after a meal, thus helping the digestion. The recipe is held secret by the Zwack family.</p>
 		</div>
 		<img class="one" src="http://www.placekitten.com/150/150" alt="" />
 		<img class="two" src="http://www.placekitten.com/150/150" alt="" />
@@ -122,66 +145,111 @@
 	<div class="third-wrap">
 		<div class="box light-green third">
 			<h4>Must try dishes</h4>
-			<h5>Yummy</h5>
+			
 			<ul>
-				<li>Túrórudi</li>
-				<li>Kifli</li>
-				<li>Kefír</li>
-			</ul>
-		</div>
-		<img class="one" src="http://www.placekitten.com/150/150" alt="" />
-		<img class="two" src="http://www.placekitten.com/150/150" alt="" />
-	</div>
-	<div class="third-wrap">
-		<div class="box light-green third">
-			<h4>Must try dishes</h4>
-			<h5>Yummy</h5>
-			<ul>
-				<li>Túrórudi</li>
-				<li>Kifli</li>
-				<li>Kefír</li>
+				<li>Goulash</li>
+				<li>Fish soup</li>
+				<li>Chicken Paprikash</li>
+				<li>Foie gras made of goose liver</li>
+				<li>Túrós csusza (salty and sweet dumplings with fresh quark cheese and thick sour cream)</li>
+				<li>Strudels (rétes), filled with apple, cherry, poppy seed or cheese</li>
+				<li>Dobos Cake</li>
+				<li>Gundel Pancake</li>
+				<li>Plum dumplings (szilvás gombóc)</li>
+				<li>Somlói dumpling</li>
 			</ul>
 		</div>
 		<img class="one" src="http://www.placekitten.com/150/150" alt="" />
 		<img class="two" src="http://www.placekitten.com/150/150" alt="" />
 	</div>
 	<div class="clearfix">
-		<h3 class="purple">nightlife &amp; festivals <span>small caps</span></h3>
+		<h3 class="purple">nightlife &amp; festivals</h3>
 		<div id="festival-slider">
 			<ul>
 				<li>
-					<div class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. Pellentesque habitant morbi </div>
+					<div class="caption">
+						<p>
+							In 2011 according to European Festival Awards, <strong>Sziget was the Best Major European Festival</strong> and Sziget was ranked one of the <strong>5 best festivals in Europe</strong> by The Independent.</p>
+						<p>Bands like Iron Maiden, Faithless, Armin Van Bueren, Placebo, Korn, Fat Boy Slim, Prodigy attended the Sziget festival in the past years.</p>
+					</div>
 					<img src="http://placekitten.com/g/935/300" alt="" />
 				</li>
 				<li>
+					<div class="caption">
+						<p>VOLT festival is one of the most exciting multicultural festivals in Central Europe, expecting its guests in the middle of a fabulous forest every July. Usually famous rock bands and alternative music performers visit this festival.</p>
+					</div>
+					<img src="http://placekitten.com/g/935/300" alt="" />
+				</li>
+				<li>
+					<div class="caption">
+						<p>Balaton Sound is the biggest House Music festival in Hungary. The Balaton Sound is a relatively young festival but has build up to a top destination for international, well known DJs such as David Guetta, Sven Väth or Paul Kalkbrenner. The special thing about Balaton Sound is the location which is right at the beach of Lake Balaton where people hang out in the water, have drinks and listen to music all day long.</p>
+					</div>
+					<img src="http://placekitten.com/g/935/300" alt="" />
+				</li>
+				<li>
+					<div class="caption">
+						<p>Nightlife - Budapest is world famous for its nightlife, in the city there are clubs and parties almost at every corner of the city. Students can choose from hundreds of party places int he city center or on the Party island (Hajógyári sziget). Moulin Rouge, Dokk, Pink, White Angel</p>
+					</div>
+					<img src="http://placekitten.com/g/935/300" alt="" />
+				</li>
+				<li>
+					<div class="caption">
+						<p>Romkocsmák - Mik ezek, tök egyedi Szimpla, Instant, Fogasház fotómontázs szövegben a nevük mint példa</p>
+					</div>
 					<img src="http://placekitten.com/g/935/300" alt="" />
 				</li>
 			</ul>
 		</div>
 	</div>
 	<div class="box third dark-green">
-		<h3>Activities</h3>
+		<h3>Cultural festivals</h3>
+		<p>The Busójárás ("Busó-walking”) is an annual celebration in the town of Mohács, Hungary held at the end of the carnival season ("Farsang"), ending the day beforeAsh Wednesday. The celebration features Busós (people wearing traditional masks) and includes folk music,daning, parades ).</p>
+
+		<p>The spectacular landscape around Lake Balaton, and the small towns of  Öcs, Pula, Kapolcs and Monostorapáti host the charmingly named Valley of Magic Festival during June and July. Over 50 separate venues, more than 800 individual events.</p>
+
 	</div>
 	<div class="box third light-green">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. </p>
+		
+		<p>The Wine Festival:It has been years that this gastronomic festival takes place in the Buda Castle in Budapest. All the best wines from all around Hungary are going to be presented during the festival, and if it is not enough, the organizers spice up the happening with mind-blowing Hungarian dishes and traditional music.</p>
+
+		<p>The Pálinka and Sausage Festival:
+ 
+Mostly during the autumn the annual Pálinka and Sausage Festival takes place in the Castle of Buda which is situated in one of the most beautiful locations of Budapest, the Castle District. At the Oroszlános courtyard, guests will be able to enjoy the pálinkas and the music under the most comfortable circumstances at their own reserved tables. The organizers of the festival draw attention to the traditional hungarian specialties and promote the tradition of pálinka-tasting. They would like to share their passion for the fine hungarian pálinkas and sausages with as many foreign and hungarian visitors as possible.</p>
 	</div>
 	<div class="box third image-quad">
 		<img class="one" src="http://www.placekitten.com/150/150" alt="" />
 		<img class="two" src="http://www.placekitten.com/150/150" alt="" />
 		<img class="three" src="http://www.placekitten.com/150/150" alt="" />
 		<img class="four" src="http://www.placekitten.com/150/150" alt="" />
+		<img class="five" src="http://www.placekitten.com/150/150" alt="" />
+		<img class="six" src="http://www.placekitten.com/150/150" alt="" />
 	</div>
-	<div class="box third dark-green">
-		<h3>Transportation</h3>
-	</div>
-	<div class="box third light-green">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque. Suspendisse potenti. Mauris eu erat et sapien posuere bibendum at fermentum purus. Fusce molestie ultrices tortor sed tincidunt. Nam at sapien enim, quis vestibulum tortor. Pellentesque et leo nulla, nec vulputate nulla. Sed blandit quam eu dolor viverra ac suscipit est sollicitudin. </p>
-	</div>
-	<div class="box third image-quad">
-		<img class="one" src="http://www.placekitten.com/150/150" alt="" />
-		<img class="two" src="http://www.placekitten.com/150/150" alt="" />
-		<img class="three" src="http://www.placekitten.com/150/150" alt="" />
-		<img class="four" src="http://www.placekitten.com/150/150" alt="" />
+	<div id="travel-wrap" class="clearfix">
+		<div class="box third dark-green">
+			<h3>Travelling inside Hungary</h3>
+		</div>
+		<div class="box third light-green">
+			<h4>By Bus</h4>
+			<p>Hungary has a very well developed internal bus network, with which you can reach any part of the country. In Budapest there are three main Bus stations: Népliget bus terminal, Népstadion bus terminal, Árpád híd bus terminal</p>
+		</div>
+		<div class="box third light-green">
+			<h4>By train</h4>
+			<p>The main centre of Hungary’s train network is Budapest. From its three main railway stations (Southern, Eastern, Western) you can travel all around Hungary. From the capital to the other main cities and towns of Hungary there are scheduled intercity and express lines.</p>
+		</div>
+		<div class="box third light-green">
+			<h4>By car</h4>
+			<p>The road network of Hungary is more than 30.000 Km long. The road system of Hungary is Budapest centralised, the 8 most important roads (most of the Motorways) start from the Capital.</p>
+		</div>
+		<div class="box third light-green">
+			<h4>City public transportation</h4>
+	 		<p>The public transportation of the cities is well developed, buses, trolleys and in the main cities ( Budapest , Debrecen , Szeged, Miskolc ) trams provide comfortable and rapid transport. In Budapest you can also use underground, metro and HÉV (suburban railway).</p>
+		</div>
+		<div class="box third image-quad">
+			<img class="one" src="http://www.placekitten.com/150/150" alt="" />
+			<img class="two" src="http://www.placekitten.com/150/150" alt="" />
+			<img class="three" src="http://www.placekitten.com/150/150" alt="" />
+			<img class="four" src="http://www.placekitten.com/150/150" alt="" />
+		</div>
 	</div>
 	<div id="famous-hungarians" class="box full dark-purple">
 		<h3>Famous hungarians</h3>
@@ -198,27 +266,30 @@
 			<p>Lorem ipsum dolor sit amet.</p>
 		</div>
 	</div>
-	<h3 class="purple">Hungaricums</h3>
+	<div class="box full" id="hung">
+		<h3 class="purple">Hungaricums</h3>
+	<p>Hungaricums are those unique Hungarian products, specialties, works of art, and animals which you can not find anywhere else in the world except in Hungary.</p>
 	<div id="hungaricums">
 		<div class="hungaricum">
-			<h5>Kolbász</h5>
+			<h5>Pálinka</h5>
 			<img src="http://www.placekitten.com/g/150/150" alt="Ukraine U" />
 		</div>
 		<div class="hungaricum">
-			<h5>Kolbász</h5>
+			<h5>Rubik's Cube</h5>
 			<img src="http://www.placekitten.com/g/150/150" alt="Ukraine U" />
 		</div>
 		<div class="hungaricum">
-			<h5>Kolbász</h5>
+			<h5>Paprika</h5>
 			<img src="http://www.placekitten.com/g/150/150" alt="Ukraine U" />
 		</div>
 		<div class="hungaricum">
-			<h5>Kolbász</h5>
+			<h5>Pick salami</h5>
 			<img src="http://www.placekitten.com/g/150/150" alt="Ukraine U" />
 		</div>
 		<div class="hungaricum">
-			<h5>Kolbász</h5>
+			<h5>Tokaji wine</h5>
 			<img src="http://www.placekitten.com/g/150/150" alt="Ukraine U" />
 		</div>
+	</div>
 	</div>
 </section>
