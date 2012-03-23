@@ -12,6 +12,8 @@ class University < ActiveRecord::Base
 	has_many :famous_graduates
 	has_many :requirements
 
+	has_many :university_images
+
 	validates :name, :description, :deadline, :campus, :presence => true
 
 	def default_for_enum
