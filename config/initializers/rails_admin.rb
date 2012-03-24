@@ -196,12 +196,20 @@ RailsAdmin.config do |config|
     end
   end
 
+	config.model UniversityImage do
+		object_label_method :university_images_label
+	end
+
 	def essential_label
 		self.topic
 	end
 
 	def requirement_label
 		self.university.name + " - " + self.level if !self.university.nil?
+	end
+
+	def university_images_label
+		self.university.name if !self.university.nil?
 	end
 
 end

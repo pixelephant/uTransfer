@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  univerity_id: 1
+  image_file: MyString
+
+two:
+  univerity_id: 1
+  image_file: MyString
