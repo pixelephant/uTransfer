@@ -1,5 +1,5 @@
 class University < ActiveRecord::Base
-	translates :description, :campus
+	translates :description, :campus, :community
 
 	has_many :university_translation
 	accepts_nested_attributes_for :university_translation
@@ -13,6 +13,7 @@ class University < ActiveRecord::Base
 	has_many :requirements
 
 	has_many :university_images
+	has_many :university_community_images
 
 	validates :name, :description, :deadline, :campus, :presence => true
 

@@ -38,6 +38,9 @@ RailsAdmin.config do |config|
       field :campus do
         ckeditor true
       end
+      field :community do
+        ckeditor true
+      end
     end
   end
 
