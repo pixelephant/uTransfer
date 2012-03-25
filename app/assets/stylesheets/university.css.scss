@@ -272,9 +272,17 @@ div.anythingControls{
 	background:url(universities/corvinus/beke.png) no-repeat bottom right;
 }
 
+#bsc,#msc,#phd{
+	li{
+		list-style-position: outside;
+		margin-left:15px;
+	}
+}
+
 /* COLUMN MÉRET IGAZÍTÁSOK */
 
-#bsc,#msc,#phd{
+.corvinus{
+	#bsc,#msc,#phd{
 	height:515px;
 }
 
@@ -289,4 +297,26 @@ div.anythingControls{
 
 #community{
 	height:420px;
+}
+
+}
+
+.bme{
+	#bsc,#msc,#phd{
+	height:640px;
+}
+
+#counter{
+	height:363px;
+}
+
+
+#campus{
+	height:265px;
+}
+
+#community{
+	height:420px;
+}
+	
 }
