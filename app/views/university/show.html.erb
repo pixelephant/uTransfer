@@ -1,0 +1,126 @@
+<div id="university-slider-wrap">
+		<h1>Universities <span class="sub"> the best of Hungary</span></h1>
+		<ul id="university-slider">
+			<li class="clearfix">
+				<!-- <a class="one active" href="#"><%= image_tag "universities/corvinus/corvinus_slider.png", :title => "Corvinus University of Budapest" %> <span class="name">Corvinus</span></a> -->
+				<% University.all.each do |university| %>
+					<%= link_to university do %>
+						<%= image_tag university.university_images.first.image_file unless university.university_images.blank? %>
+					<% end %>
+				<% end %>
+			</li>
+		</ul>
+</div>
+
+<section id="content" class="clearfix corvinus">
+
+	<div class="clearfix">
+		<div class="box twothird dark-green" id="unversity-intro">
+			<h3><%= @university.name %></h3>
+			<%= @university.description.html_safe %>
+		</div>
+
+		<div class="box third dark-purple" id="counter">
+			<h3>Time left for application</h3>
+			<div id="countdown" class="clearfix"></div>
+			<span id="deadline">Deadline is <span></span></span>
+			<a href="#" class="button">Apply</a>
+		</div>
+	</div>
+
+	<% @university.requirements.each do |requirement| %>
+		<div class="box third gray" id="<%= requirement.level %>">
+			<h4><%= requirement.level.html_safe %></h4>
+			<%= requirement.text.html_safe %>
+
+			<h5>Tuition fee</h5>
+			<%= requirement.tution_fee.html_safe %>
+
+			<h5>Pograms</h5>
+			<ul>
+				<% @university.faculties.each do |faculty| %>
+					<li><%= link_to faculty.name, "#" + faculty.name.delete(" ").downcase %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<div class="box third dark-purple" id="campus">
+		<h3>The Campus</h3>
+		<%= @university.campus.html_safe %>
+	</div>
+	<div class="box third video">
+		<%= @university.campus_map %>
+		<a target="_blank" href="http://maps.google.com/maps?q=1093+Budapest,+F%C5%91v%C3%A1m+t%C3%A9r+8&hl=hu&ie=UTF8&ll=47.485352,19.060056&spn=0.008454,0.019269&sll=47.15984,19.500732&sspn=4.354998,9.865723&hnear=1093+Budapest,+IX.+ker%C3%BClet,+F%C5%91v%C3%A1m+t%C3%A9r+8&t=h&z=16">
+			<img src="http://maps.google.com/maps/api/staticmap?center=47.485564,19.058331&zoom=14&markers=color:green|47.485564,19.058331&size=305x305&sensor=true" alt="The campus of Corvinus University of Budapest" />
+		</a>
+	</div>
+
+	<% unless @university.campus_video.blank? %>
+		<div class="box third video">
+			<iframe src="<%= @university.campus_video %>" width="305" height="305" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+		</div>
+	<% end %>
+
+	<div class="clearfix" id="faculty-grid">
+		<div id="programs" class="box dark-green third">
+			<h3>Programs</h3>
+		</div>
+
+		<% @university.faculties.each do |faculty| %>
+
+			<% id = faculty.name.delete(" ").downcase %>
+
+			<div class="box light-green third" id="<%= id %>">
+				<h4><%= faculty.name %> Bsc</h4>
+				<p><%= faculty.short_description %></p>
+				<a href="#<%= id %>-info" class="button more-link">More info</a>
+				<div class="more-info box gray" id="<%= id %>-info">
+					<h4><%= faculty.name %> BSc</h4>
+					<%= faculty.desc.html_safe %>
+				</div>
+			</div>
+
+		<% end %>
+
+
+</div>
+	<div class="box dark-purple full" id="graduates">
+		<h3>Famous graduates</h3>
+		<% @university.famous_graduates.each do |fam_grad| %>
+			<div class="graduate" id="<%= fam_grad.name.delete(" ").downcase %>">
+				<h4><%= fam_grad.name %></h4>
+				<p><%= fam_grad.title %></p>
+			</div>
+		<% end %>
+	</div>
+	<div class="box full white" id="connections">
+		<h3>Industrial connections</h3>
+		<% @university.related_industries.each do |ind| %>
+			<%= image_tag ind.image_file, :title => ind.name %>
+		<% end %>
+	</div>
+	<div class="box dark-green twothird" id="community">
+		<h3>Community</h3>
+		<%= @university.community.html_safe %>
+	</div>
+	<div class="box third image-quad">
+		<img class="one" src="http://www.placekitten.com/150/150" alt="" />
+		<img class="two" src="http://www.placekitten.com/150/150" alt="" />
+		<img class="three" src="http://www.placekitten.com/150/150" alt="" />
+		<img class="four" src="http://www.placekitten.com/150/150" alt="" />
+		<img class="five" src="http://www.placekitten.com/150/150" alt="" />
+		<img class="six" src="http://www.placekitten.com/150/150" alt="" />
+	</div>
+	<div id="international-relations" class="box full white">
+		<h3>Erasmus partners</h3>
+		<p>These are the universities to which you can go for as an exchange student.</p>
+		<% @university.related_institutions.each do |inst| %>
+			<div class="relation">
+				<span class="country england">England</span>
+				<h5><%= inst.name %></h5>
+				<%= image_tag inst.image_file, :title => inst.name %>
+			</div>
+		<% end %>
+	</div>
+</section>
