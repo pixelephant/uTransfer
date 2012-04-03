@@ -366,6 +366,7 @@ a,input[type='submit']{
 		width:305px;
 		@include clearfix;
 		a,img{
+			text-decoration:none;
 			width:150px;
 			height:150px;
 			&.one{
