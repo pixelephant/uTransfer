@@ -38,9 +38,9 @@
 			<h5>Tuition fee</h5>
 			<%= requirement.tution_fee.html_safe %>
 
-			<h5>Pograms</h5>
+			<h5>Programs</h5>
 			<ul>
-				<% @university.faculties.each do |faculty| %>
+				<% @university.faculties.where(:level => requirement.level).each do |faculty| %>
 					<li><%= link_to faculty.name, "#" + faculty.name.delete(" ").downcase %></li>
 				<% end %>
 			</ul>
@@ -60,9 +60,11 @@
 			<iframe src="<%= @university.campus_video %>" width="305" height="305" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 		</div>
 	<% else %>
-		<% @university.university_images.limit(4).each_with_index do |image, i| %>
-			<%= image_tag image.image_file, :title => @university.name + "-" + i.to_s %>
-		<% end %>
+		<div class="box third image-quad">
+			<% @university.university_images.limit(4).each_with_index do |image, i| %>
+				<%= image_tag image.image_file, :title => @university.name + "-" + (i+1).to_s, :class => int_to_eng(i+1) %>
+			<% end %>
+		</div>
 	<% end %>
 
 	<div class="clearfix" id="faculty-grid">
