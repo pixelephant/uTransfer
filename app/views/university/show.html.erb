@@ -50,10 +50,7 @@
 		<%= @university.campus.html_safe %>
 	</div>
 	<div class="box third video">
-		<%= @university.campus_map %>
-		<a target="_blank" href="http://maps.google.com/maps?q=1093+Budapest,+F%C5%91v%C3%A1m+t%C3%A9r+8&hl=hu&ie=UTF8&ll=47.485352,19.060056&spn=0.008454,0.019269&sll=47.15984,19.500732&sspn=4.354998,9.865723&hnear=1093+Budapest,+IX.+ker%C3%BClet,+F%C5%91v%C3%A1m+t%C3%A9r+8&t=h&z=16">
-			<img src="http://maps.google.com/maps/api/staticmap?center=47.485564,19.058331&zoom=14&markers=color:green|47.485564,19.058331&size=305x305&sensor=true" alt="The campus of Corvinus University of Budapest" />
-		</a>
+		<%= @university.campus_map.html_safe unless @university.campus_map.blank? %>
 	</div>
 
 	<% unless @university.campus_video.blank? %>
@@ -98,12 +95,16 @@
 			</div>
 		<% end %>
 	</div>
-	<div class="box full white" id="connections">
-		<h3>Industrial connections</h3>
-		<% @university.related_industries.each do |ind| %>
-			<%= image_tag ind.image_file, :title => ind.name %>
-		<% end %>
-	</div>
+
+	<% if @university.related_industries.any? %>
+		<div class="box full white" id="connections">
+			<h3>Industrial connections</h3>
+			<% @university.related_industries.each do |ind| %>
+				<%= image_tag ind.image_file, :title => ind.name %>
+			<% end %>
+		</div>
+	<% end %>
+
 	<div class="box dark-green twothird" id="community">
 		<h3>Community</h3>
 		<%= @university.community.html_safe %>
@@ -116,15 +117,18 @@
 		<img class="five" src="http://www.placekitten.com/150/150" alt="" />
 		<img class="six" src="http://www.placekitten.com/150/150" alt="" />
 	</div>
-	<div id="international-relations" class="box full white">
-		<h3>Erasmus partners</h3>
-		<p>These are the universities to which you can go for as an exchange student.</p>
-		<% @university.related_institutions.each do |inst| %>
-			<div class="relation">
-				<span class="country england">England</span>
-				<h5><%= inst.name %></h5>
-				<%= image_tag inst.image_file, :title => inst.name %>
-			</div>
-		<% end %>
-	</div>
+
+	<% if @university.related_institutions.any? %>
+		<div id="international-relations" class="box full white">
+			<h3>Erasmus partners</h3>
+			<p>These are the universities to which you can go for as an exchange student.</p>
+			<% @university.related_institutions.each do |inst| %>
+				<div class="relation">
+					<span class="country england">England</span>
+					<h5><%= inst.name %></h5>
+					<%= image_tag inst.image_file, :title => inst.name %>
+				</div>
+			<% end %>
+		</div>
+	<% end %>
 </section>
