@@ -1,4 +1,7 @@
 class University < ActiveRecord::Base
+	extend FriendlyId
+	friendly_id :name, use: :slugged
+
 	translates :description, :campus
 
 	mount_uploader :index_logo, ImageUploader

@@ -35,6 +35,8 @@ gem 'carrierwave'
 
 gem 'rake', '0.9.2.2'
 
+gem 'friendly_id'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

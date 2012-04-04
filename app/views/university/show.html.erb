@@ -4,7 +4,9 @@
 			<li class="clearfix">
 				<!-- <a class="one active" href="#"><%= image_tag "universities/corvinus/corvinus_slider.png", :title => "Corvinus University of Budapest" %> <span class="name">Corvinus</span></a> -->
 				<% University.all.each do |university| %>
-					<%= link_to university do %>
+					<% active = '' %>
+					<% active = ' active' if university == @university %>
+					<%= link_to university, :class => (university.slug + active) do %>
 						<%= image_tag university.slider_logo unless university.slider_logo.blank? %>
 					<% end %>
 				<% end %>
@@ -12,7 +14,7 @@
 		</ul>
 </div>
 
-<section id="content" class="clearfix corvinus">
+<section id="content" class="clearfix <%= @university.slug %>">
 
 	<div class="clearfix">
 		<div class="box twothird dark-green" id="unversity-intro">
