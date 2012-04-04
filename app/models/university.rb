@@ -1,6 +1,9 @@
 class University < ActiveRecord::Base
 	translates :description, :campus
 
+	mount_uploader :index_logo, ImageUploader
+	mount_uploader :slider_logo, ImageUploader
+
 	has_many :university_translation
 	accepts_nested_attributes_for :university_translation
 

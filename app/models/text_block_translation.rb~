@@ -1,2 +1,0 @@
-class TextBlockTranslation < ActiveRecord::Base
-end
