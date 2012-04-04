@@ -60,6 +60,10 @@
 		<div class="box third video">
 			<iframe src="<%= @university.campus_video %>" width="305" height="305" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 		</div>
+	<% else %>
+		<% @university.university_images.limit(4).each_with_index do |image, i| %>
+			<%= image_tag image.image_file, :title => @university.name + "-" + i.to_s %>
+		<% end %>
 	<% end %>
 
 	<div class="clearfix" id="faculty-grid">
