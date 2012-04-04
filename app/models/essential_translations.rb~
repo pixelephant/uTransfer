@@ -1,3 +1,0 @@
-class EssentialTranslation < ActiveRecord::Base
-	belongs_to :essential
-end

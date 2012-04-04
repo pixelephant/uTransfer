@@ -12,7 +12,7 @@ class Faculty < ActiveRecord::Base
 	validates :name, :desc, :university_id, :presence => true
 
 	def level_enum
-    {:bsc => 1, :msc => 2, :phd => 3}
+    {:bsc => "BSc", :msc => "MSc", :phd => "PhD"}
   end
 
 end

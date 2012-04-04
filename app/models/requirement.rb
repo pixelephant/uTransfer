@@ -10,7 +10,7 @@ class Requirement < ActiveRecord::Base
 	validates :text, :tution_fee, :university_id, :level, :presence => true
 
 	def level_enum
-    {:bsc => 1, :msc => 2, :phd => 3}
+    {:bsc => "BSc", :msc => "MSc", :phd => "PhD"}
   end
 
 end
