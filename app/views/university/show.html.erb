@@ -87,8 +87,8 @@
 </div>
 	<div class="box dark-purple full" id="graduates">
 		<h3>Famous graduates</h3>
-		<% @university.famous_graduates.each do |fam_grad| %>
-			<div class="graduate" id="<%= fam_grad.name.delete(" ").downcase %>">
+		<% @university.famous_graduates.each_with_index do |fam_grad, i| %>
+			<div class="graduate" id="slug-grad-<%= i+1 %>">
 				<h4><%= fam_grad.name %></h4>
 				<p><%= fam_grad.title %></p>
 			</div>
