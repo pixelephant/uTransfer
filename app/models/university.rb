@@ -21,7 +21,7 @@ class University < ActiveRecord::Base
 	has_many :university_images
 	has_many :university_community_images
 
-	validates :name, :description, :deadline, :campus, :presence => true
+	validates :name, :short_name, :description, :deadline, :campus, :presence => true
 
 	def default_for_enum
     I18n.available_locales
