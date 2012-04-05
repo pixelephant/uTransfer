@@ -60,7 +60,7 @@
 
 	<% unless @university.campus_video.blank? %>
 		<div class="box third video">
-			<iframe src="<%= @university.campus_video %>" width="305" height="305" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			<%= @university.campus_video.html_safe %>
 		</div>
 	<% else %>
 		<div class="box third image-quad">
