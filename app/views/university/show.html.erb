@@ -8,6 +8,7 @@
 					<% active = ' active' if university == @university %>
 					<%= link_to university, :class => (university.slug + active) do %>
 						<%= image_tag university.slider_logo unless university.slider_logo.blank? %>
+						<span class="name"><%=university.short_name%></span>
 					<% end %>
 				<% end %>
 			</li>
@@ -93,7 +94,7 @@
 	<div class="box dark-purple full" id="graduates">
 		<h3>Famous graduates</h3>
 		<% @university.famous_graduates.each_with_index do |fam_grad, i| %>
-			<div class="graduate" id="slug-grad-<%= i+1 %>">
+			<div class="graduate" id="grad-<%= i+1 %>">
 				<h4><%= fam_grad.name %></h4>
 				<p><%= fam_grad.title %></p>
 			</div>
@@ -126,9 +127,8 @@
 		<div id="international-relations" class="box full white">
 			<h3>Erasmus partners</h3>
 			<p>These are the universities to which you can go for as an exchange student.</p>
-			<% @university.related_institutions.each do |inst| %>
-				<div class="relation">
-					<span class="country england">England</span>
+			<% @university.related_institutions.each_with_index do |inst, i| %>
+				<div class="relation <%= i == 4 ? 'last' : '' %>">
 					<h5><%= inst.name %></h5>
 					<%= image_tag inst.image_file, :title => inst.name %>
 				</div>

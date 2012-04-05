@@ -260,17 +260,6 @@ div.anythingControls{
 	padding-bottom:0;
 }
 
-#akos{
-	background:url(universities/corvinus/akos.png) no-repeat bottom right;
-}
-
-#agi{
-	background:url(universities/corvinus/agi.png) no-repeat bottom right;
-}
-
-#beke{
-	background:url(universities/corvinus/beke.png) no-repeat bottom right;
-}
 
 #bsc,#msc,#phd{
 	li{
@@ -279,44 +268,50 @@ div.anythingControls{
 	}
 }
 
+/*Híres emberek */
+.corvinus-university-of-budapest{
+	#grad-1{
+		background:url(universities/corvinus/akos.png) no-repeat bottom right;
+	}
+	
+	#grad-2{
+		background:url(universities/corvinus/agi.png) no-repeat bottom right;
+	}
+
+	#grad-3{
+		background:url(universities/corvinus/beke.png) no-repeat bottom right;
+	}
+}
+
+
 /* COLUMN MÉRET IGAZÍTÁSOK */
 
-.corvinus{
+.corvinus-university-of-budapest{
 	#bsc,#msc,#phd{
-	height:515px;
-}
-
-#counter{
-	height:363px;
-}
-
-
-#campus{
-	height:265px;
-}
-
-#community{
-	height:420px;
-}
-
+		height:515px;
+	}
+	#counter{
+		height:363px;
+	}
+	#campus{
+		height:265px;
+	}
+	#community{
+		height:420px;
+	}
 }
 
 .bme{
 	#bsc,#msc,#phd{
-	height:640px;
-}
-
-#counter{
-	height:363px;
-}
-
-
-#campus{
-	height:265px;
-}
-
-#community{
-	height:420px;
-}
-	
+		height:640px;
+	}
+	#counter{
+		height:363px;
+	}
+	#campus{
+		height:265px;
+	}
+	#community{
+		height:420px;
+	}
 }
