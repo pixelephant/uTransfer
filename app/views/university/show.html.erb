@@ -8,7 +8,7 @@
 					<% active = ' active' if university == @university %>
 					<%= link_to university, :class => (university.slug + active) do %>
 						<%= image_tag university.slider_logo unless university.slider_logo.blank? %>
-						<span class="name"><%=university.short_name%></span>
+						<span class="name"><%= university.short_name %></span>
 					<% end %>
 				<% end %>
 			</li>
@@ -32,14 +32,16 @@
 	</div>
 
 	<% @university.requirements.each do |requirement| %>
-		<div class="box third gray" id="<%= requirement.level %>">
+		<div class="box third gray" id="<%= requirement.level.downcase %>">
 			<h4><%= requirement.level.html_safe %></h4>
+
+			<h5>Requirements</h5>
 			<%= requirement.text.html_safe %>
 
 			<h5>Tuition fee</h5>
 			<%= requirement.tution_fee.html_safe %>
 
-			<h5>Programs</h5>
+			<h5>Programmes</h5>
 			<ul>
 				<% @university.faculties.where(:level => requirement.level).each do |faculty| %>
 					<li><%= link_to faculty.name, "#" + faculty.name.delete(" ").downcase %></li>
@@ -70,7 +72,7 @@
 
 	<div class="clearfix" id="faculty-grid">
 		<div id="programs" class="box dark-green third">
-			<h3>Programs</h3>
+			<h3>Programmes</h3>
 		</div>
 
 		<% @university.faculties.each do |faculty| %>
@@ -78,11 +80,10 @@
 			<% id = faculty.name.delete(" ").downcase %>
 
 			<div class="box light-green third" id="<%= id %>">
-				<h4><%= faculty.name %> Bsc</h4>
+				<h4><%= faculty.name %> <%= faculty.level.html_safe %></h4>
 				<p><%= faculty.short_description %></p>
 				<a href="#<%= id %>-info" class="button more-link">More info</a>
 				<div class="more-info box gray" id="<%= id %>-info">
-					<h4><%= faculty.name %> BSc</h4>
 					<%= faculty.desc.html_safe %>
 				</div>
 			</div>

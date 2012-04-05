@@ -192,11 +192,12 @@ div.anythingControls{
 	}
 	padding-left:0;
 	padding-right:0;
+	width:935px;
 }
 
 .graduate{
 	float:left;
-	width:258px;
+	width:271px;
 	height:200px;
 	padding:0 20px;
 }
@@ -275,11 +276,26 @@ div.anythingControls{
 	}
 	
 	#grad-2{
-		background:url(universities/corvinus/agi.png) no-repeat bottom right;
+		background:url(universities/corvinus/beke.png) no-repeat bottom right;
 	}
 
 	#grad-3{
-		background:url(universities/corvinus/beke.png) no-repeat bottom right;
+		background:url(universities/corvinus/agi.png) no-repeat bottom right;
+	}
+}
+
+
+.international-business-school{
+	#grad-1{
+		background:url(universities/ibs/koko.png) no-repeat bottom right;
+	}
+	
+	#grad-2{
+		background:url(universities/ibs/zseda.png) no-repeat bottom right;
+	}
+
+	#grad-3{
+		background:url(universities/ibs/aczel.png) no-repeat bottom right;
 	}
 }
 
@@ -288,7 +304,7 @@ div.anythingControls{
 
 .corvinus-university-of-budapest{
 	#bsc,#msc,#phd{
-		height:515px;
+		height:445px;
 	}
 	#counter{
 		height:363px;
@@ -301,12 +317,27 @@ div.anythingControls{
 	}
 }
 
-.bme{
+.budapest-university-of-technology-and-economics{
 	#bsc,#msc,#phd{
-		height:640px;
+		height:620px;
 	}
 	#counter{
-		height:363px;
+		height:372px;
+	}
+	#campus{
+		height:265px;
+	}
+	#community{
+		height:420px;
+	}
+}
+
+.international-business-school{
+	#bsc,#msc,#phd{
+		height:620px;
+	}
+	#counter{
+		height:306px;
 	}
 	#campus{
 		height:265px;
