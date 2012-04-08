@@ -28,7 +28,6 @@ $brand-green: #84A219;
   -webkit-border-bottom-right-radius: $br;
   -webkit-border-bottom-left-radius: $bl;
   border-radius: $tl $tr $br $bl;
- -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 }
 
 @mixin background-gradient($startColor: #3C3C3C, $endColor: #999999, $image: none) {
@@ -127,7 +126,7 @@ $brand-green: #84A219;
 @mixin cupid-black {
   color: #333333;
   @include font-raleway;
-  font-size:18px;
+  font-size:20px;
   padding:0 10px; 
   height:32px;
   line-height:30px;

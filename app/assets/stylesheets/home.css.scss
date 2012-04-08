@@ -94,9 +94,8 @@ div.anythingSlider{
 
 #partner-uni-box{
 	background: url(bookmark.png) no-repeat 250px 20px;
-	padding-right:50px;
-	width:235px;
-	height:134px;
+	width:895px;
+	position:relative;
 }
 
 #newsletter{
@@ -136,10 +135,12 @@ div.anythingSlider{
 
 #view-all-uni{
 	float:right;
+	position:absolute;
+	top:20px;
+	right:20px;
 }
 
 .universities{
-	margin-top:110px;
 	a{
 		margin:0 10px;
 	}

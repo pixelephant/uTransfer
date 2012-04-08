@@ -1,7 +1,4 @@
 //= require jquery.easing
-//= require jquery.anythingslider
-//= require jquery.anythingslider.fx
-//= require jquery.touchwipe
 //= require jquery.countdown
 //= require jquery.fancybox
 
@@ -24,7 +21,7 @@ $(document).ready(function(){
 	});
 	
 	
-	$("#university-slider").anythingSlider({
+	/*$("#university-slider").anythingSlider({
 		appendControlsTo : ".anythingWindow",
 		buildStartStop: false,
 		buildNavigation: false,
@@ -41,7 +38,7 @@ $(document).ready(function(){
 		'.two' : ['right','1300px','1200'],
 		'.three' : ['right','1400px','1300'],
 		'.four' : ['right','1500px','1400']
-	  });;
+	  });;*/
 	
 	var austDay = new Date();
 	austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 26);

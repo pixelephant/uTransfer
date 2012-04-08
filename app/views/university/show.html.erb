@@ -6,7 +6,7 @@
 				<% University.all.each do |university| %>
 					<% active = '' %>
 					<% active = ' active' if university == @university %>
-					<%= link_to university, :class => (university.slug + active) do %>
+					<%= link_to university, :class => (university.slug + active + " animated fadeInRightBig") do %>
 						<%= image_tag university.slider_logo unless university.slider_logo.blank? %>
 						<span class="name"><%= university.short_name %></span>
 					<% end %>

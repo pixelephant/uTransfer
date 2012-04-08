@@ -20,13 +20,12 @@
 }
 
 #photo{
-	margin-bottom:-100px;
+	margin-bottom:-29px;
 }
 
 #photo img{
 	position: relative;
 	z-index: 3;
-	left: -100px;
 }
 
 #under-photo{
@@ -127,7 +126,7 @@ table{
 		margin:0;
 	}
 	li{
-		height:300px !important;
+		height:350px !important;
 		margin:0;
 		padding:0;
 		.caption{
@@ -138,6 +137,7 @@ table{
 			width:895px;
 			color:white;
 			@include dark-purple-gradient;
+			opacity:0.8;
 		}
 	}
 }
@@ -203,6 +203,10 @@ table{
 }
 
 /*MÉRET IGAZÍTÁSOK*/
+
+#basic{
+	height:256px;
+}
 
 #gastro .third{
 	height:310px;
