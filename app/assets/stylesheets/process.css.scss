@@ -7,6 +7,7 @@
 	padding-right:80px;
 	width:357px;
 	float:left;
+	height:130px;
 	.num{
 		display:block;
 		float:left;
@@ -25,6 +26,7 @@
 	p{
 		padding:20px;
 		font-size:12px;
+		line-height:1.5;
 	}
 	&.first{
 		color:$brand-purple;
@@ -72,7 +74,7 @@
 		.num{
 			background:#3d9551;
 		}	
-		background:url(process_ticket.png) no-repeat right center;
+		background:url(process_visa.png) no-repeat right center;
 	}
 	&.seventh{
 		margin-top:40px;
@@ -80,7 +82,7 @@
 		.num{
 			background:#3d958e;
 		}
-		background:url(process_visa.png) no-repeat right center;			
+		background:url(process_ticket.png) no-repeat right center;			
 	}
 	&.eighth{
 		margin-top:60px;		
@@ -92,6 +94,14 @@
 	}
 	&.ninth{
 		margin-top:40px;		
+		color:$brand-purple;
+		.num{
+			background:$brand-purple;
+		}
+		background:url(process_experience.png) no-repeat right center;			
+	}
+	&.tenth{
+		margin-top:60px;		
 		color:$brand-purple;
 		.num{
 			background:$brand-purple;
