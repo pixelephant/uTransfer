@@ -93,7 +93,7 @@ div.anythingControls{
 			width:240;
 			display:block;
 			float:left;
-			margin:0px 6px;
+			margin:0 5px;
 			position:relative;
 			text-decoration:none;
 			color:black;
@@ -106,7 +106,13 @@ div.anythingControls{
 				margin-top:-5px;
 			}
 			&.active{
-				background:url(slider_active.png) no-repeat bottom center;
+				//background:url(slider_active.png) no-repeat bottom center;
+				border:1px solid $brand-purple;
+				@include border-radius(20px,20px,20px,20px);
+				padding:6px;
+				.name{
+					color:$brand-purple;
+				}
 			}
 			img{
 				
@@ -310,6 +316,15 @@ div.anythingControls{
 
 /* COLUMN MÉRET IGAZÍTÁSOK */
 
+.the-liszt-academy-of-music{
+	#counter{
+		height:325px;
+	}
+	#campus{
+		height:265px;
+	}
+}
+
 .corvinus-university-of-budapest{
 	#bsc,#msc,#phd{
 		height:445px;
@@ -342,7 +357,7 @@ div.anythingControls{
 		height:420px;
 	}
 	#counter{
-		height:306px;
+		height:325px;
 	}
 	#campus{
 		height:265px;

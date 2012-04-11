@@ -1,0 +1,31 @@
+@import '_mixins.css.scss';
+
+#approach{
+	h3{
+		color:$brand-green;
+	}
+}
+
+#service-image{
+	text-align:center;
+	img{
+
+	}
+}
+
+
+#personal-needs .third{
+	height:114px;
+}
+
+#personalized-brochure .third{
+	height:114px;
+}
+
+#visa-procedure .third{
+	height:171px;
+}
+
+#local-community .third{
+	height:171px;
+}
