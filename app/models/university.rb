@@ -27,4 +27,10 @@ class University < ActiveRecord::Base
     I18n.available_locales
   end
 
+  # def description
+  # 	# self.description.gsub!('#<p[^>]*>(\s|&nbsp;?)*</p>#')
+  # 	self.description.downcase!
+  # 	# self
+  # end
+
 end
