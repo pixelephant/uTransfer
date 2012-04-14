@@ -137,6 +137,9 @@ RailsAdmin.config do |config|
 			field :experiences do
         ckeditor true
       end
+      field :career do
+        ckeditor true
+      end
     end
   end
 
