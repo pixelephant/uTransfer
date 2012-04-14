@@ -13,8 +13,8 @@ $(document).ready(function(){
 		$(this).parent().slideUp();
 		$("#form-side").slideUp();
 		$("#additional").slideDown("300",function(){
-			$('html, body').animate({ 
-      			scrollTop: $('#additional').offset().top 
+			$('html, body').animate({
+      			scrollTop: $('#additional').offset().top
   			});
 		});
 		return false;
@@ -30,4 +30,19 @@ $(document).ready(function(){
 			$(".uni-no").show();
 		}
 	});
+
+	$("#personals_university_id").change(function(){
+		id = $("#personals_university_id").val();
+		$.ajax({
+		  type: 'POST',
+		  url: "/universities/universities_faculties",
+			data: {id : id},
+		  success: function(resp){
+		  	$("#major").html("");
+				$.each(resp, function(i, val) {
+      		$("#major").append("<option value='" + val.id+ "'>" + val.name + "</option>")
+    		});
+		}});
+	});
+
 });

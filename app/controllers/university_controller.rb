@@ -14,4 +14,12 @@ class UniversityController < ApplicationController
     end
   end
 
+  def universities_faculties
+    faculties = University.find(params[:id]).faculties
+
+    respond_to do |format|
+      format.json { render json: faculties }
+    end
+  end
+
 end

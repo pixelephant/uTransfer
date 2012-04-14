@@ -4,6 +4,8 @@ Utransfer::Application.routes.draw do
 
   devise_for :users
 
+  post 'universities/universities_faculties'  => 'university#universities_faculties'
+
   resources :essentials
 
   resources :university

@@ -6,7 +6,7 @@
 	<div class="box gray twothird">
 		<form id="offer-form" action="#">
 			<h4>Personal data</h4>
-			
+
 			<fieldset>
 				<div class="half">
 					<label for="firstname">First name</label> <input autofocus type="text" name="firstname" id="firstname" class="required" />
@@ -133,19 +133,15 @@
 					<legend>Where would you like to apply?</legend>
 					<div>
 						<div class="half">
-							<label for="university">University</label> 
-							<select name="university" id="university">
-								<option value="#">University 1</option>
-								<option value="#">University 2</option>
-								<option value="#">University 3</option>								
-							</select>
+							<label for="personals_university_id">University</label>
+								<%= select("personals", "university_id", University.all.collect {|u| [ u.name, u.id ] }, {:prompt => 'Select University'}) %>
 						</div>
 						<div class="half">
-							<label for="major">Major</label> 
+							<label for="major">Major</label>
 							<select name="major" id="major">
 								<option value="#">Major 1</option>
 								<option value="#">Major 2</option>
-								<option value="#">Major 3</option>								
+								<option value="#">Major 3</option>
 							</select>
 						</div>
 					</div>
@@ -225,14 +221,14 @@
 							<label for="">Open day <input type="checkbox" name="heard" id="" /></label>
 						</div>
 				</div>
-			</fieldset>		
+			</fieldset>
 			<fieldset>
 				<div class="tarea">
 					<label>Other</label>
 					<textarea cols="60" rows="10"></textarea>
 				</div>
 			</fieldset>
-			<input type="submit" value="Send" />	
+			<input type="submit" value="Send" />
 		</form>
 	</div>
 </section>
