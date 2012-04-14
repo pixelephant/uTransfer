@@ -196,6 +196,7 @@ a,input[type='submit']{
 }
 
 #masthead{
+	background:url(arrow.png) no-repeat 470px 145px;
 	width:910px;
 	margin:0 auto;
 	padding:35px 30px 0px 30px;
@@ -451,7 +452,16 @@ a,input[type='submit']{
 			color:black;
 		}
 	}
+
+
+	&.white h3{
+		margin-top:70px;
+	}
 	
+	&.white-green h3{
+		margin-top:70px;	
+	}
+
 	&.white-purple{
 		h3,h4,h5,ul,strong{
 			color:$brand-purple;
@@ -471,6 +481,11 @@ a,input[type='submit']{
 		}
 	}
 }
+
+.white-green h3,h3.purple{
+		margin-top:70px !important;
+		margin-bottom:20px;	
+	}
 
 h3.green{
 	font-size:28px;

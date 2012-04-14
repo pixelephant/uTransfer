@@ -1,6 +1,6 @@
 <section id="content" class="clearfix">
 	<div class="twothird-wrap">
-		<div class="box two-third white" id="hungary-intro">
+		<div class="box two-third white-purple" id="hungary-intro">
 			<h3>Hungary, the land of oppurtunities</h3>
 			<p class="left">Hungary is located in the heart of Europe with its magnificent history, Hungary is one of the oldest countries in Europe it has more than 1100 years history. Hungarians speak a language and form a culture unlike any other in the region. With its capital <em>Budapest the “Pearl of the Danube”</em> Hungary is one of most attractive places in Europe moreover it is the <strong>15th most liked tourist destination in the world.</strong></p>
 
@@ -47,40 +47,45 @@
 		<thead>
 			<tr>
 				<th class="big">Living cost estimates</th>
-				<th>New York</th>
-				<th>Paris</th>
 				<th>Budapest</th>
-				<th class="last">Milan</th>
+				<th>Dallas</th>
+				
+				<th>Melbourne</th>
+				<th class="last">London</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
-				<td class="head">First criteria <a href="#" title="Ide jön a magyarázat" class="info">?</a></td>
-				<td>220.35 $ / sem.</td>
-				<td>220.35 $ / sem.</td>
-				<td>220.35 $ / sem.</td>
-				<td class="last">220.35 $ / sem.</td>			
+				<td class="head">BSc courses / year</td>
+				<td>&euro; 5 000 - 7 000</td>
+				<td>&euro; 10 000 - 50 000</td>
+				
+				<td>&euro; 15 000 - 30 000</td>
+				<td class="last">&euro; 20 000 - 50 000</td>			
 			</tr>
 			<tr>
-				<td class="head">Second criteria</td>
-				<td>220.35 $ / sem.</td>
-				<td>220.35 $ / sem.</td>
-				<td>220.35 $ / sem.</td>
-				<td class="last">220.35 $ / sem.</td>			
+				<td class="head">Cost of living / month <a href="#"t title="Including food and free time." class="info">?</a></td>
+				<td>&euro; 200</td>
+				<td>&euro; 300</td>
+				
+				<td>&euro; 350</td>
+				<td class="last">&euro; 470</td>			
 			</tr>
 			<tr>
-				<td class="head">Third criteria</td>
-				<td>220.35 $ / sem.</td>
-				<td>220.35 $ / sem.</td>
-				<td>220.35 $ / sem.</td>
-				<td class="last">220.35 $ / sem.</td>			
+				<td class="head">Apartment / month</td>
+				<td>&euro; 300 - 600</td>
+				<td>&euro; 600 - 1 000</td>
+				
+				<td>&euro; 300 - 1 000</td>
+				<td class="last">&euro; 700 - 1 600</td>			
 			</tr>
 			<tr>
-				<td class="head">Fourth criteria</td>
-				<td>220.35 $ / sem.</td>
-				<td>220.35 $ / sem.</td>
-				<td>220.35 $ / sem.</td>
-				<td class="last">220.35 $ / sem.</td>			
+				<td class="head">Total / year</td>
+				<td>&euro; 12 000 - 15 000</td>
+				<td>&euro; 20 800 - 65 600</td>
+				
+				<td>&euro; 22 800 - 46 200</td>
+				<td class="last">&euro; 34 040 - 74 000</td>			
 			</tr>
 		</tbody>
 	</table>
@@ -88,23 +93,23 @@
 		<h3>Sights</h3>
 	</div>
 	<div class="box third image-quad">
-		<%= link_to "/assets/sights/nationalmuseum.jpg", :title => "National Museum", :class=>"fancybox one", :rel=>"group1" do %>
-			<%= image_tag("sights/nationalmuseum.jpg", :title => "National Museum") %>
+		<%= link_to "/assets/sights/furdo.jpg", :title => "Fürdő", :class=>"fancybox one", :rel=>"group1" do %>
+			<%= image_tag("sights/furdo.jpg", :title => "Fürdő") %>
 		<% end %>
-		<%= link_to "/assets/sights/fisherman.jpg", :title => "Fisherman", :class=>"fancybox two", :rel=>"group1" do %>
-			<%= image_tag("sights/fisherman.jpg", :title => "Fisherman") %>
+		<%= link_to "/assets/sights/hosok.jpg", :title => "Hősök tere", :class=>"fancybox two", :rel=>"group1" do %>
+			<%= image_tag("sights/hosok.jpg", :title => "Hősök tere") %>
 		<% end %>
-		<%= link_to "/assets/sights/matyaschurch.jpg", :title => "Mátyás", :class=>"fancybox three", :rel=>"group1" do %>
-			<%= image_tag("sights/matyaschurch.jpg", :title => "Mátyás") %>
+		<%= link_to "/assets/sights/hid.jpg", :title => "Híd", :class=>"fancybox three", :rel=>"group1" do %>
+			<%= image_tag("sights/hid.jpg", :title => "Híd") %>
 		<% end %>
-		<%= link_to "/assets/sights/chainbridge.png", :title => "Chainbridge", :class=>"fancybox four", :rel=>"group1" do %>
-			<%= image_tag("sights/chainbridge.png", :title => "Chainbridge") %>
+		<%= link_to "/assets/sights/parlament.jpg", :title => "Parlament", :class=>"fancybox four", :rel=>"group1" do %>
+			<%= image_tag("sights/parlament.jpg", :title => "Parlament") %>
 		<% end %>
 	</div>
 	<div class="box third video">
-		<iframe width="305" height="305" src="http://www.youtube.com/embed/e0wkokaybWA" frameborder="0" allowfullscreen></iframe>
+		<iframe width="305" height="305" src="http://www.youtube.com/embed/e0wkokaybWA?wmode=transparent" frameborder="0" allowfullscreen></iframe>
 	</div>
-	<div id="history">
+	<div id="history" class="clearfix">
 		<div class="box third dark-green">
 		<h3>History</h3>
 		<p>The ancient Hungarian’s homeland was somewhere in Western Siberia. The Huns were a group of Eurasian nomads, appearing from east of the Volga, who migrated into Europe c. 370 and built up an enormous empire. Attila the Hun, was the ruler. 
@@ -121,7 +126,7 @@ Under the leadership of Árpád the Hungarians tribes settled in the Carpathian 
 In 2004 Hungary joined The EU and to the Schengen Agreement as well.</p>
 	</div>
 	</div>
-	<div id="gastro">
+	<div id="gastro" class="white-green clearfix">
 		<h3 class="green">Gastronomy</h3>
 		<div class="third-wrap">
 			<div class="box light-green third">
@@ -207,13 +212,13 @@ In 2004 Hungary joined The EU and to the Schengen Agreement as well.</p>
 				</li>
 				<li>
 					<div class="caption">
-						<p>Romkocsmák - Mik ezek, tök egyedi Szimpla, Instant, Fogasház fotómontázs szövegben a nevük mint példa</p>
+						<p><strong>Ruined pubs</strong> are a unique Hungarian inventions, which became world famous in the past years. They are among the bucket list of almost all the foreigners coming to Hungary. <strong>Szimpla</strong>, the most famous pub <strong>became the world’s 3rd best pub</strong> according to Lonelyplanet.</p>
 					</div>
 					<%= image_tag "festival/romkocsmak.jpg" %>
 				</li>
 				<li>
 					<div class="caption">
-						<p>Gastro festivals</p>
+						<p>Hungary is famous for its gastronomy, hence Hungarian focus on it a lot. There are gastro festivals organized annualy , all over Hungary. The most famous gastro festivals are the <strong>pálinka, wine and sausage festival</strong> which is held in the magnificent castle district in Budapest.</p>
 					</div>
 					<%= image_tag "festival/gasztro.jpg" %>
 				</li>
@@ -257,23 +262,23 @@ In 2004 Hungary joined The EU and to the Schengen Agreement as well.</p>
 	</div>
 	<div id="famous-hungarians" class="box full dark-purple">
 		<h3>Famous hungarians</h3>
-		<div class="hungarian">
-			<h4>Pap Norbert</h4>
-			<p>Lorem ipsum dolor sit amet.</p>
+		<div class="hungarian" id="neumann">
+			<h4>János Neumann</h4>
+			<p>founding figure in <br> computer science</p>
 		</div>
-		<div class="hungarian">
-			<h4>Pap Norbert</h4>
-			<p>Lorem ipsum dolor sit amet.</p>
+		<div class="hungarian" id="szent-gyorgyi">
+			<h4>Albert Szent-Györgyi</h4>
+			<p>Nobel prize winner, <br>discovery of vitamin C</p>
 		</div>
-		<div class="hungarian">
-			<h4>Pap Norbert</h4>
-			<p>Lorem ipsum dolor sit amet.</p>
+		<div class="hungarian" id="puskas">
+			<h4>Ferenc Puskás</h4>
+			<p>one of the best football <br> players of all time</p>
 		</div>
 	</div>
 	<div class="box full" id="hung">
 		<h3 class="purple">Hungaricums</h3>
 	<p>Hungaricums are those unique Hungarian products, specialties, works of art, and animals which you can not find anywhere else in the world except in Hungary.</p>
-	<div id="hungaricums">
+	<div id="hungaricums" class="clearfix">
 		<div class="hungaricum">
 			<h5>Pálinka</h5>
 			<%= link_to "/assets/hungaricum/palinka.jpg", :title => "Pálinka", :class=>"fancybox one", :rel=>"group4" do %>

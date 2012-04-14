@@ -2,10 +2,17 @@
 //= require jquery.countdown
 //= require jquery.fancybox
 
-
-
-
 $(document).ready(function(){
+
+	$(".fancybox").fancybox({
+		openEffect : "elastic",
+		closeEffect : "elastic",
+		helpers: {
+			title : {
+					type : 'inside'
+					}
+			}
+	});
 	
 /*	$.countdown.regional['zh-CN'] = {
 		labels: ['年', '月', '周', '天', '时', '分', '秒'],

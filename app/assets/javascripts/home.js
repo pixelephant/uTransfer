@@ -36,15 +36,16 @@ $(document).ready(function(){
 		animationTime      : 0,
         delayBeforeAnimate : 500,
 	    onSlideComplete: function(slider) {
+	    	var a = slider.$targetPage.next();
 			$("#slider-outer").animate({
-				backgroundColor: get_random_color()
+				backgroundColor: a.data("color")
 			},500);
 		}
 	}).anythingSliderFx({ 
-		'p' : ['fade'],
+		'p' : ['left'],
 	    'img' : [ 'bottom' ],
 		'h2' : ['left'],
-		'a' : ['fade']
+		'a' : ['bottom']
 	  },{
 		stopRepeat : false
 	});;

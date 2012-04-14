@@ -177,7 +177,7 @@ $brand-green: #84A219;
 	}
 }
 
-.white .button,.gray .button{
+.white .button,.gray .button,.white-purple .button{
 	@include cta-button(#fff,$brand-purple);
 	border:1px solid #24195e;
 	&:hover,&:focus{

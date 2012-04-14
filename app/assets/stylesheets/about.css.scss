@@ -9,6 +9,7 @@
 	}
 	h3{
 		color:$brand-purple;
+		margin-top:0 !important;
 	}
 }
 
@@ -32,11 +33,14 @@
 		color:$brand-purple;
 		font-size:12px;
 		line-height:1.5;
-		width:265px;
+		width:245px;
+		background:rgba(255,255,255,0.9);
+		@include border-radius(20px,20px,20px,20px);
 	}
 }
 
 #about-peter{
+	background:url(about/Peter.jpg) no-repeat center left;
 	text-align:right;
 	p{
 		float:right;
@@ -44,6 +48,7 @@
 }
 
 #about-gan{
+	background:url(about/Gan.jpg) no-repeat center right;
 	text-align:left;
 	p{
 		float:left;

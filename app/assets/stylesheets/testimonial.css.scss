@@ -1,5 +1,5 @@
-@import 'anythingslider.css';
 @import '_mixins.css.scss';
+@import '_animation.css';
 
 .anythingControls{
 	display:none !important;
@@ -57,7 +57,7 @@
 			top:-10px;
 			text-indent:-9999em;
 			&.ukrainian{
-				background: url(flags/ukraine.png) no-repeat center;
+				background: url(flags/ukr.png) no-repeat center;
 			}
 		}
 		.name{
@@ -74,7 +74,6 @@
 #cite{
 	cite{
 		display:block;
-		background:url(qoutemark.png) no-repeat 200px 70px;
 		@include font-raleway;
 		font-size:50px;
 		color:white;
@@ -103,17 +102,20 @@
 	}
 }
 
+#about-box,#experiences-box{
+	height:315px;
+}
+
 #photo{
 	img{
 		position:relative;
 		z-index:3;
-		left:-100px;
 	}
 }
 
 #under-photo{
 	position:relative;
-	top:-135px;
+	top:-170px;
 	z-index:4;
 }
 

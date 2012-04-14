@@ -44,7 +44,7 @@
 			<h5>Programmes</h5>
 			<ul>
 				<% @university.faculties.where(:level => requirement.level).each do |faculty| %>
-					<li><%= link_to faculty.name, "#" + faculty.name.delete(" ").downcase %></li>
+					<li><%= link_to faculty.name, "#" + faculty.name.delete(" ").downcase + "-" +requirement.level.downcase %></li>
 				<% end %>
 			</ul>
 		</div>
@@ -65,7 +65,9 @@
 	<% else %>
 		<div class="box third image-quad">
 			<% @university.university_images.limit(4).each_with_index do |image, i| %>
-				<%= image_tag image.image_file, :title => @university.name + "-" + (i+1).to_s, :class => int_to_eng(i+1) %>
+				<%= link_to(image.image_file.to_s, :title => @university.name + "-" + (i+1).to_s, :class => int_to_eng(i+1) + " fancybox", :rel => "camp") do %>
+					<%= image_tag image.image_file, :title => @university.name + "-" + (i+1).to_s, :class => int_to_eng(i+1) %>
+				<% end %>
 			<% end %>
 		</div>
 	<% end %>
@@ -75,9 +77,9 @@
 			<h3>Programmes</h3>
 		</div>
 
-		<% @university.faculties.each do |faculty| %>
+		<% @university.faculties.order("level").each do |faculty| %>
 
-			<% id = faculty.name.delete(" ").downcase %>
+			<% id = faculty.name.delete(" ").downcase + "-" +faculty.level.downcase %>
 
 			<div class="box light-green third" id="<%= id %>">
 				<h4><%= faculty.name %> <%= faculty.level.html_safe %></h4>

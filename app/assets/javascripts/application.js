@@ -32,6 +32,6 @@ $(document).ready(function(){
 	$("#languages li").click(function(){
 		$("#current-language").removeClass().addClass($(this).attr("class"));
 		$("#current-language").trigger("click");
-	})
+	});
 
 });
