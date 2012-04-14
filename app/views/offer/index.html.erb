@@ -23,19 +23,8 @@
 				</div>
 			</fieldset>
 			<filedset>
-				<label for="citizenship">Citizenship</label>
-				<select name="citizeship" id="citizenship">
-					<option value="">1</option>
-					<option value="">2</option>
-					<option value="">3</option>
-					<option value="">4</option>
-					<option value="">5</option>
-					<option value="">6</option>
-					<option value="">7</option>
-					<option value="">8</option>
-					<option value="">9</option>
-					<option value="">10</option>
-				</select>
+				<label for="personals_country_id">Citizenship</label>
+				<%= select("personals", "country_id", Country.all.collect {|u| [ u.name, u.id ] }, {:prompt => 'Select Country'}) %>
 			</filedset>
 			<fieldset>
 				<label for="age">How old are you?</label>
