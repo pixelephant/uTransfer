@@ -134,7 +134,7 @@ RailsAdmin.config do |config|
 			field :about do
         ckeditor true
       end
-			field :experiences do
+			field :experience do
         ckeditor true
       end
       field :career do
@@ -150,7 +150,7 @@ RailsAdmin.config do |config|
       field :about do
         ckeditor true
       end
-			field :experiences do
+			field :experience do
         ckeditor true
       end
 			field :quote do

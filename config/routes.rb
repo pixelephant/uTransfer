@@ -8,6 +8,8 @@ Utransfer::Application.routes.draw do
 
   resources :essentials
 
+  resources :testimonial
+
   resources :university
 
   root :to => 'home#index'

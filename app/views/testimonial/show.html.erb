@@ -1,0 +1,64 @@
+<div id="testimonial-slider-wrap">
+		<h1>Testimonials <span class="sub"> we helped their university transfer to Hungary</span></h1>
+		<ul id="testimonial-slider">
+			<li class="clearfix">
+				<a class="one" href="#"><span class="nationality ukrainian">Ukrain</span><%= image_tag "testimonials/olga/olga_thumb.png", :title => "Olga from Ukraine" %> <span class="name">Olga</span></a>
+				<% @testimonials.each do |testimonial| %>
+					<%= link_to testimonial_url(testimonial), :class => testimonial.slug do %>
+						<% title = testimonial.first_name + " from " + testimonial.country.name %>
+						<span class="nationality <%= testimonial.country.nationality.to_s %>"><%= testimonial.country.nationality.to_s %></span><%= image_tag testimonial.slider_image.to_s, :title => title, :alt => title %> <span class="name"><%= testimonial.first_name %></span>
+					<% end %>
+				<% end %>
+			</li>
+		</ul>
+</div>
+
+<section id="content" class="clearfix">
+
+	<div class="clearfix">
+		<div class="twothird-wrap">
+			<div class="box twothird dark-green" id="cite">
+				<h3><%= @testimonial.first_name + " " + @testimonial.last_name %></h3>
+				<cite><%= @testimonial.quote.html_safe %></cite>
+			</div>
+
+			<div class="third-wrap">
+				<div class="box third gray" id="about-box">
+					<h4>About <%= @testimonial.first_name %></h4>
+					<p> <strong>From</strong> <%= @testimonial.country.name %></p>
+					<p><strong>University</strong> <%= link_to @testimonial.university.name, university_url(@testimonial.university) %></p>
+					<p><strong>How did he find us</strong> word-of-mouth, through friends</p>
+				</div>
+			</div>
+			<div class="box third gray" id="experiences-box">
+				<h4>Experiences</h4>
+				<%= @testimonial.experience.html_safe %>
+			</div>
+		</div>
+		<div class="box third" id="photo">
+			<%= image_tag @testimonial.full_image, :title => @testimonial.first_name + " from " + @testimonial.country.name %>
+		</div>
+	</div>
+	<div id="under-photo">
+		<div id="experiences" class="box third dark-purple">
+			<h3><%= @testimonial.first_name %> in Hungary</h3>
+		</div>
+		<% unless @testimonial.video.nil? %>
+			<div class="box third video">
+				<%= video_tag @testimonial.video %><!-- Ez így nyilván nem jó -->
+			</div>
+		<% end %>
+		<div class="box third image-quad">
+			<% @experience_images.each_with_index do |image, i| %>
+				<%= image_tag image.image_file, :class => int_to_eng(i) %>
+			<% end %>
+		</div>
+		<div id="career" class="box third light-green">
+			<h3>Career</h3>
+			<%= @testimonial.career.html_safe %>
+		</div>
+		<div class="box twothird light-green">
+
+		</div>
+	</div>
+</section>

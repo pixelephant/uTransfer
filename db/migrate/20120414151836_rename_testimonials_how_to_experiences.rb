@@ -1,6 +1,6 @@
 class RenameTestimonialsHowToExperiences < ActiveRecord::Migration
   def change
-  	rename_column :testimonials, :how, :experiences
-  	rename_column :testimonial_translations, :how, :experiences
+  	rename_column :testimonials, :how, :experience
+  	rename_column :testimonial_translations, :how, :experience
   end
 end
