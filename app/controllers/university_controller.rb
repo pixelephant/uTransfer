@@ -7,6 +7,7 @@ class UniversityController < ApplicationController
 
 	def show
 		@university = University.find(params[:id])
+    @community_images = University.limit(6).find(params[:id]).university_community_images
 
     respond_to do |format|
       format.html # show.html.erb

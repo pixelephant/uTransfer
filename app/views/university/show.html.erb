@@ -118,12 +118,9 @@
 		<%= @university.community.html_safe %>
 	</div>
 	<div class="box third image-quad">
-		<img class="one" src="http://www.placekitten.com/150/150" alt="" />
-		<img class="two" src="http://www.placekitten.com/150/150" alt="" />
-		<img class="three" src="http://www.placekitten.com/150/150" alt="" />
-		<img class="four" src="http://www.placekitten.com/150/150" alt="" />
-		<img class="five" src="http://www.placekitten.com/150/150" alt="" />
-		<img class="six" src="http://www.placekitten.com/150/150" alt="" />
+		<% @community_images.each_with_index do |image, i| %>
+			<%= image_tag image.image_file, :class => int_to_eng(i) %>
+		<% end %>
 	</div>
 
 	<% if @university.related_institutions.any? %>
