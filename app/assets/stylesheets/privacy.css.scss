@@ -1,0 +1,16 @@
+@import '_mixins.css.scss';
+a.orange{
+			color:#dd5520;
+			@include transition-03s;
+			&:hover,&:focus{
+				color:#FF8112;
+			}
+		}
+
+		.gray h4{
+			margin-top:35px;
+		}
+
+		p.full{
+			margin-top:5px;
+		}

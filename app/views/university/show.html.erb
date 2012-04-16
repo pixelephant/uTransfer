@@ -94,6 +94,7 @@
 
 
 </div>
+	<% if @university.famous_graduates.any? %>
 	<div class="box dark-purple full" id="graduates">
 		<h3>Famous graduates</h3>
 		<% @university.famous_graduates.each_with_index do |fam_grad, i| %>
@@ -103,7 +104,7 @@
 			</div>
 		<% end %>
 	</div>
-
+	<% end %>
 	<% if @university.related_industries.any? %>
 		<div class="box full white" id="connections">
 			<h3>Industrial connections</h3>

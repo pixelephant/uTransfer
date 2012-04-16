@@ -2,20 +2,18 @@
 @import '_form.css.scss';
 
 label{
-	color:white;
+	color:#554595;;
 }
 
 input[type="text"],input[type="email"]{
 	margin-bottom:20px;
-	background:#bfb6de;
+	background:white;
 	width:200px;
-	@include transition-03s;
 }
 
 textarea{
 	margin-bottom:20px;
-	background:#bfb6de;
-	@include transition-03s;
+	background:white;
 }
 
 textarea,input[type="text"],input[type="email"]{
@@ -47,4 +45,8 @@ label.error{
 	li{
 		list-style:none;
 	}
+}
+
+#contact-form{
+	height:458px;
 }
