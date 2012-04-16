@@ -2,11 +2,10 @@
 		<h1>Testimonials <span class="sub"> we helped their university transfer to Hungary</span></h1>
 		<ul id="testimonial-slider">
 			<li class="clearfix">
-				<a class="one" href="#"><span class="nationality ukrainian">Ukrain</span><%= image_tag "testimonials/olga/olga_thumb.png", :title => "Olga from Ukraine" %> <span class="name">Olga</span></a>
 				<% @testimonials.each do |testimonial| %>
-					<%= link_to testimonial_url(testimonial), :class => testimonial.slug do %>
+					<%= link_to testimonial_url(testimonial), :class => testimonial.slug + " animated fadeInRightBig" do %>
 						<% title = testimonial.first_name + " from " + testimonial.country.name %>
-						<span class="nationality <%= testimonial.country.nationality.to_s %>"><%= testimonial.country.nationality.to_s %></span><%= image_tag testimonial.slider_image.to_s, :title => title, :alt => title %> <span class="name"><%= testimonial.first_name %></span>
+						<span class="nationality <%= testimonial.country.nationality.downcase.to_s %>"><%= testimonial.country.nationality.to_s %></span><%= image_tag testimonial.slider_image.to_s, :title => title, :alt => title %> <span class="name"><%= testimonial.last_name %></span>
 					<% end %>
 				<% end %>
 			</li>
@@ -41,7 +40,7 @@
 	</div>
 	<div id="under-photo">
 		<div id="experiences" class="box third dark-purple">
-			<h3><%= @testimonial.first_name %> in Hungary</h3>
+			<h3><%= @testimonial.last_name %> in Hungary</h3>
 		</div>
 		<% unless @testimonial.video.nil? %>
 			<div class="box third video">

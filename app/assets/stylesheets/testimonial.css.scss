@@ -8,7 +8,7 @@
 #testimonial-slider-wrap{
 	overflow:hidden;
 	width:100%;
-	height:350px;
+	height:280px;
 	padding-top:20px;
 	background:#ededed;
 	-webkit-box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
@@ -26,26 +26,30 @@
 		}
 	}
 	ul{
-		height:215px;
-		width:855px; /*955 a max két 40px nyíl + 2*10px margó*/
+		height:220px;
+		width:955px; /*955 a max két 40px nyíl + 2*10px margó*/
+		margin:0 auto;
 	}
 	li{
+		/*margin:0 auto;*/
 		@include clearfix;
-		width:960px;
-		height:150px;
+		/*width:960px;*/
+		/*height:220px; */
 		a{
 			display:block;
 			float:left;
-			margin:30px 36px;
+			margin:0 5px;
 			position:relative;
 			text-decoration:none;
 			color:black;
 			font-size:24px;
 			@include font-raleway;
 			text-align:center;
+			@include transition-03s;
+			text-align:center;
 			&:hover{
 				color: $brand-purple;
-				
+				margin-top:-5px;
 			}
 		}
 		.nationality{
@@ -59,11 +63,24 @@
 			&.ukrainian{
 				background: url(flags/ukr.png) no-repeat center;
 			}
+			&.angolan{
+				background: url(flags/ukr.png) no-repeat center;	
+			}
 		}
 		.name{
 			display:block;
 			margin-top:10px;
 		}
+		&.active{
+				//background:url(slider_active.png) no-repeat bottom center;
+				//border:1px solid $brand-purple;*/
+				//@include border-radius(20px,20px,20px,20px);
+				//padding:6px;
+				.name{
+					color:$brand-purple;
+					text-decoration:underline;
+				}
+			}
 	}
 	ul{
 		overflow:hidden;
@@ -72,11 +89,22 @@
 }
 
 #cite{
-	cite{
+	cite,p{
 		display:block;
 		@include font-raleway;
 		font-size:50px;
 		color:white;
+		line-height:1;
+	}
+	p{
+		&:after{
+			content: '\201D';
+			font-weight:bold;
+		}
+		//&:before{
+		//	content: '\201C';
+		//	font-weight:bold;
+		//}
 	}
 }
 

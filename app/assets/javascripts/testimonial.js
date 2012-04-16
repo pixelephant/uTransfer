@@ -6,7 +6,7 @@
 
 $(document).ready(function(){
 
-	$("#testimonial-slider").anythingSlider({
+	/*$("#testimonial-slider").anythingSlider({
 		appendControlsTo : ".anythingWindow",
 		buildStartStop: false,
 		buildNavigation: false,
