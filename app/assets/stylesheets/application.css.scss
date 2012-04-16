@@ -366,10 +366,14 @@ a,input[type='submit']{
 		padding:0;
 		width:305px;
 		@include clearfix;
-		a,img{
+		a{
 			text-decoration:none;
 			width:150px;
 			height:150px;
+			img{
+				width:150px;
+				height:150px;
+			}
 			&.one{
 				margin:0 5px 5px 0;
 			}
@@ -378,6 +382,9 @@ a,input[type='submit']{
 			}
 			&.three{
 				margin:0 5px 0 0;
+			}
+			&.four{
+				margin:0 0 0px 0;	
 			}
 			&.five{
 				margin:5px 5px 0px 0;

@@ -119,7 +119,9 @@
 	</div>
 	<div class="box third image-quad">
 		<% @community_images.each_with_index do |image, i| %>
-			<%= image_tag image.image_file, :class => int_to_eng(i) %>
+			<%= link_to(image.image_file.to_s, :title => @university.name + "-" + (i+1).to_s, :class => int_to_eng(i+1) + " fancybox", :rel => "com") do %>
+					<%= image_tag image.image_file, :title => @university.name + "-" + (i+1).to_s, :class => int_to_eng(i+1) %>
+				<% end %>
 		<% end %>
 	</div>
 
