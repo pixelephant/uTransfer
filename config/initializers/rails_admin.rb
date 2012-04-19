@@ -141,6 +141,7 @@ RailsAdmin.config do |config|
         ckeditor true
       end
     end
+    object_label_method :testimonial_label
   end
 
 
@@ -213,6 +214,10 @@ RailsAdmin.config do |config|
 	def requirement_label
 		self.university.name + " - " + self.level if !self.university.nil?
 	end
+
+  def testimonial_label
+    self.first_name + " " + self.last_name if !self.first_name.nil? || !self.last_name.nil?
+  end
 
 	def university_images_label
 		self.university.name if !self.university.nil?

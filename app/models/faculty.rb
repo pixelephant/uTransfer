@@ -7,8 +7,6 @@ class Faculty < ActiveRecord::Base
 
 	belongs_to :university
 
-	has_many :testimonials
-
 	validates :name, :desc, :university_id, :presence => true
 
 	def level_enum
