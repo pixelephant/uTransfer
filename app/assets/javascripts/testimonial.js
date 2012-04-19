@@ -1,11 +1,17 @@
-//= require jquery.easing
-//= require jquery.anythingslider
-//= require jquery.anythingslider.fx
-//= require jquery.touchwipe
+//= require jquery.fancybox
+
 
 
 $(document).ready(function(){
-
+	$(".fancybox").fancybox({
+		openEffect : "elastic",
+		closeEffect : "elastic",
+		helpers: {
+			title : {
+					type : 'inside'
+					}
+			}
+	});
 	/*$("#testimonial-slider").anythingSlider({
 		appendControlsTo : ".anythingWindow",
 		buildStartStop: false,

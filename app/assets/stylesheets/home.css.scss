@@ -118,6 +118,15 @@ div.anythingSlider{
 	padding-right:50px;
 	width:235px;
 	height:230px;
+	.signup{
+		@include submit;
+		text-decoration:none;
+		text-align:center;
+		font-size:20px;
+		display: block;
+		width:125px;
+		margin:60px auto;
+	}
 }
 
 #blog{

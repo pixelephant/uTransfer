@@ -1,7 +1,6 @@
 //= require jquery.anythingslider
 //= require jquery.anythingslider.fx
 //= require jquery.color
-//= require jquery.flip
 
 function get_random_color() {
     var letters = '0123456789ABCDEF'.split('');
@@ -13,16 +12,6 @@ function get_random_color() {
 }
 
 $(document).ready(function(){
-	
-	$("#newsletter-form input[type='submit']").click(function(){
-		$("#newsletter").flip({
-			direction:'tb',
-			onEnd: function(){
-				$("#newsletter").removeClass("dark-purple").addClass("light-green").html("<h3>Thank you</h3><p>Watch out for our awesome newsletters!</p>");
-			}
-		});
-		return false;
-	});
 	
 	$("#slider").anythingSlider({
 		appendControlsTo : ".anythingWindow",

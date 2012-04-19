@@ -6,6 +6,12 @@ Utransfer::Application.routes.draw do
 
   post 'universities/universities_faculties'  => 'university#universities_faculties'
 
+  post 'contact/email'  => 'contact#email'
+
+  post 'offer/email'  => 'offer#email'
+
+  post 'offer/additional'  => 'offer#additional'
+
   resources :essentials
 
   resources :testimonial

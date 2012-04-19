@@ -4,7 +4,7 @@
 			<li class="clearfix">
 				<% @testimonials.each do |testimonial| %>
 					<% active = '' %>
-					<% active = ' active' if testimonial == @testimonial %>
+					<% active = ' active ' if testimonial == @testimonial %>
 					<%= link_to testimonial_url(testimonial), :class => testimonial.slug + " animated fadeInRightBig" + active do %>
 						<% title = testimonial.first_name + " from " + testimonial.country.name %>
 						<span class="nationality <%= testimonial.country.nationality.downcase.to_s %>"><%= testimonial.country.nationality.to_s %></span><%= image_tag testimonial.slider_image.to_s, :title => title, :alt => title %> <span class="name"><%= testimonial.last_name %></span>
@@ -14,12 +14,12 @@
 		</ul>
 </div>
 
-<section id="content" class="clearfix">
+<section id="content" class="clearfix <%= @testimonial.slug %>">
 
 	<div class="clearfix">
 		<div class="twothird-wrap">
 			<div class="box twothird dark-green" id="cite">
-				<h3><%= @testimonial.first_name + " " + @testimonial.last_name %></h3>
+				<h3><%= @testimonial.first_name %></h3>
 				<cite><%= @testimonial.quote.html_safe %></cite>
 			</div>
 
@@ -40,26 +40,26 @@
 			<%= image_tag @testimonial.full_image, :title => @testimonial.first_name + " from " + @testimonial.country.name %>
 		</div>
 	</div>
-	<div id="under-photo">
+	<div id="under-photo" class="clearfix">
 		<div id="experiences" class="box third dark-purple">
 			<h3><%= @testimonial.last_name %> in Hungary</h3>
 		</div>
-		<% unless @testimonial.video.nil? %>
+		<% unless !@testimonial.video.nil? %>
 			<div class="box third video">
 				<%= video_tag @testimonial.video %><!-- Ez így nyilván nem jó -->
 			</div>
 		<% end %>
 		<div class="box third image-quad">
+
 			<% @experience_images.each_with_index do |image, i| %>
-				<%= image_tag image.image_file, :class => int_to_eng(i) %>
+				<%= link_to(image.image_file.to_s, :title => image.image_file.to_s + "-" + (i+1).to_s, :class => int_to_eng(i+1) + " fancybox", :rel => "exp") do %>
+					<%= image_tag image.image_file, :title => image.image_file.to_s + "-" + (i+1).to_s, :class => int_to_eng(i+1) %>
+				<% end %>
 			<% end %>
 		</div>
 		<div id="career" class="box third light-green">
 			<h3>Career</h3>
 			<%= @testimonial.career.html_safe %>
-		</div>
-		<div class="box twothird light-green">
-
 		</div>
 	</div>
 </section>

@@ -2,22 +2,42 @@
 
 $(document).ready(function(){
 
-	/*$("#offer-form").validate({
+	$("#offer-form").validate({
 		submitHandler : function(form){
-			form.submit();
-			form.slideUp();
+			$.ajax({
+		  		type: 'POST',
+		  		url: "/offer/email",
+				data: {fields : $("#offer-form").serialize()},
+		  		success: function(resp){
+					$("#form-wrap").slideUp(600,function(){
+						$("#additional").slideDown(600,function(){
+							$('html,body').animate({
+       							 scrollTop: $("#additional").offset().top},
+        					'slow');
+						});
+					});		
+				}
+    		});
 		}
-	});*/
+	});
 
-	$("#offer-form").submit(function(){
-		$(this).parent().slideUp();
-		$("#form-side").slideUp();
-		$("#additional").slideDown("300",function(){
-			$('html, body').animate({
-      			scrollTop: $('#additional').offset().top
-  			});
-		});
-		return false;
+	$("#additional-form").validate({
+		submitHandler : function(form){
+			$.ajax({
+		  		type: 'POST',
+		  		url: "/offer/additional",
+				data: {fields : $("#additional-form").serialize()},
+		  		success: function(resp){
+					$("#additional").slideUp(600,function(){
+						$("#thankyou").slideDown(600,function(){
+							$('html,body').animate({
+       							 scrollTop: $("#thankyou").offset().top},
+        					'slow');
+						});
+					});		
+				}
+    		});
+		}
 	});
 
 	$("#no-uni,#yes-uni").change(function(){
@@ -39,8 +59,8 @@ $(document).ready(function(){
 			data: {id : id},
 		  success: function(resp){
 		  	$("#major").html("");
-				$.each(resp, function(i, val) {
-      		$("#major").append("<option value='" + val.id+ "'>" + val.name + "</option>")
+			$.each(resp, function(i, val) {
+      			$("#major").append("<option value='" + val.id+ "'>" + val.name + "</option>")
     		});
 		}});
 	});

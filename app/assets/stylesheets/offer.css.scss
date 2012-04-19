@@ -56,6 +56,11 @@ input[type="submit"]{
 	}
 }
 
-#additional{
+#additional,#thankyou{
 	display:none;
 }
+
+#thankyou{
+	height:106px;
+}
+
