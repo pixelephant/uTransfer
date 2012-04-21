@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-<!--  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Utransfer</title>
   <%= stylesheet_link_tag    "application", controller_name %>
   <%= javascript_include_tag "application", controller_name %>
@@ -50,7 +50,7 @@
 			<li><a <%= 'class="active" '.html_safe if params[:controller] == 'home' %>href="/home">Home</a></li>
 			<li><a <%= 'class="active" '.html_safe if params[:controller] == 'experience' %>href="/experience">Experience</a></li>
 			<li><a <%= 'class="active" '.html_safe if params[:controller] == 'process' %>href="/process">Process</a></li>
-			<li><a <%= 'class="active" '.html_safe if params[:controller] == 'essentials' %>href="/essentials">Essentials</a></li>
+			<!--<li><a <%= 'class="active" '.html_safe if params[:controller] == 'essentials' %>href="/essentials">Essentials</a></li>-->
 			<li><a <%= 'class="active" '.html_safe if params[:controller] == 'hungary' %>href="/hungary">Hungary</a></li>
 			<li><a <%= 'class="active" '.html_safe if params[:controller] == 'university' %>href="/university">Universities</a></li>
 			<li><a <%= 'class="active" '.html_safe if params[:controller] == 'testimonial' %>href="/testimonial">Testimonials</a></li>
@@ -71,7 +71,7 @@
 			<li><a href="#">Home</a></li>
 			<li><a href="#">Experience</a></li>
 			<li><a href="#">Process</a></li>
-			<li><a href="#">Essentials</a></li>
+			<!--<li><a href="#">Essentials</a></li>-->
 			<li><a href="#">Hungary</a></li>
 			<li><a href="#">Universities</a></li>
 			<li><a href="#">Testimonials</a></li>

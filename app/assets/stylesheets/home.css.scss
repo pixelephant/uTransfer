@@ -15,8 +15,6 @@
 	display:none !important;
 }
 
-@import '_mixins.css.scss';
-
 div.anythingSlider{
 	padding-bottom:0;
 }
@@ -41,6 +39,7 @@ div.anythingSlider{
 		margin-right:20px;
 	}
 	li{
+		overflow:hidden;
 		width:815px !important;
 		height:300px;
 		padding:20px;
@@ -134,6 +133,7 @@ div.anythingSlider{
 }
 
 .testimonial{
+	height:238px;
 	img{
 		width:90px;
 		height:160px;
@@ -271,6 +271,7 @@ div#social-wrap{
 		top:20px;
 		right:20px;
 	}
+	height:398px;
 }
 
 #article-list{
@@ -303,6 +304,6 @@ div#social-wrap{
 
 /* Méretek*/
 
-#study-with-us-box{
-		height:209px;
+#study-promo,#study-with-us-box {
+		height:219px;
 }

@@ -14,11 +14,12 @@ $brand-green: #84A219;
 	&:after{
 		clear:both;
 	}
-	zoom:1
+	zoom:1;
 }
 
 .clearfix{
-	@include clearfix;
+	//@include clearfix;
+	overflow:hidden;
 }
 
 @mixin border_radius($tl: 5px, $tr: 5px, $br: 5px, $bl: 5px) {

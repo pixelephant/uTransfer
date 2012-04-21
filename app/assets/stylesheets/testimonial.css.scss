@@ -33,13 +33,15 @@
 	}
 	li{
 		/*margin:0 auto;*/
-		@include clearfix;
+		//@include clearfix;
 		/*width:960px;*/
-		/*height:220px; */
+		height:220px; 
+		list-style:none;
 		a{
 			display:block;
 			float:left;
 			margin:0 5px;
+			margin-top:20px;
 			position:relative;
 			text-decoration:none;
 			color:black;
@@ -50,7 +52,7 @@
 			text-align:center;
 			&:hover{
 				color: $brand-purple;
-				margin-top:-5px;
+				margin-top:15px;
 			}
 			&.active{
 				//background:url(slider_active.png) no-repeat bottom center;
@@ -93,6 +95,7 @@
 }
 
 #cite{
+	height:168px;
 	cite,p{
 		display:block;
 		@include font-raleway;
@@ -109,6 +112,20 @@
 		//	content: '\201C';
 		//	font-weight:bold;
 		//}
+	}
+}
+
+.lt-ie9{
+	#cite{
+		cite,p{
+			font-size:30px;
+		}
+		p:after{
+			content:"";
+		}
+	}
+	#testimonial-slider-wrap a:hover{
+		margin-top:20px;
 	}
 }
 
