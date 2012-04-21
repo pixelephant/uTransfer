@@ -1,6 +1,7 @@
 class OfferController < ApplicationController
 
   def index
+    @university_id ||= session[:university_id]
     render 'index'
   end
 

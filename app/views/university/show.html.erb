@@ -29,7 +29,7 @@
 			<h3>Time left for application</h3>
 			<div id="countdown" class="clearfix"></div>
 			<span id="deadline">Deadline is <span><%= @university.deadline %></span></span>
-			<a href="#" class="button">Apply</a>
+			<%= link_to "Apply", "/offer", :class => "button" %>
 		</div>
 	</div>
 

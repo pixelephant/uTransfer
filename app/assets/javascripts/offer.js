@@ -2,6 +2,22 @@
 
 $(document).ready(function(){
 
+	$.ajax({
+	  type: 'POST',
+	  url: "/universities/universities_faculties",
+		data: {todo: "init"},
+	  success: function(resp){
+	  	if(resp == 'null'){
+	  		return false;
+	  	}else{
+	  		$("#no-uni").click();
+	  		$.each(resp, function(i, val) {
+	  			$("#personals_university_id").val(val.university_id);
+	  			$("#major").append("<option value='" + val.id+ "'>" + val.name + "</option>")
+  			});
+	  	}
+	}});
+
 	$("#offer-form").validate({
 		submitHandler : function(form){
 			$.ajax({
