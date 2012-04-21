@@ -59,7 +59,7 @@
 			<ul>
 				<% Dir.glob("public/pdf/liszt bsc/*.pdf").each do |file| %>
 					<% a = File.basename(file, ".*").to_s %>
-					<li><%= link_to a[6..-1], file %></li>
+					<li><%= link_to a[6..-1], file[6..-1] %></li>
 				<% end %>
 			</ul>
 		</div>
@@ -69,7 +69,7 @@
 			<ul>
 				<% Dir.glob("public/pdf/liszt msc/*.pdf").each do |file| %>
 					<% a = File.basename(file, ".*").to_s %>
-					<li><%= link_to a[6..-1], file %></li>
+					<li><%= link_to a[6..-1], file[6..-1] %></li>
 				<% end %>
 			</ul>
 		</div>
