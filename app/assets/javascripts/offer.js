@@ -15,7 +15,7 @@ $(document).ready(function(){
        							 scrollTop: $("#additional").offset().top},
         					'slow');
 						});
-					});		
+					});
 				}
     		});
 		}
@@ -34,7 +34,7 @@ $(document).ready(function(){
        							 scrollTop: $("#thankyou").offset().top},
         					'slow');
 						});
-					});		
+					});
 				}
     		});
 		}
@@ -51,12 +51,18 @@ $(document).ready(function(){
 		}
 	});
 
-	$("#personals_university_id").change(function(){
+	$("#personals_university_id, #type input").change(function(){
 		id = $("#personals_university_id").val();
+		level = $("#type div input:radio[@name=type]:checked").attr("id")
+
+		if(id == ''){
+			return false;
+		}
+
 		$.ajax({
 		  type: 'POST',
 		  url: "/universities/universities_faculties",
-			data: {id : id},
+			data: {id : id, level : level},
 		  success: function(resp){
 		  	$("#major").html("");
 			$.each(resp, function(i, val) {

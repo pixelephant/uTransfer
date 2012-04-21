@@ -1,3 +1,5 @@
+<% liszt = "liszt" %>
+
 <div id="university-slider-wrap">
 		<h1>Universities <span class="sub"> the best of Hungary</span></h1>
 		<ul id="university-slider">
@@ -31,20 +33,43 @@
 		</div>
 	</div>
 
-	<% @university.requirements.each do |requirement| %>
-		<div class="box third gray" id="<%= requirement.level.downcase %>">
-			<h4><%= requirement.level.html_safe %></h4>
+	<% if @university != liszt %>
+		<% @university.requirements.each do |requirement| %>
+			<div class="box third gray" id="<%= requirement.level.downcase %>">
+				<h4><%= requirement.level.html_safe %></h4>
 
-			<h5>Requirements</h5>
-			<%= requirement.text.html_safe %>
+				<h5>Requirements</h5>
+				<%= requirement.text.html_safe %>
 
-			<h5>Tuition fee</h5>
-			<%= requirement.tution_fee.html_safe %>
+				<h5>Tuition fee</h5>
+				<%= requirement.tution_fee.html_safe %>
 
+				<h5>Programmes</h5>
+				<ul>
+					<% @university.faculties.where(:level => requirement.level).each do |faculty| %>
+						<li><%= link_to faculty.name, "#" + faculty.name.delete(" ").downcase + "-" +requirement.level.downcase %></li>
+					<% end %>
+				</ul>
+			</div>
+		<% end %>
+	<% else %>
+		<div class="box third gray" id="bsc">
+			<h4>BSc</h4>
 			<h5>Programmes</h5>
 			<ul>
-				<% @university.faculties.where(:level => requirement.level).each do |faculty| %>
-					<li><%= link_to faculty.name, "#" + faculty.name.delete(" ").downcase + "-" +requirement.level.downcase %></li>
+				<% Dir.glob("public/pdf/liszt bsc/*.pdf").each do |file| %>
+					<% a = File.basename(file, ".*").to_s %>
+					<li><%= link_to a[6..-1], file[6..-1] %></li>
+				<% end %>
+			</ul>
+		</div>
+		<div class="box third gray" id="msc">
+			<h4>BSc</h4>
+			<h5>Programmes</h5>
+			<ul>
+				<% Dir.glob("public/pdf/liszt msc/*.pdf").each do |file| %>
+					<% a = File.basename(file, ".*").to_s %>
+					<li><%= link_to a[6..-1], file[6..-1] %></li>
 				<% end %>
 			</ul>
 		</div>
@@ -74,28 +99,29 @@
 	<% end %>
 	</div>
 
-	<div class="clearfix" id="faculty-grid">
-		<div id="programs" class="box dark-green third">
-			<h3>Programmes</h3>
-		</div>
-
-		<% @university.faculties.order("level").each do |faculty| %>
-
-			<% id = faculty.name.delete(" ").downcase + "-" +faculty.level.downcase %>
-
-			<div class="box light-green third" id="<%= id %>">
-				<h4><%= faculty.name %> <%= faculty.level.html_safe %></h4>
-				<p><%= faculty.short_description %></p>
-				<a href="#<%= id %>-info" class="button more-link">More info</a>
-				<div class="more-info box gray" id="<%= id %>-info">
-					<%= faculty.desc.html_safe %>
-				</div>
+	<% if @university != liszt %>
+		<div class="clearfix" id="faculty-grid">
+			<div id="programs" class="box dark-green third">
+				<h3>Programmes</h3>
 			</div>
 
-		<% end %>
+			<% @university.faculties.order("level").each do |faculty| %>
 
+				<% id = faculty.name.delete(" ").downcase + "-" +faculty.level.downcase %>
 
-</div>
+				<div class="box light-green third" id="<%= id %>">
+					<h4><%= faculty.name %> <%= faculty.level.html_safe %></h4>
+					<p><%= faculty.short_description %></p>
+					<a href="#<%= id %>-info" class="button more-link">More info</a>
+					<div class="more-info box gray" id="<%= id %>-info">
+						<%= faculty.desc.html_safe %>
+					</div>
+				</div>
+
+			<% end %>
+		</div>
+	<% end %>
+
 	<% if @university.famous_graduates.any? %>
 	<div class="box dark-purple full" id="graduates">
 		<h3>Famous graduates</h3>

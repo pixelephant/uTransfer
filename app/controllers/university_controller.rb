@@ -16,7 +16,9 @@ class UniversityController < ApplicationController
   end
 
   def universities_faculties
-    faculties = University.find(params[:id]).faculties
+    id = params[:id]
+    level = params[:level]
+    faculties = Faculty.find_by_sql(["select * from faculties where university_id=? AND level=?", id, level])
 
     respond_to do |format|
       format.json { render json: faculties }
