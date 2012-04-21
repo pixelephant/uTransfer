@@ -18,7 +18,7 @@
 <section id="content" class="clearfix <%= @university.slug %>">
 
 	<div class="clearfix">
-		<div class="box twothird dark-green" id="unversity-intro">
+		<div class="box twothird dark-green" id="university-intro">
 			<h3><%= @university.name %></h3>
 			<%= @university.description.html_safe %>
 		</div>
@@ -50,7 +50,8 @@
 		</div>
 	<% end %>
 
-	<div class="box third dark-purple" id="campus">
+	<div class="clearfix" id="campus-wrap">
+		<div class="box third dark-purple" id="campus">
 		<h3>The Campus</h3>
 		<%= @university.campus.html_safe %>
 	</div>
@@ -71,6 +72,7 @@
 			<% end %>
 		</div>
 	<% end %>
+	</div>
 
 	<div class="clearfix" id="faculty-grid">
 		<div id="programs" class="box dark-green third">

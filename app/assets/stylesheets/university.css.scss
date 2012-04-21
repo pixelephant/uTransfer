@@ -65,7 +65,7 @@ div.anythingControls{
 #university-slider-wrap{
 	overflow:hidden;
 	width:100%;
-	height:280px;
+	height:240px;
 	padding-top:20px;
 	background:#ededed;
 	-webkit-box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
@@ -84,11 +84,12 @@ div.anythingControls{
 	}
 	ul{
 		margin:0 auto;
-		height:220px;
+		height:190px;
 		width:955px; /*955 a max két 40px nyíl + 2*10px margó*/
 	}
 	li{
-		@include clearfix;
+		
+		height:170px;
 		a{
 			width:240;
 			display:block;
@@ -128,6 +129,10 @@ div.anythingControls{
 		overflow:hidden;
 	}
 	
+}
+
+.lt-ie9 #university-slider-wrap li a:hover{
+	margin-top:0;
 }
 
 #counter{
@@ -183,6 +188,8 @@ div.anythingControls{
 }
 
 #graduates{
+	height:268px;
+	overflow:hidden;
 	h4{
 		margin-bottom:10px;
 	}
@@ -204,6 +211,7 @@ div.anythingControls{
 #international-relations{
 	h3{
 		margin-bottom:10px;
+		margin-top:50px !important;
 	}
 	p{
 		margin-bottom:30px;
@@ -245,6 +253,10 @@ div.anythingControls{
 	}
 }
 
+.lt-ie9 .relation h5{
+	padding-top:10px;
+	font-size:17px;
+}
 
 .rightwrap{
 	float:right;
@@ -332,11 +344,16 @@ div.anythingControls{
 
 /* COLUMN MÉRET IGAZÍTÁSOK */
 
+#campus-wrap{
+	width:945px;
+	height:315px;
+}
+
 .the-liszt-academy-of-music{
 	#counter{
 		height:325px;
 	}
-	#campus{
+	#campus,#university-intro{
 		height:265px;
 	}
 }
@@ -345,8 +362,8 @@ div.anythingControls{
 	#bsc,#msc,#phd{
 		height:445px;
 	}
-	#counter{
-		height:363px;
+	#counter,#university-intro{
+		height:365px;
 	}
 	#campus{
 		height:265px;
@@ -360,8 +377,8 @@ div.anythingControls{
 	#bsc,#msc,#phd{
 		height:620px;
 	}
-	#counter{
-		height:372px;
+	#counter,#university-intro{
+		height:375px;
 	}
 	#campus{
 		height:265px;
@@ -372,7 +389,7 @@ div.anythingControls{
 	#bsc,#msc,#pre-school{
 		height:420px;
 	}
-	#counter{
+	#counter,#university-intro{
 		height:325px;
 	}
 	#campus{
@@ -390,7 +407,7 @@ div.anythingControls{
 	#bsc,#msc,#phd{
 		height:542px;
 	}
-	#counter{
-		height:296px;
+	#counter,#university-intro{
+		height:300px;
 	}
 }

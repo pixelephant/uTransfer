@@ -20,7 +20,7 @@
 }
 
 .about{
-	@include clearfix;
+	overflow:hidden;
 	padding:20px;
 	width:427.5px;
 	float:left;
@@ -34,6 +34,7 @@
 		font-size:12px;
 		line-height:1.5;
 		width:245px;
+		background:white;
 		background:rgba(255,255,255,0.9);
 		@include border-radius(20px,20px,20px,20px);
 	}

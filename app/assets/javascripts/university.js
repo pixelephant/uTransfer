@@ -23,7 +23,7 @@ $(document).ready(function(){
 	$.countdown.setDefaults($.countdown.regional['zh-CN']);*/
 	
 	$("#bsc a,#msc a,#phd a").click(function(){
-		console.log($($(this).attr("href")));
+		
 		$('html,body').animate({scrollTop: $($(this).attr("href")).offset().top -10},'slow');
 	});
 	

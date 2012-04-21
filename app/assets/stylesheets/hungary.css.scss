@@ -29,11 +29,19 @@
 }
 
 #under-photo{
+	width:945px;
 	position:relative;
 	z-index:4;
 }
 
+#why .box{
+	height:350px;
+}
+
 table{
+	.left{
+		float:left;
+	}
 	.info{
 		float:right;
 		color:white;
@@ -82,7 +90,20 @@ table{
 			padding:20px;
 			border-right:10px solid white;
 			font-size:16px;
+			overflow:hidden;
 		}
+	}
+}
+
+.lt-ie9 #quote{
+	h4{
+		font-size:20px !important;
+	}
+}
+
+.lt-ie8{
+	#photo{
+		margin-bottom:15px;
 	}
 }
 
@@ -138,12 +159,15 @@ table{
 			padding:20px;
 			width:895px;
 			color:white;
+			background:$brand-purple;
 			background: rgba(85,69,149,0.8);
 		}
 	}
 }
 
 #famous-hungarians{
+	height:268px;
+	overflow:hidden;
 	h4{
 		margin-bottom:10px;
 	}
@@ -210,9 +234,6 @@ table{
 	p{
 		margin-bottom:10px;
 	}
-	.dark-green{
-		height:353px;
-	}
 }
 
 #neumann{
@@ -231,7 +252,11 @@ table{
 
 /*MÉRET IGAZÍTÁSOK*/
 
-#basic{
+#hung h3.purple{
+	margin-top:50px !important;
+}
+
+#basic,#quote{
 	height:256px;
 }
 
@@ -246,11 +271,20 @@ table{
 }
 
 #travel-wrap{
-	.box{
+	.box.dark-green,.box.light-green{
 		height:265px
 	}	
+	height:630px;
+}
+
+#sights-wrap{
+	width:945px;
 }
 
 #sights{
 	height:265px;
+}
+
+#sights-wrap{
+	height:315px;
 }

@@ -138,6 +138,7 @@ a,input[type='submit']{
 }
 
 #current-language{
+	display:none;
 	background-repeat:no-repeat;
 	background-position:center;
 	img{
@@ -287,6 +288,10 @@ a,input[type='submit']{
 	}
 }
 
+.lt-ie9 #main-nav a{
+	font-size:17px;
+}
+
 #content{
 	min-height:400px;
 	margin:0 auto;
@@ -298,7 +303,7 @@ a,input[type='submit']{
 	padding:20px;
 	margin:5px;
 	float:left;
-	@include clearfix;
+	//@include clearfix;
 	h3{
 		color:white;
 		font-weight:bold;
@@ -365,7 +370,7 @@ a,input[type='submit']{
 	&.image-quad{
 		padding:0;
 		width:305px;
-		@include clearfix;
+		overflow:hidden;
 		a{
 			text-decoration:none;
 			width:150px;

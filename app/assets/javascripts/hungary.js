@@ -17,6 +17,10 @@ $(document).ready(function(){
 	});
 	
 	$(".info").tooltip();
+
+	$(".info").click(function(){
+		return false;
+	})
 	
 	$("#festival-slider ul").anythingSlider({
 		appendControlsTo : "#festival-slider",
