@@ -15,7 +15,9 @@ class ContactController < ApplicationController
     c.email = fields['email']
     c.why = fields['type']
     c.message = fields['message']
-    c.save!
+    if c.save!
+      UserMailer.contact_confirmation(c).deliver
+    end
 
   	respond_to do |format|
       format.json { render json: '{
