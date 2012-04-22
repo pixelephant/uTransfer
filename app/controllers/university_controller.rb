@@ -8,6 +8,7 @@ class UniversityController < ApplicationController
 	def show
 		@university = University.find(params[:id])
     @community_images = University.limit(6).find(params[:id]).university_community_images
+    session[:university_id] = @university.id
 
     respond_to do |format|
       format.html # show.html.erb
@@ -16,9 +17,19 @@ class UniversityController < ApplicationController
   end
 
   def universities_faculties
-    id = params[:id]
-    level = params[:level]
-    faculties = Faculty.find_by_sql(["select * from faculties where university_id=? AND level=?", id, level])
+
+    if(params[:todo] == 'init')
+      unless(session[:university_id].blank?)
+        faculties = Faculty.find_by_sql(["select * from faculties where university_id=? AND level='bsc'", session[:university_id]])
+        session[:university_id] = nil
+      else
+        faculties = nil
+      end
+    else
+      id = params[:id]
+      level = params[:level]
+      faculties = Faculty.find_by_sql(["select * from faculties where university_id=? AND level=?", id, level])
+    end
 
     respond_to do |format|
       format.json { render json: faculties }

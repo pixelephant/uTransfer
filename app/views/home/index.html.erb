@@ -7,13 +7,13 @@
 				<a href="/hungary" class="button">Learn more about Hungary</a>
 			</div>
 			<%= image_tag "slider/slider_01.png", :title => "", :class => "right" %>
-			
+
 		</li>
 		<li class="" id="slide-2" data-color="#e76100">
 			<div class="left">
 				<h2>Outstanding education</h2>
 				<p>Hungary delegates 3 universities to the world university ranking list according to Webometrics.</p>
-				<a href="/nuiversities" class="button">View our universities</a>				
+				<a href="/nuiversities" class="button">View our universities</a>
 			</div>
 			<%= image_tag "slider/slider_02.png", :title => "", :class => "right" %>
 		</li>
@@ -75,14 +75,14 @@
 		<h3>Our universities</h3>
 		<a href="#" id="view-all-uni" class="button">View all universities</a>
 		<div class="universities">
-			<a href="#"><%=image_tag "universities/corvinus/corvinus-landing.png"%></a>
-			<a href="#"><%=image_tag "universities/bme/bme-landing.png"%></a>
-			<a href="#"><%=image_tag "universities/ibs/ibs-landing.png"%></a>
-			<a href="#"><%=image_tag "universities/liszt/lfze-landing.png"%></a>
-			<a href="#"><%=image_tag "universities/szie/szie-landing.png"%></a>
+			<% @universities.each do |uni| %>
+				<%= link_to uni do %>
+					<% image_tag uni.index_logo unless uni.index_logo.blank? %>
+				<% end %>
+			<% end %>
 		</div>
 	</div>
-		
+
 	<div id="social-wrap">
 		<div id="newsletter" class="dark-purple box third">
 			<h3>Newsletter</h3>

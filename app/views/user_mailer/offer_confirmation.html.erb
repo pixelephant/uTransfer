@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Contact information</h1>
+    <p>Name: <strong><%= @contact.first_name + " " + @contact.last_name %></strong></p>
+    <p>Gender: <strong><%= @contact.gender %></strong></p>
+    <p>Age: <strong><%= (Time.now.year.to_f - @contact.birth_year.to_f).to_i %></strong></p>
+    <p>Country: <strong><%= @contact.country.name %></strong></p>
+    <p>Phone: <strong><%= @contact.phone %></strong></p>
+    <p>Email: <strong><%= @contact.email %></strong></p>
+    <% unless @contact.university.blank? %>
+      <p>University: <strong><%= @contact.university.name %></strong></p>
+    <% end %>
+    <% unless @contact.faculty.blank? %>
+      <p>Faculty: <strong><%= @contact.faculty.name %></strong></p>
+    <% end %>
+    <% unless @contact.apply_to.blank? %>
+      <p>Apply to: <strong><%= @contact.apply_to %></strong></p>
+    <% end %>
+    <p>Message: <strong><%= @contact.message %></strong></p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
