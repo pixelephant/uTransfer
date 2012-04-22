@@ -20,7 +20,7 @@ class ContactController < ApplicationController
     end
 
   	respond_to do |format|
-      format.json { render json: '{
+      format.json { render :json => '{
     "glossary": {
         "title": "example glossary",
 		"GlossDiv": {

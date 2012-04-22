@@ -12,7 +12,7 @@ class UniversityController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @university }
+      format.json { render :json => @university }
     end
   end
 
@@ -32,7 +32,7 @@ class UniversityController < ApplicationController
     end
 
     respond_to do |format|
-      format.json { render json: faculties }
+      format.json { render :json => faculties }
     end
   end
 

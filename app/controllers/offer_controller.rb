@@ -31,7 +31,7 @@ def email
     session[:offer_id] = p.id
 
   	respond_to do |format|
-      format.json { render json: '{
+      format.json { render :json => '{
     "glossary": {
         "title": "example glossary",
 		"GlossDiv": {
@@ -69,7 +69,7 @@ def email
     p.save!
 
   	respond_to do |format|
-      format.json { render json: '{
+      format.json { render :json => '{
     "glossary": {
         "title": "example glossary",
 		"GlossDiv": {
