@@ -1,10 +1,22 @@
 class ContactController < ApplicationController
-  
+
+  include Rack::Utils
+
   def index
     render 'index'
   end
-  
+
   def email
+
+    fields = parse_nested_query(params[:fields])
+
+    c = Contact.new
+    c.name = fields['name']
+    c.email = fields['email']
+    c.why = fields['type']
+    c.message = fields['message']
+    c.save!
+
   	respond_to do |format|
       format.json { render json: '{
     "glossary": {
