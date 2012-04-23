@@ -13,7 +13,7 @@
 			<div class="left">
 				<h2>Outstanding education</h2>
 				<p>Hungary delegates 3 universities to the world university ranking list according to Webometrics.</p>
-				<a href="/nuiversities" class="button">View our universities</a>
+				<a href="/universities" class="button">View our universities</a>
 			</div>
 			<%= image_tag "slider/slider_02.png", :title => "", :class => "right" %>
 		</li>
@@ -47,7 +47,7 @@
 <section id="content" class="clearfix">
 	<div class="box third dark-green" id="testimonial-box">
 		<h3>They have already chosen us</h3>
-		<a href="#" id="testimonials-button" class="button">View all testimonials</a>
+		<a href="/testimonial" id="testimonials-button" class="button">View all testimonials</a>
 	</div>
 	<div class="box third light-green testimonial">
 		<h4>Alina</h4>
@@ -55,9 +55,11 @@
 		<img src="http://placekitten.com/g/90/160" alt="Testimonial of Alina" />
 	</div>
 	<div class="box third light-green testimonial">
-		<h4>Zohan</h4>
+		<a href="#">
+			<h4>Zohan</h4>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque.</p>
 		<img src="http://placekitten.com/g/90/160" alt="Testimonial of Zohan" />
+		</a>
 	</div>
 	<div class="box third dark-green" id="study-with-us-box">
 		<h3>Study with us in Hungary</h3>
@@ -67,13 +69,13 @@
 			<p><span class="firstLetter"><span>H</span></span>ungary is not just famous for its world famous inventors, physicist, athletes, doctors but also for its marvelous history and breathtaking environment. Hungary’s education dates back to the 15th century, the county has always been famous for presenting the greatest professors and academics to the world. Hungary is the country where the quality meets high standards but the price remains reasonable and all this happens in the heart of Europe in the hub of international students.</p>
 		</div>
 		<div class="inner-block">
-			<a href="#" class="button">Discover the uTransfer experience</a>
-			<a href="#" class="button">Learn more about Hungary</a>
+			<a href="/experience" class="button">Discover the uTransfer experience</a>
+			<a href="/hungary" class="button">Learn more about Hungary</a>
 		</div>
 	</div>
 	<div class="box white-purple" id="partner-uni-box">
 		<h3>Our universities</h3>
-		<a href="#" id="view-all-uni" class="button">View all universities</a>
+		<!--<a href="#" id="view-all-uni" class="button">View all universities</a>-->
 		<div class="universities">
 			<% @universities.each do |uni| %>
 				<%= link_to uni do %>
@@ -90,28 +92,27 @@
 		</div>
 		<div id="twitter-box">
 			<h3>Twitter</h3>
-			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://utransferhungary.com" data-lang="hu">Tweet</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-			<a href="https://twitter.com/twitter" class="twitter-follow-button" data-show-count="false" data-lang="hu">@twitter követése</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			<a href="https://twitter.com/uTransferEurope" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @uTransferEurope</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		</div>
 		<div id="facebook-box">
 			<h3>Face book</h3>
 			<div id="fb-root"></div>
-			<script>(function(d, s, id) {
-			  var js, fjs = d.getElementsByTagName(s)[0];
-			  if (d.getElementById(id)) return;
-			  js = d.createElement(s); js.id = id;
-			  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=136997593064327";
-			  fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));</script>
-			<div class="fb-like" data-href="http://www.utransferhungary.com" data-send="true" data-layout="button_count" data-width="200" data-show-faces="false"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=136997593064327";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+			<div class="fb-like" data-href="http://www.utransferhungary.com/" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
 		</div>
 	</div>
 	<div id="blog" class="box twothird dark-green">
 		<h3>Fresh from our blog</h3>
 		<a href="#" class="button">View all</a>
 		<div id="article-list">
+			<h4>Coming soon...</h4>
 			<!--
 			<article>
 				<img src="http://placekitten.com/g/90/90" alt="" />
