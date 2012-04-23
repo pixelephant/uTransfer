@@ -10,7 +10,7 @@ $(document).ready(function(){
 	  	if(resp == 'null'){
 	  		return false;
 	  	}else{
-	  		$("#no-uni").click();
+	  		$("#yes-uni").click();
 	  		$.each(resp, function(i, val) {
 	  			$("#personals_university_id").val(val.university_id);
 	  			$("#major").append("<option value='" + val.id+ "'>" + val.name + "</option>")
@@ -57,7 +57,7 @@ $(document).ready(function(){
 	});
 
 	$("#no-uni,#yes-uni").change(function(){
-		if($("input[name='uni']:checked").attr("id") != "yes-uni"){
+		if($("input[name='uni']:checked").attr("id") != "no-uni"){
 			$(".uni-no").hide();
 			$(".uni-yes").show();
 		}

@@ -4,16 +4,17 @@ Utransfer::Application.configure do
   config.action_mailer.raise_delivery_errors = true
 
   # set delivery method to :smtp, :sendmail or :test
-  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :sendmail
 
   # these options are only needed if you choose smtp delivery
   config.action_mailer.smtp_settings = {
     :address        => 'mail.utransferhungary.com',
     :port           => 587,
-    :domain         => 'utransferhungary.com',
+    :domain         => 'www.utransferhungary.com',
     :authentication => :login,
     :user_name      => 'test@utransferhungary.com',
     :password       => 'pumukli'
+    :enable_starttls_auto => false
   }
 
   config.action_mailer.perform_deliveries = true

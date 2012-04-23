@@ -16,7 +16,7 @@ def email
     p = Personal.new
     p.first_name = fields['firstname']
     p.last_name = fields['lastname']
-    p.gender = fields['gender']
+    p.gender = params[:gender]
     p.birth_year = (Time.now.year.to_f - fields['age'].to_f)
     p.phone = "(" + fields['phone-country'] + ")" + fields['phone-number']
     p.email = fields['email']
@@ -24,6 +24,7 @@ def email
     p.country_id = fields['personals']['country_id']
     p.faculty_id = fields['major']
     p.message = fields['else']
+    p.level = params[:type]
     if p.save!
       UserMailer.offer_confirmation(p).deliver
     end
