@@ -62,7 +62,7 @@ Utransfer::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
-  config.assets.precompile += ['home.js', 'hungary.js', 'contact.js', 'essentials.js', 'experience.js', 'offer.js', 'sequence.js', 'testimonial.js', 'university.js', 'process.js', 'home.css', 'hungary.css', 'contact.css', 'essentials.css', 'experience.css', 'offer.css', 'about.css', 'testimonial.css', 'university.css', 'process.css', 'privacy.css', 'anythingslider.css', 'jquery.fancybox.css', 'scaffolds.css' ]
+    config.assets.precompile += ['home.js', 'hungary.js', 'contact.js', 'essentials.js', 'experience.js', 'offer.js', 'process.js', 'privacy.js' ,'sequence.js', 'testimonial.js', 'university.js', 'home.css', 'hungary.css', 'contact.css', 'essentials.css', 'experience.css', 'offer.css', 'about.css', 'testimonial.css', 'university.css', 'process.css', 'privacy.css', 'anythingslider.css', 'jquery.fancybox.css', 'scaffolds.css' ]
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
