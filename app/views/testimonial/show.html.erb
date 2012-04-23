@@ -6,7 +6,7 @@
 					<% active = '' %>
 					<% active = ' active ' if testimonial == @testimonial %>
 					<%= link_to testimonial_url(testimonial), :class => testimonial.slug + " animated fadeInRightBig" + active do %>
-						<% title = testimonial.first_name + " from " + testimonial.country.name %>
+						<% title = testimonial.first_name + " from " + testimonial.country.name.to_s %>
 						<span class="nationality <%= testimonial.country.nationality.downcase.to_s %>"><%= testimonial.country.nationality.to_s %></span><%= (image_tag testimonial.slider_image.to_s, :title => title, :alt => title) unless testimonial.slider_image.blank? %> <span class="name"><%= testimonial.last_name %></span>
 					<% end %>
 				<% end %>
