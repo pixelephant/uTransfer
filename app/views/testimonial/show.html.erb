@@ -7,7 +7,7 @@
 					<% active = ' active ' if testimonial == @testimonial %>
 					<%= link_to testimonial_url(testimonial), :class => testimonial.slug + " animated fadeInRightBig" + active do %>
 						<% title = testimonial.first_name + " from " + testimonial.country.name %>
-						<span class="nationality <%= testimonial.country.nationality.downcase.to_s %>"><%= testimonial.country.nationality.to_s %></span><%= image_tag testimonial.slider_image.to_s, :title => title, :alt => title %> <span class="name"><%= testimonial.last_name %></span>
+						<span class="nationality <%= testimonial.country.nationality.downcase.to_s %>"><%= testimonial.country.nationality.to_s %></span><%= (image_tag testimonial.slider_image.to_s, :title => title, :alt => title) unless testimonial.slider_image.blank? %> <span class="name"><%= testimonial.last_name %></span>
 					<% end %>
 				<% end %>
 			</li>
@@ -37,7 +37,7 @@
 			</div>
 		</div>
 		<div class="box third" id="photo">
-			<%= image_tag @testimonial.full_image, :title => @testimonial.first_name + " from " + @testimonial.country.name %>
+			<%= (image_tag @testimonial.full_image, :title => @testimonial.first_name + " from " + @testimonial.country.name) unless @testimonial.full_image.blank? %>
 		</div>
 	</div>
 	<div id="under-photo" class="clearfix">
