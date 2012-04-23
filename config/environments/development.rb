@@ -17,7 +17,7 @@ Utransfer::Application.configure do
   }
 
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_charset = "utf-8"
+  # config.action_mailer.default_charset = "utf-8"
 
 
   # In the development environment your application's code is reloaded on
