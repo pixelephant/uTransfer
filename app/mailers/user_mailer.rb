@@ -11,8 +11,8 @@ class UserMailer < ActionMailer::Base
 
 	def offer_confirmation(contact)
 		@contact = contact
-	  recipients = "offer@utransferhungary.com"
-	  from = "offer@utransferhungary.com"
+	  recipients = "apply@utransferhungary.com"
+	  from = "apply@utransferhungary.com"
 	  subject = "Personal offer from website"
 	  #body        :contact => contact
 	  mail(:to => recipients, :from => from, :subject => subject)
@@ -20,8 +20,8 @@ class UserMailer < ActionMailer::Base
 
 	def offer_additional(contact)
 		@contact = contact
-	  recipients = "offer@utransferhungary.com"
-	  from = "offer@utransferhungary.com"
+	  recipients = "apply@utransferhungary.com"
+	  from = "apply@utransferhungary.com"
 	  subject = "Additional informations"
 	  #body        :contact => contact
 	  mail(:to => recipients, :from => from, :subject => subject)

@@ -54,22 +54,6 @@
 		<% end %>
 	<% else %>
 		<% requirement = @university.requirements.where(:level => 'Pre-school').first %>
-		<div class="box third gray" id="<%= requirement.level.downcase %>">
-			<h4><%= requirement.level.html_safe %></h4>
-
-			<h5>Requirements</h5>
-			<%= requirement.text.html_safe %>
-
-			<h5>Tuition fee</h5>
-			<%= requirement.tution_fee.html_safe %>
-
-			<h5>Programmes</h5>
-			<ul>
-				<% @university.faculties.where(:level => requirement.level).each do |faculty| %>
-					<li><%= link_to faculty.name, "#" + faculty.name.delete(" ").downcase + "-" +requirement.level.downcase %></li>
-				<% end %>
-			</ul>
-		</div>
 		<div class="box third gray" id="bsc">
 			<h4>BSc</h4>
 			<h5>Programmes</h5>
@@ -87,6 +71,22 @@
 				<% Dir.glob("pdf/liszt msc/*.pdf").each do |file| %>
 					<% a = File.basename(file, ".*").to_s %>
 					<li><%= link_to a, "/" + file %></li>
+				<% end %>
+			</ul>
+		</div>
+		<div class="box third gray" id="<%= requirement.level.downcase %>">
+			<h4><%= requirement.level.html_safe %></h4>
+
+			<h5>Requirements</h5>
+			<%= requirement.text.html_safe %>
+
+			<h5>Tuition fee</h5>
+			<%= requirement.tution_fee.html_safe %>
+
+			<h5>Programmes</h5>
+			<ul>
+				<% @university.faculties.where(:level => requirement.level).each do |faculty| %>
+					<li><%= link_to faculty.name, "#" + faculty.name.delete(" ").downcase + "-" +requirement.level.downcase %></li>
 				<% end %>
 			</ul>
 		</div>
