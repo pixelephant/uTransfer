@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "test@utransferhungary.com"
+  default :from => "test@utransferhungary.com"
 
 	def contact_confirmation(contact)
 	  recipients 		"test@utransferhungary.com"

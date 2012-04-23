@@ -1,6 +1,24 @@
 Utransfer::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  config.action_mailer.raise_delivery_errors = true
+
+  # set delivery method to :smtp, :sendmail or :test
+  config.action_mailer.delivery_method = :smtp
+
+  # these options are only needed if you choose smtp delivery
+  config.action_mailer.smtp_settings = {
+    :address        => 'mail.utransferhungary.com',
+    :port           => 587,
+    :domain         => 'utransferhungary.com',
+    :authentication => :login,
+    :user_name      => 'test@utransferhungary.com',
+    :password       => 'pumukli'
+  }
+
+  config.action_mailer.perform_deliveries = true
+  #config.action_mailer.default_charset = "utf-8"
+
   # Code is not reloaded between requests
   config.cache_classes = true
 
@@ -44,7 +62,7 @@ Utransfer::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
-  config.assets.precompile += ['home.js', 'hungary.js', 'contact.js', 'essentials.js', 'experience.js', 'offer.js', 'sequence.js', 'testimonial.js', 'university.js', 'process.js', 'home.css', 'hungary.css', 'contact.css', 'essentials.css', 'experience.css', 'offer.css', 'about.css', 'testimonial.css', 'university.css', 'process.css', 'privacy.css']
+  config.assets.precompile += ['home.js', 'hungary.js', 'contact.js', 'essentials.js', 'experience.js', 'offer.js', 'sequence.js', 'testimonial.js', 'university.js', 'process.js', 'home.css', 'hungary.css', 'contact.css', 'essentials.css', 'experience.css', 'offer.css', 'about.css', 'testimonial.css', 'university.css', 'process.css', 'privacy.css', 'anythingslider.css', 'jquery.fancybox.css', 'scaffolds.css' ]
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
