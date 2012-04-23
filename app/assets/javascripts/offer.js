@@ -23,7 +23,7 @@ $(document).ready(function(){
 			$.ajax({
 		  		type: 'POST',
 		  		url: "/offer/email",
-				data: {fields : $("#offer-form").serialize()},
+				data: {fields : $("#offer-form").serialize(), gender: $("input:radio[name=gender]:checked").attr("id"), type: $("input:radio[name=type]:checked").attr("id"), $("input:radio[name=uni]:checked").attr("id") },
 		  		success: function(resp){
 					$("#form-wrap").slideUp(600,function(){
 						$("#additional").slideDown(600,function(){
