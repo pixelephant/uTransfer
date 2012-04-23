@@ -1,7 +1,5 @@
 //= require jquery.validate.min
 
-jQuery.fn.serializeForm=function(){var e={};this.each(function(){jQuery("input, select, textarea",this).each(function(){var a=jQuery(this);var b=a.attr("id");b=""!=b?b:a.attr("name");var c=a.val();var d=a.attr("type");if("checkbox"==d){if(this.checked){e[b]="true"}else{e[b]="false"}}else if("radio"==d){if(this.checked){e[b]=c}}else{if(!b.match(/__.+/)){if(e[b]===undefined){if("textarea"==d){e[b]=encodeURIComponent(c)}else{e[b]=c}}else{e[b]+=","+encodeURIComponent(c)}}}})});return e};
-
 $(document).ready(function(){
 
 	$.ajax({
@@ -25,7 +23,7 @@ $(document).ready(function(){
 			$.ajax({
 		  		type: 'POST',
 		  		url: "/offer/email",
-				data: {fields : $("#offer-form").serializeForm()},
+				data: {fields : $("#offer-form").serialize()},
 		  		success: function(resp){
 					$("#form-wrap").slideUp(600,function(){
 						$("#additional").slideDown(600,function(){
@@ -44,7 +42,7 @@ $(document).ready(function(){
 			$.ajax({
 		  		type: 'POST',
 		  		url: "/offer/additional",
-				data: {fields : $("#additional-form").serializeForm()},
+				data: {fields : $("#additional-form").serialize()},
 		  		success: function(resp){
 					$("#additional").slideUp(600,function(){
 						$("#thankyou").slideDown(600,function(){
