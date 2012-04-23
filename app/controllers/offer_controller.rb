@@ -117,6 +117,9 @@ def email
         heard += 'Open Day'
     end
 
+    p.who_encouraged_other = fields['other-encourage']
+    p.where_did_other = fields['other-hear']
+
     p.where_did = heard
     p.who_encouraged = encourage
     if p.save!

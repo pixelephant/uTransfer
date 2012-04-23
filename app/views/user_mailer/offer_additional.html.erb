@@ -6,5 +6,9 @@
   <body>
     <h1>Additional information</h1>
     <p>Name: <strong><%= @contact.first_name + " " + @contact.last_name %></strong></p>
+    <p>Who encouraged: <strong><%= @contact.who_encouraged %></strong></p>
+    <p><%= @contact.who_encouraged_other %></p>
+    <p>Where did your hear about us: <strong><%= @contact.where_did %></strong></p>
+    <p><%= @contact.where_did_other %></p>
   </body>
 </html>
