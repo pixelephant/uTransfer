@@ -13,7 +13,7 @@
 			<div class="left">
 				<h2>Outstanding education</h2>
 				<p>Hungary delegates 3 universities to the world university ranking list according to Webometrics.</p>
-				<a href="/nuiversities" class="button">View our universities</a>
+				<a href="/universities" class="button">View our universities</a>
 			</div>
 			<%= image_tag "slider/slider_02.png", :title => "", :class => "right" %>
 		</li>
@@ -47,18 +47,16 @@
 <section id="content" class="clearfix">
 	<div class="box third dark-green" id="testimonial-box">
 		<h3>They have already chosen us</h3>
-		<a href="#" id="testimonials-button" class="button">View all testimonials</a>
+		<a href="testimonial" id="testimonials-button" class="button">View all testimonials</a>
 	</div>
-	<div class="box third light-green testimonial">
-		<h4>Alina</h4>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque.</p>
-		<img src="http://placekitten.com/g/90/160" alt="Testimonial of Alina" />
-	</div>
-	<div class="box third light-green testimonial">
-		<h4>Zohan</h4>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet mauris eu turpis euismod rutrum dapibus vitae neque.</p>
-		<img src="http://placekitten.com/g/90/160" alt="Testimonial of Zohan" />
-	</div>
+	<% @testimonials.each do |testimonial| %>
+		<div class="box third light-green testimonial">
+			<h4><%= testimonial.first_name %></h4>
+			<%= testimonial.quote %>
+			<% title = "Testimonial of " + testimonial.first_name %>
+			<%= (image_tag index_image, :alt => title, :title => title) unless index_image.blank? %>
+		</div>
+	<% end %>
 	<div class="box third dark-green" id="study-with-us-box">
 		<h3>Study with us in Hungary</h3>
 	</div>
