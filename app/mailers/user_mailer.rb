@@ -18,4 +18,13 @@ class UserMailer < ActionMailer::Base
 	  mail(:to => recipients, :from => from, :subject => subject)
 	end
 
+	def offer_additional(contact)
+		@contact = contact
+	  recipients = "test@utransferhungary.com"
+	  from = contact.email
+	  subject = "Additional informations"
+	  #body        :contact => contact
+	  mail(:to => recipients, :from => from, :subject => subject)
+	end
+
 end

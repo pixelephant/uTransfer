@@ -20,9 +20,35 @@ def email
     p.birth_year = (Time.now.year.to_f - fields['age'].to_f)
     p.phone = "(" + fields['phone-country'] + ")" + fields['phone-number']
     p.email = fields['email']
-    p.university_id = fields['personals']['university_id']
     p.country_id = fields['personals']['country_id']
-    p.faculty_id = fields['major']
+    if(params[:uni] == 'yes-uni')
+        p.university_id = fields['personals']['university_id']
+        p.faculty_id = fields['major']
+    else
+        interested = ''
+        unless(defined?(economy).nil?)
+            interested += 'Economy, '
+        end
+        unless(defined?(arts).nil?)
+            interested += 'Arts, '
+        end
+        unless(defined?(tourism).nil?)
+            interested += 'Tourism, '
+        end
+        unless(defined?(music).nil?)
+            interested += 'Music, '
+        end
+        unless(defined?(engineering).nil?)
+            interested += 'Engineering, '
+        end
+        unless(defined?(it).nil?)
+            interested += 'IT,'
+        end
+        unless(defined?(business).nil?)
+            interested += 'Business'
+        end
+        p.interests = interested
+    end
     p.message = fields['else']
     p.level = params[:type]
     if p.save!
@@ -65,9 +91,37 @@ def email
     puts fields
 
     p = Personal.find(session[:offer_id])
+    heard = ''
+    encourage = ''
+
+    unless(defined?(fields['encourage_friend']).nil?)
+        encourage += 'Friend, '
+    end
+    unless(defined?(fields['encourage_parent']).nil?)
+        encourage += 'Parent'
+    end
+
+    unless(defined?(fields['hear_ad']).nil?)
+        heard += 'Ad, '
+    end
+    unless(defined?(fields['hear_google']).nil?)
+        heard += 'Google, '
+    end
+    unless(defined?(fields['hear_agent']).nil?)
+        heard += 'Agent, '
+    end
+    unless(defined?(fields['hear_brochure']).nil?)
+        heard += 'Brochure, '
+    end
+    unless(defined?(fields['hear_openday']).nil?)
+        heard += 'Open Day'
+    end
+
     p.where_did = heard
     p.who_encouraged = encourage
-    p.save!
+    if p.save!
+      UserMailer.offer_additional(p).deliver
+    end
 
   	respond_to do |format|
       format.json { render :json => '{

@@ -20,6 +20,9 @@
     <% unless @contact.apply_to.blank? %>
       <p>Apply to: <strong><%= @contact.apply_to %></strong></p>
     <% end %>
+    <% unless @contact.interests.blank? %>
+      <p>Interested in: <strong><%= @contact.interests %></strong></p>
+    <% end %>
     <p>Message: <strong><%= @contact.message %></strong></p>
     <p>Thanks for joining and have a great day!</p>
   </body>
