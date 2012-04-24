@@ -51,10 +51,13 @@
 	</div>
 	<% @testimonials.each do |testimonial| %>
 		<div class="box third light-green testimonial">
+			
+			<%= link_to testimonial  do %>	
 			<h4><%= testimonial.first_name %></h4>
 			<%= testimonial.quote.html_safe %>
 			<% title = "Testimonial of " + testimonial.first_name %>
 			<%= (image_tag testimonial.index_image, :alt => title, :title => title) unless testimonial.index_image.blank? %>
+			<% end %>
 		</div>
 	<% end %>
 	<div class="box third dark-green" id="study-with-us-box">

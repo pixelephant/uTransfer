@@ -40,7 +40,7 @@
 		a{
 			display:block;
 			float:left;
-			margin:0 5px;
+			margin:0 85px;
 			margin-top:20px;
 			position:relative;
 			text-decoration:none;
@@ -168,9 +168,14 @@
 }
 
 
-.artemio-afonso #under-photo{
-	top:-170px;
-	margin-bottom:-170px;
+.artemio-afonso{
+	#under-photo{
+		top:-170px;
+		margin-bottom:-170px;
+	}
+	#photo img{
+		top:-35px;
+	}
 }
 
 .guo-dantong{
@@ -197,6 +202,10 @@
 
 #experiences{
 	height:265px;
+}
+
+#experiences-box p,#career p{
+	text-align:justify;
 }
 
 #career{
