@@ -28,7 +28,7 @@
 					<h4>About <%= @testimonial.first_name %></h4>
 					<p> <strong>From</strong> <%= @testimonial.country.name %></p>
 					<p><strong>University</strong> <%= link_to @testimonial.university.name, university_url(@testimonial.university) %></p>
-					<p><strong>How did he find us</strong> word-of-mouth, through friends</p>
+					<p><strong>How did he find us</strong> <%=  %></p>
 				</div>
 			</div>
 			<div class="box third gray" id="experiences-box">

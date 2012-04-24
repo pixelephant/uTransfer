@@ -35,6 +35,7 @@
 
 	<% if @university.slug != liszt %>
 		<% @university.requirements.each do |requirement| %>
+			<% requirement.level = 'Non-degree' if (requirement.level == 'Pre-school') && @university.id == 3 %>
 			<div class="box third gray" id="<%= requirement.level.downcase %>">
 				<h4><%= requirement.level.html_safe %></h4>
 
@@ -125,6 +126,7 @@
 			<% @university.faculties.order("level").each do |faculty| %>
 
 			<% faculty.level = 'BA' if faculty.id == 30 %>
+			<% faculty.level = 'Non-degree' if (faculty.level == 'Pre-school') && @university.id == 3 %>
 
 				<% id = faculty.name.delete(" ").downcase + "-" +faculty.level.downcase %>
 

@@ -11,6 +11,7 @@
     <p>Country: <strong><%= @contact.country.name %></strong></p>
     <p>Phone: <strong><%= @contact.phone %></strong></p>
     <p>Email: <strong><%= @contact.email %></strong></p>
+    <p>Type: <strong><%= @contact.faculty.level %></strong></p>
     <% unless @contact.university.blank? %>
       <p>University: <strong><%= @contact.university.name %></strong></p>
     <% end %>
