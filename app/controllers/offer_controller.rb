@@ -26,26 +26,26 @@ def email
         p.faculty_id = fields['major']
     else
         interested = ''
-        unless(defined?(economy).nil?)
-            interested += 'Economy, '
+        if(fields['economy'] == 'on')
+            interested << 'Economy, '
         end
-        unless(defined?(arts).nil?)
-            interested += 'Arts, '
+        if(fields['arts'] == 'on')
+            interested << 'Arts, '
         end
-        unless(defined?(tourism).nil?)
-            interested += 'Tourism, '
+        if(fields['tourism'] == 'on')
+            interested << 'Tourism, '
         end
-        unless(defined?(music).nil?)
-            interested += 'Music, '
+        if(fields['music'] == 'on')
+            interested << 'Music, '
         end
-        unless(defined?(engineering).nil?)
-            interested += 'Engineering, '
+        if(fields['engineering'] == 'on')
+            interested << 'Engineering, '
         end
-        unless(defined?(it).nil?)
-            interested += 'IT,'
+        if(fields['it'] == 'on')
+            interested << 'IT,'
         end
-        unless(defined?(business).nil?)
-            interested += 'Business'
+        if(fields['business'] == 'on')
+            interested << 'Business'
         end
         p.interests = interested
     end
@@ -94,26 +94,26 @@ def email
     heard = ''
     encourage = ''
 
-    unless(defined?(fields['encourage_friend']).nil?)
+    if(fields['encourage_friends'] == 'on')
         encourage += 'Friend, '
     end
-    unless(defined?(fields['encourage_parent']).nil?)
+    if(fields['encourage_parent'] == 'on')
         encourage += 'Parent'
     end
 
-    unless(defined?(fields['hear_ad']).nil?)
+    if(fields['hear_ad'] == 'on')
         heard += 'Ad, '
     end
-    unless(defined?(fields['hear_google']).nil?)
+    if(fields['hear_google'] == 'on')
         heard += 'Google, '
     end
-    unless(defined?(fields['hear_agent']).nil?)
+    if(fields['hear_agent'] == 'on')
         heard += 'Agent, '
     end
-    unless(defined?(fields['hear_brochure']).nil?)
+    if(fields['hear_brochure'] == 'on')
         heard += 'Brochure, '
     end
-    unless(defined?(fields['hear_openday']).nil?)
+    if(fields['hear_openday'] == 'on')
         heard += 'Open Day'
     end
 
