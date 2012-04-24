@@ -152,17 +152,23 @@ div.anythingSlider{
 		float:right;
 	}
 	p{
-		background:url(qoutemark.png) no-repeat 120px 2px;
 		padding-top:32px;
 		font-size:13px;
 		float:left;
 		width:160px;
 		margin-right:5px;
 		color:white;
+		&:after{
+			content: '\201D';
+			font-weight:bold;
+		}
 	}
 }
 
 #study-promo{
+	p{
+		text-align:justify;
+	}
 	a{
 		margin:15px 0;
 	}

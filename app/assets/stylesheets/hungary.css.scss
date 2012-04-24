@@ -2,6 +2,13 @@
 @import 'jquery.fancybox.css';
 @import '_mixins.css.scss';
 
+div.anythingControls{
+	height:50px;
+	li{
+		height:50px !important;
+	}
+}
+
 #tooltip {
 	position: absolute;
 	z-index: 3000;
@@ -16,6 +23,12 @@
 #hungary-intro{
 	h3,p{
 		color:$brand-purple;
+	}
+	p{
+		text-align:justify;
+		&.left{
+			margin-right:25px;
+		}
 	}
 }
 
@@ -148,7 +161,7 @@ table{
 		padding:0;
 		margin:0;
 	}
-	li{
+	.anythingSlider li{
 		height:350px !important;
 		margin:0;
 		padding:0;
@@ -248,6 +261,14 @@ table{
 	background:url(puskas.png) no-repeat bottom right;
 }
 
+#gastro p{
+	text-align:justify;
+	margin-bottom:10px;
+}
+
+#travel-wrap p{
+	text-align:justify;
+}
 
 
 /*MÉRET IGAZÍTÁSOK*/
@@ -267,6 +288,9 @@ table{
 #history{
 	.box{
 		height:280px;
+	}
+	p{
+		text-align:justify;
 	}
 }
 
