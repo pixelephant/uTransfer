@@ -25,11 +25,12 @@
 			<%= @university.description.html_safe %>
 		</div>
 
-		<div class="box third dark-purple" id="counter">
+		<div class="box third dark-purple" id="counter" data-deadline="<%= @university.deadline %>">
 			<h3>Time left for application</h3>
 			<div id="countdown" class="clearfix"></div>
 			<span id="deadline">Deadline is <span><%= @university.deadline %></span></span>
 			<%= link_to "Apply", "/offer", :class => "button" %>
+			<p>Please finish your application by the <%= @university.deadline.strftime('%d, %B, %Y') %>. Later applications will be accepted but the decision will be made by the university.</p>
 		</div>
 	</div>
 
@@ -56,7 +57,7 @@
 	<% else %>
 		<% requirement = @university.requirements.where(:level => 'Pre-school').first %>
 		<div class="box third gray" id="bsc">
-			<h4>BA</h4>			
+			<h4>BA</h4>
 			<h5>Requirements</h5>
 			<ul>
 				<li>As specified in each programme</li>
@@ -64,7 +65,7 @@
 			<h5>Tuition fee</h5>
 			<ul>
 				<li> <strong>€ 1 750</strong> - <strong>€ 3 550</strong> / semester </li>
-				<li>(2 - 4 semester / programme)</li>	
+				<li>(2 - 4 semester / programme)</li>
 			</ul>
 			<h5>Programmes</h5>
 			<ul>
@@ -83,7 +84,7 @@
 			<h5>Tuition fee</h5>
 			<ul>
 				<li> <strong>€ 2 550</strong> - <strong>€ 4 400</strong> / semester </li>
-				<li>(8 semester / programme)</li>	
+				<li>(8 semester / programme)</li>
 			</ul>
 			<h5>Programmes</h5>
 			<ul>

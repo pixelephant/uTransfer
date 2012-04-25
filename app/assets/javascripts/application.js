@@ -10,10 +10,6 @@
 //= require jquery_ujs
 //= require jquery.easing
 
-
-//  <- Ez mit keres itt? 
-//= require ckeditor/init 
-
 $(document).ready(function(){
 	var language_top = parseInt($("#language-selector").css("top"));
 

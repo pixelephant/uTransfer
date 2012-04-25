@@ -137,6 +137,9 @@ div.anythingControls{
 
 #counter{
 	@include dark-purple-gradient(url(clock.png) no-repeat 250px 20px);
+	p{
+		text-align:justify;
+	}
 }
 
 #counter .button{
@@ -355,10 +358,10 @@ div.anythingControls{
 
 .the-liszt-academy-of-music{
 	#bsc,#msc,#phd,#pre-school{
-		height:780px;
+		height:940px;
 	}
 	#counter,#university-intro{
-		height:325px;
+		height:365px;
 	}
 	#campus{
 		height:265px;
@@ -393,11 +396,11 @@ div.anythingControls{
 }
 
 .international-business-school{
-	#bsc,#msc,#pre-school{
+	#bsc,#msc,#pre-school,#non-degree{
 		height:420px;
 	}
 	#counter,#university-intro{
-		height:325px;
+		height:365px;
 	}
 	#campus{
 		height:265px;
@@ -415,6 +418,6 @@ div.anythingControls{
 		height:542px;
 	}
 	#counter,#university-intro{
-		height:300px;
+		height:365px;
 	}
 }

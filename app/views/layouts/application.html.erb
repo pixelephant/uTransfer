@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Utransfer</title>
   <%= stylesheet_link_tag    "application", controller_name %>
-  <%= javascript_include_tag "application", controller_name %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,latin-ext,cyrillic-ext,cyrillic,greek,greek-ext,vietnamese' rel='stylesheet' type='text/css'>
 
@@ -60,7 +60,7 @@
 	</section>
 	<nav id="main-nav">
 		<ul>
-			<li><a <%= 'class="active" '.html_safe if params[:controller] == 'home' %>href="/home">Home</a></li>
+			<li><a <%= 'class="active" '.html_safe if params[:controller] == 'home' %>href="/">Home</a></li>
 			<li><a <%= 'class="active" '.html_safe if params[:controller] == 'experience' %>href="/experience">Experience</a></li>
 			<li><a <%= 'class="active" '.html_safe if params[:controller] == 'process' %>href="/process">Process</a></li>
 			<!--<li><a <%= 'class="active" '.html_safe if params[:controller] == 'essentials' %>href="/essentials">Essentials</a></li>-->
@@ -98,6 +98,6 @@
 		</ul>
 	</div>
 </footer>
-
+<%= javascript_include_tag controller_name %>
 </body>
 </html>
