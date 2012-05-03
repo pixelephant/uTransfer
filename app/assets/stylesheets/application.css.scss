@@ -5,7 +5,7 @@
  *= require_self
 */
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -19,8 +19,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -31,7 +31,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -131,7 +131,7 @@ a,input[type='submit']{
 			span{
 				display:block;
 				font-size:13px;
-				
+
 			}
 		}
 	}
@@ -179,8 +179,8 @@ a,input[type='submit']{
 		margin-left:90px;
 		float:left;
 		background-color: transparent;
-	  	background-color: rgba(255, 255, 255, 0.6); 
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF,endColorstr=#99FFFFFF); 
+	  	background-color: rgba(255, 255, 255, 0.6);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF,endColorstr=#99FFFFFF);
         zoom: 1;
 	}
 	font-size:12px;
@@ -247,7 +247,7 @@ a,input[type='submit']{
 		font-size:22px;
 		line-height:1;
 		position:relative;
-		z-index:1; 
+		z-index:1;
 		@include transition-03s;
 		&:hover{
 			@include orange-gradient-hover;
@@ -260,7 +260,7 @@ a,input[type='submit']{
 			font-family:Arial;
 			font-weight:bold;
 		}
-		
+
 	}
 }
 
@@ -347,8 +347,8 @@ a,input[type='submit']{
 			padding-left:0;
 		}
 	}
-	
-	
+
+
 	&.third{
 		width:265px; /*305 paddingal*/
 	}
@@ -358,15 +358,15 @@ a,input[type='submit']{
 	&.full{
 		width:895px; /*935 paddingal*/
 	}
-	
-	
-	
+
+
+
 	&.video,&.image{
 		padding:0;
 		width:305px;
 		height:305px;
 	}
-	
+
 	&.image-quad{
 		padding:0;
 		width:305px;
@@ -389,7 +389,7 @@ a,input[type='submit']{
 				margin:0 5px 0 0;
 			}
 			&.four{
-				margin:0 0 0px 0;	
+				margin:0 0 0px 0;
 			}
 			&.five{
 				margin:5px 5px 0px 0;
@@ -400,7 +400,7 @@ a,input[type='submit']{
 			float:left;
 		}
 	}
-	
+
 	&.white{
 		h3{
 			color:$brand-purple;
@@ -409,7 +409,7 @@ a,input[type='submit']{
 			color:#333;
 		}
 	}
-	
+
 	&.light-green{
 		@include light-green-gradient;
 		p{
@@ -432,7 +432,7 @@ a,input[type='submit']{
 			margin-bottom:10px;
 		}
 	}
-	
+
 	&.dark-purple{
 		@include dark-purple-gradient;
 		p{
@@ -455,7 +455,7 @@ a,input[type='submit']{
 			}
 		}
 	}
-	
+
 	&.white{
 		h3,h4,h5,ul{
 			color:black;
@@ -469,9 +469,9 @@ a,input[type='submit']{
 	&.white h3{
 		margin-top:70px;
 	}
-	
+
 	&.white-green h3{
-		margin-top:70px;	
+		margin-top:70px;
 	}
 
 	&.white-purple{
@@ -482,7 +482,7 @@ a,input[type='submit']{
 			color:$brand-purple;
 		}
 	}
-	
+
 	&.gray-green{
 		background:#e6e6e6;
 		h3,h4,h5,ul{
@@ -496,7 +496,7 @@ a,input[type='submit']{
 
 .white-green h3,h3.purple{
 		margin-top:70px !important;
-		margin-bottom:20px;	
+		margin-bottom:20px;
 	}
 
 h3.green{

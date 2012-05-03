@@ -51,8 +51,8 @@
 	</div>
 	<% @testimonials.each do |testimonial| %>
 		<div class="box third light-green testimonial">
-			
-			<%= link_to testimonial  do %>	
+
+			<%= link_to testimonial  do %>
 			<h4><%= testimonial.first_name %></h4>
 			<%= testimonial.quote.html_safe %>
 			<% title = "Testimonial of " + testimonial.first_name %>
@@ -113,6 +113,13 @@
 		<a href="#" class="button">View all</a>
 		<div id="article-list">
 			<h4>Coming soon...</h4>
+			<% @blogposts.each do |article| %>
+				<article>
+					<h1><%= article.post_title %></h1>
+					<p><time pubdate datetime="<%= article.post_date_gmt %>"><%= article.post_date %></time></p>
+					<p class="lead"><%= truncate strip_tags(article.post_content).html_safe, :length => 470, :omission => '...' %> <%= link_to "Continue reading &raquo;".html_safe, "http://localhost/wordpress/?page_id=" + article.id.to_s %></p>
+				</article>
+			<% end %>
 			<!--
 			<article>
 				<img src="http://placekitten.com/g/90/90" alt="" />
