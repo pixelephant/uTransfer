@@ -20,7 +20,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'modernizr-rails'
+#gem 'modernizr-rails'
 
 gem 'globalize3'
 
